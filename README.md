@@ -11,6 +11,7 @@ go get github.com/omegastreamtv/spotify
 ### Albums
 - [x] Get Album
 - [x] Get Several Albums
+- [x] Get Album Tracks
 - [ ] Get User's Saved Albums
 - [ ] Save Albums for Current User
 - [ ] Remove Users' Saved Albums

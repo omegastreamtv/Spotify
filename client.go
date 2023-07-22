@@ -55,6 +55,15 @@ func (s *SpotifyError) Error() string {
 	return fmt.Sprintf("Spotify API Error - Status: %d, Message: %s", s.Err.Status, s.Err.Message)
 }
 
+type Pagination struct {
+	Href     string `json:"href"`
+	Limit    int    `json:"limit"`
+	Next     string `json:"next"`
+	Offset   int    `json:"offset"`
+	Previous string `json:"previous"`
+	Total    int    `json:"total"`
+}
+
 func (c *Client) SetAppAccessToken(token string) {
 	c.mu.Lock()
 	defer c.mu.Unlock()

@@ -113,8 +113,49 @@ func (c *Client) GetSeveralAlbums(ids []string, market string) (*GetSeveralAlbum
 	return &albums, nil
 }
 
+type GetAlbumTracksParams struct {
+	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
+	//
+	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
+	//
+	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
+	// Users can view the country that is associated with their account in the account settings.
+	Market string `url:"market,omitempty"`
+	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+	//
+	// Example value: 10
+	//
+	// Default value: 20
+	//
+	// Range: 0 - 50
+	Limit int `url:"limit,omitempty"`
+	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+	//
+	// Example value: 5
+	//
+	// Default value: 0
+	Offset int `url:"offset,omitempty"`
+}
+
+type GetAlbumTracksResponse struct {
+	Pagination
+	Items []Track `json:"items"`
+}
+
 // Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.
-func (c *Client) GetAlbumTracks() {}
+func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAlbumTracksResponse, error) {
+	albums := GetAlbumTracksResponse{}
+	var err *SpotifyError
+
+	c.get(fmt.Sprintf("/albums/%v/tracks", id)).QueryStruct(params).Receive(&albums, &err)
+	if err != nil {
+		return nil, err
+	}
+
+	fmt.Println(albums, err)
+
+	return &albums, nil
+}
 
 // Get a list of the albums saved in the current Spotify user's 'Your Music' library.
 //
