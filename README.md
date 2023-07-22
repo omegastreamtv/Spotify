@@ -19,11 +19,11 @@ go get github.com/omegastreamtv/spotify
 - [ ] Get New Releases
 
 ### Artists
-- [ ] Get Artist
-- [ ] Get Several Artists
-- [ ] Get Artist's Albums
-- [ ] Get Artist's Top Tracks
-- [ ] Get Artist's Related Artists
+- [x] Get Artist
+- [x] Get Several Artists
+- [x] Get Artist's Albums
+- [x] Get Artist's Top Tracks
+- [x] Get Artist's Related Artists
 
 ### Audiobooks
 - [ ] Get an Audiobook

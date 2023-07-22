@@ -56,16 +56,6 @@ type ExternalIDs struct {
 	UPC string `json:"upc"`
 }
 
-type Artists struct {
-	ExternalURLs ExternalURLs `json:"external_urls"`
-	Href         string       `json:"href"`
-	ID           string       `json:"id"`
-	Images       []Images     `json:"images,omitempty"`
-	Name         string       `json:"name"`
-	Type         string       `json:"type"`
-	URI          string       `json:"uri"`
-}
-
 // Allows to update the user interface based on which playback actions are available within the current context.
 type Actions struct {
 	// Interrupting playback. Optional field.
@@ -123,7 +113,7 @@ type Track struct {
 	// The album on which the track appears. The album object includes a link in href to full information about the album.
 	Album Album `json:"album"`
 	// The artists who performed the track. Each artist object includes a link in href to more detailed information about the artist.
-	Artists []Artists `json:"artists"`
+	Artists []Artist `json:"artists"`
 	// A list of the countries in which the track can be played, identified by their ISO 3166-1 alpha-2 code.
 	AvailableMarkets []string `json:"available_markets"`
 	// The disc number (usually 1 unless the album consists of more than one disc).

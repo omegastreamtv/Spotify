@@ -51,7 +51,7 @@ type Album struct {
 	// Allowed values: "album", "single", "compilation", "appears_on"
 	AlbumGroup string `json:"album_group,omitempty"`
 	// The artists of the album. Each artist object includes a link in href to more detailed information about the artist.
-	Artists []Artists `json:"artists"`
+	Artists []Artist `json:"artists"`
 }
 
 type FullAlbum struct {
@@ -158,7 +158,7 @@ func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAl
 // Get a list of the albums saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) GetUsersSavedAlbums() {}
+func (c *Client) GetUsersSavedAlbums(id string) {}
 
 // Save one or more albums to the current user's 'Your Music' library.
 //
