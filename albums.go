@@ -152,8 +152,6 @@ func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAl
 		return nil, err
 	}
 
-	fmt.Println(albums, err)
-
 	return &albums, nil
 }
 
