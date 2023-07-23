@@ -1,5 +1,7 @@
 package spotify
 
+type Show struct{}
+
 // Get Spotify catalog information for a single show identified by its unique Spotify ID.
 //
 // Required scope: user-read-playback-position

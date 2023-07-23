@@ -1,5 +1,7 @@
 package spotify
 
+type Audiobook struct{}
+
 // Get Spotify catalog information for a single audiobook.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.

@@ -1,5 +1,7 @@
 package spotify
 
+type Playlist struct{}
+
 // Get a playlist owned by a Spotify user.
 func (c *Client) GetPlaylist() {}
 

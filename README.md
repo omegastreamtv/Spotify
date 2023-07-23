@@ -103,7 +103,7 @@ go get github.com/omegastreamtv/spotify
 
 ### Search
 
-- [ ] Search for Item
+- [x] Search for Item
 
 ### Shows
 

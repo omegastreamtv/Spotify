@@ -1,5 +1,7 @@
 package spotify
 
+type Episode struct{}
+
 // Get Spotify catalog information for a single episode identified by its unique Spotify ID.
 func (c *Client) GetEpisode() {}
 
