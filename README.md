@@ -102,16 +102,16 @@ go get github.com/omegastreamtv/spotify
 - [ ] Check User's Saved Shows
 
 ### Tracks
-- [ ] Get Track
-- [ ] Get Several Tracks
-- [ ] Get User's Saved Tracks
-- [ ] Save Tracks for Current User
-- [ ] Remove User's Saved Tracks
-- [ ] Check User's Saved Tracks
-- [ ] Get Tracks' Audio Features
-- [ ] Get Track's Audio Features
-- [ ] Get Track's Audio Analysis
-- [ ] Get Recommendations
+- [x] Get Track
+- [x] Get Several Tracks
+- [x] Get User's Saved Tracks
+- [x] Save Tracks for Current User
+- [x] Remove User's Saved Tracks
+- [x] Check User's Saved Tracks
+- [x] Get Tracks' Audio Features
+- [x] Get Track's Audio Features
+- [x] Get Track's Audio Analysis
+- [x] Get Recommendations
 
 ### Users
 - [ ] Get Current User's Profile
