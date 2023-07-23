@@ -1,0 +1,50 @@
+name: Format
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'
+
+      - name: Set git credentials
+        run: git config --global url."https://${{ secrets.GH_SECRET }}@github.com".insteadOf "https://github.com"
+
+      - name: Install goimports-reviser
+        run: go install -v github.com/incu6us/goimports-reviser/v3@latest
+
+      - name: Run goimports-reviser
+        run: goimports-reviser -rm-unused -set-alias -format ./...
+      
+      - name: Install gofumpt
+        run: go install mvdan.cc/gofumpt@latest
+
+      - name: Run gofumpt (internal)
+        run: gofumpt -w internal
+
+      - name: Run gofumpt (config)
+        run: gofumpt -w config
+
+      - name: Run gofumpt (cmd)
+        run: gofumpt -w cmd
+
+      - name: Commit and push if changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m 'Automated code formatting' && git push)
