@@ -3,12 +3,15 @@
 Spotify is a Go wrapper for Spotify's web API.
 
 ## Install
+
 ```cli
 go get github.com/omegastreamtv/spotify
 ```
 
 ## Endpoints
+
 ### Albums
+
 - [x] Get Album
 - [x] Get Several Albums
 - [x] Get Album Tracks
@@ -19,6 +22,7 @@ go get github.com/omegastreamtv/spotify
 - [ ] Get New Releases
 
 ### Artists
+
 - [x] Get Artist
 - [x] Get Several Artists
 - [x] Get Artist's Albums
@@ -26,6 +30,7 @@ go get github.com/omegastreamtv/spotify
 - [x] Get Artist's Related Artists
 
 ### Audiobooks
+
 - [ ] Get an Audiobook
 - [ ] Get Several Audiobooks
 - [ ] Get Audiobook Chapters
@@ -35,14 +40,17 @@ go get github.com/omegastreamtv/spotify
 - [ ] Check User's Saved Audiobooks
 
 ### Categories
+
 - [ ] Get Several Browse Categories
 - [ ] Get Single Browse Category
 
 ### Chapters
+
 - [ ] Get a Chapter
 - [ ] Get Several Chapters
 
 ### Episodes
+
 - [ ] Get Episode
 - [ ] Get Several Episodes
 - [ ] Get User's Saved Episodes
@@ -51,12 +59,15 @@ go get github.com/omegastreamtv/spotify
 - [ ] Check USer's Saved Episodes
 
 ### Genres
-- [ ] Get Available Genre Seeds
+
+- [x] Get Available Genre Seeds
 
 ### Markets
+
 - [x] Get Available Markets
 
 ### Player
+
 - [x] Get Playback State
 - [ ] Transfer Playback
 - [ ] Get Available Devices
@@ -75,6 +86,7 @@ go get github.com/omegastreamtv/spotify
 - [ ] Add Item to Playback Queue
 
 ### Playlists
+
 - [ ] Get Playlist
 - [ ] Change Playlist Details
 - [ ] Get Playlist Items
@@ -90,9 +102,11 @@ go get github.com/omegastreamtv/spotify
 - [ ] Add Custom Playlist Cover Image
 
 ### Search
+
 - [ ] Search for Item
 
 ### Shows
+
 - [ ] Get Show
 - [ ] Get Several Shows
 - [ ] Get Show Episodes
@@ -102,6 +116,7 @@ go get github.com/omegastreamtv/spotify
 - [ ] Check User's Saved Shows
 
 ### Tracks
+
 - [x] Get Track
 - [x] Get Several Tracks
 - [x] Get User's Saved Tracks
@@ -114,6 +129,7 @@ go get github.com/omegastreamtv/spotify
 - [x] Get Recommendations
 
 ### Users
+
 - [ ] Get Current User's Profile
 - [ ] Get User's Top Items
 - [ ] Get User's Profile
