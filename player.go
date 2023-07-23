@@ -109,55 +109,6 @@ type Context struct {
 	URI string `json:"uri"`
 }
 
-type Track struct {
-	// The album on which the track appears. The album object includes a link in href to full information about the album.
-	Album Album `json:"album"`
-	// The artists who performed the track. Each artist object includes a link in href to more detailed information about the artist.
-	Artists []Artist `json:"artists"`
-	// A list of the countries in which the track can be played, identified by their ISO 3166-1 alpha-2 code.
-	AvailableMarkets []string `json:"available_markets"`
-	// The disc number (usually 1 unless the album consists of more than one disc).
-	DiscNumber int `json:"disc_number"`
-	// The track length in milliseconds.
-	DurationMs int `json:"duration_ms"`
-	// Whether or not the track has explicit lyrics ( true = yes it does; false = no it does not OR unknown).
-	Explicit bool `json:"explicit"`
-	// Known external IDs for the track.
-	ExternalIDs ExternalIDs `json:"external_ids"`
-	// Known external URLs for this track.
-	ExternalURLs ExternalURLs `json:"external_urls"`
-	// A link to the Web API endpoint providing full details of the track.
-	Href string `json:"href"`
-	// The Spotify ID for the track.
-	ID string `json:"id"`
-	// Part of the response when Track Relinking is applied. If true, the track is playable in the given market. Otherwise false.
-	IsPlayable bool `json:"is_playable"`
-	// Part of the response when Track Relinking is applied, and the requested track has been replaced with different track.
-	//
-	// The track in the linked_from object contains information about the originally requested track.
-	LinkedFrom struct{} `json:"linked_from"`
-	// Included in the response when a content restriction is applied.
-	Restrictions Restrictions `json:"restrictions"`
-	// The name of the track.
-	Name string `json:"name"`
-	// The popularity of the track. The value will be between 0 and 100, with 100 being the most popular.
-	//
-	// The popularity of a track is a value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.
-	//
-	// Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past. Duplicate tracks (e.g. the same track from a single and an album) are rated independently. Artist and album popularity is derived mathematically from track popularity. Note: the popularity value may lag actual popularity by a few days: the value is not updated in real time.
-	Popularity int `json:"popularity"`
-	// A link to a 30 second preview (MP3 format) of the track. Can be null
-	PreviewURL string `json:"preview_url,omitempty"`
-	// The number of the track. If an album has several discs, the track number is the number on the specified disc.
-	TrackNumber int `json:"track_number"`
-	// The object type: "track".
-	Type string `json:"type"`
-	// The Spotify URI for the track.
-	URI string `json:"uri"`
-	// Whether or not the track is from a local file.
-	IsLocal bool `json:"is_local"`
-}
-
 type GetPlaybackStateResponse struct {
 	// The device that is currently active.
 	Device Device `json:"device"`
