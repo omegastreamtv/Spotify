@@ -54,7 +54,7 @@ go get github.com/omegastreamtv/spotify
 - [ ] Get Available Genre Seeds
 
 ### Markets
-- [ ] Get Available Markets
+- [x] Get Available Markets
 
 ### Player
 - [x] Get Playback State
