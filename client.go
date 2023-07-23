@@ -85,10 +85,41 @@ func (c *Client) get(path string) *sling.Sling {
 	if c.userAccessToken != "" {
 		tokenToUse = c.userAccessToken
 		fmt.Println("use userAccessToken")
-
 	}
 
 	req := sling.New().Get(URL+path).Set("Authorization", "Bearer "+tokenToUse)
+	c.userAccessToken = ""
+	c.mu.Unlock()
+
+	return req
+}
+
+func (c *Client) put(path string) *sling.Sling {
+	c.mu.Lock()
+
+	tokenToUse := c.appAccessToken
+	if c.userAccessToken != "" {
+		tokenToUse = c.userAccessToken
+		fmt.Println("use userAccessToken")
+	}
+
+	req := sling.New().Put(URL+path).Set("Authorization", "Bearer "+tokenToUse)
+	c.userAccessToken = ""
+	c.mu.Unlock()
+
+	return req
+}
+
+func (c *Client) delete(path string) *sling.Sling {
+	c.mu.Lock()
+
+	tokenToUse := c.appAccessToken
+	if c.userAccessToken != "" {
+		tokenToUse = c.userAccessToken
+		fmt.Println("use userAccessToken")
+	}
+
+	req := sling.New().Delete(URL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
 
