@@ -23,7 +23,7 @@ type Album struct {
 	// The Spotify ID for the album.
 	ID string `json:"id"`
 	// The cover art for the album in various sizes, widest first.
-	Images []Images `json:"images"`
+	Images []Image `json:"images"`
 	// The name of the album. In case of an album takedown, the value may be an empty string.
 	Name string `json:"name"`
 	// The date the album was first released.

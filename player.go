@@ -11,7 +11,7 @@ type ExternalURLs struct {
 }
 
 // The cover art for the episode in various sizes, widest first.
-type Images struct {
+type Image struct {
 	// The source URL of the image.
 	URL string `json:"url"`
 	// The image height in pixels.
