@@ -33,14 +33,8 @@ jobs:
       - name: Install gofumpt
         run: go install mvdan.cc/gofumpt@latest
 
-      - name: Run gofumpt (internal)
-        run: gofumpt -w internal
-
-      - name: Run gofumpt (config)
-        run: gofumpt -w config
-
-      - name: Run gofumpt (cmd)
-        run: gofumpt -w cmd
+      - name: Run gofumpt
+        run: gofumpt -w .
 
       - name: Commit and push if changes
         run: |
