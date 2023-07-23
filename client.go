@@ -56,12 +56,18 @@ func (s *SpotifyError) Error() string {
 }
 
 type Pagination struct {
-	Href     string `json:"href"`
-	Limit    int    `json:"limit"`
-	Next     string `json:"next"`
-	Offset   int    `json:"offset"`
+	// A link to the Web API endpoint returning the full result of the request
+	Href string `json:"href"`
+	// The maximum number of items in the response (as set in the query or by default).
+	Limit int `json:"limit"`
+	// URL to the next page of items. (null if none)
+	Next string `json:"next"`
+	// The offset of the items returned (as set in the query or by default)
+	Offset int `json:"offset"`
+	// URL to the previous page of items. (null if none)
 	Previous string `json:"previous"`
-	Total    int    `json:"total"`
+	// The total number of items available to return.
+	Total int `json:"total"`
 }
 
 func (c *Client) SetAppAccessToken(token string) {
