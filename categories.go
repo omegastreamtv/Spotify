@@ -15,8 +15,18 @@ type GetSeveralBrowseCategoriesParams struct {
 	Offset int `url:"offset"`
 }
 
+type Category struct {
+	Href  string  `json:"href"`
+	Icons []Image `json:"icons"`
+	ID    string  `json:"id"`
+	Name  string  `json:"name"`
+}
+
 type GetSeveralBrowseCategoriesResponse struct {
-	Categories Pagination `json:"categories"`
+	Categories struct {
+		Pagination
+		Items []Category `json:"items"`
+	} `json:"categories"`
 }
 
 // Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
