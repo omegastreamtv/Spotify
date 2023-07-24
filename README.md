@@ -31,18 +31,18 @@ go get github.com/omegastreamtv/spotify
 
 ### Audiobooks
 
-- [ ] Get an Audiobook
-- [ ] Get Several Audiobooks
-- [ ] Get Audiobook Chapters
-- [ ] Get User's Saved Audiobooks
-- [ ] Save Audiobooks for Current User
-- [ ] Remove User's Saved Audiobooks
-- [ ] Check User's Saved Audiobooks
+- [x] Get an Audiobook
+- [x] Get Several Audiobooks
+- [x] Get Audiobook Chapters
+- [x] Get User's Saved Audiobooks
+- [x] Save Audiobooks for Current User
+- [x] Remove User's Saved Audiobooks
+- [x] Check User's Saved Audiobooks
 
 ### Categories
 
-- [ ] Get Several Browse Categories
-- [ ] Get Single Browse Category
+- [x] Get Several Browse Categories
+- [x] Get Single Browse Category
 
 ### Chapters
 
