@@ -3,6 +3,7 @@ package spotify
 import (
 	"errors"
 	"fmt"
+	"net/http"
 	"sync"
 
 	"github.com/dghubble/sling"
@@ -21,6 +22,10 @@ type Client struct {
 	userAccessToken string
 	// appAccessToken is used when the userAccessToken is not provided
 	appAccessToken string
+	// baseURL is the URL to use when making requests
+	baseURL string
+	// Custom HTTP client
+	httpClient *http.Client
 }
 
 type Options struct {
@@ -30,18 +35,31 @@ type Options struct {
 	ClientSecret string
 	// The URI to redirect to after the user grants or denies permission. This URI needs to have been entered in the Redirect URI allowlist that you specified when you registered your application (See the app guide). The value of redirect_uri here must exactly match one of the values you entered when you registered your application, including upper or lowercase, terminating slashes, and such.
 	RedirectURI string
+	// BaseURL is the URL to use when making requests
+	BaseURL string
 }
 
-func NewClient(options *Options) (*Client, error) {
+func NewClient(options *Options, client *http.Client) (*Client, error) {
+	c := &Client{
+		mu:              sync.RWMutex{},
+		userAccessToken: "",
+		httpClient:      http.DefaultClient,
+		baseURL:         options.BaseURL,
+	}
+
 	if options.ClientID == "" {
 		return nil, errors.New("ClientID cannot be empty")
 	}
 
-	return &Client{
-		mu:              sync.RWMutex{},
-		opts:            options,
-		userAccessToken: "",
-	}, nil
+	c.opts = options
+
+	if client == nil {
+		c.httpClient = client
+	}
+
+	fmt.Println(c.opts.BaseURL)
+
+	return c, nil
 }
 
 type SpotifyError struct {
@@ -93,7 +111,7 @@ func (c *Client) get(path string) *sling.Sling {
 		fmt.Println("use userAccessToken")
 	}
 
-	req := sling.New().Get(URL+path).Set("Authorization", "Bearer "+tokenToUse)
+	req := sling.New().Get(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
 
