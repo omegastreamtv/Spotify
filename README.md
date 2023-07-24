@@ -1,6 +1,6 @@
 # Spotify
 
-![Coverage](https://img.shields.io/badge/Coverage-80.5%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-71.5%25-brightgreen)
 
 Spotify is a Go wrapper for Spotify's web API.
 
@@ -53,12 +53,12 @@ go get github.com/omegastreamtv/spotify
 
 ### Episodes
 
-- [ ] Get Episode
-- [ ] Get Several Episodes
-- [ ] Get User's Saved Episodes
-- [ ] Save Episodes for Current User
-- [ ] Remove User's Saved Episodes
-- [ ] Check USer's Saved Episodes
+- [x] Get Episode
+- [x] Get Several Episodes
+- [x] Get User's Saved Episodes
+- [x] Save Episodes for Current User
+- [x] Remove User's Saved Episodes
+- [x] Check User's Saved Episodes
 
 ### Genres
 
