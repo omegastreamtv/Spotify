@@ -60,6 +60,11 @@ type FullAlbum struct {
 	Tracks []Track `json:"tracks"`
 }
 
+type SavedAlbum struct {
+	AddedAt string    `json:"added_at"`
+	Album   FullAlbum `json:"album"`
+}
+
 type GetAlbumResponse struct {
 	Album
 	Tracks struct {
@@ -161,25 +166,136 @@ func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAl
 	return &tracks, nil
 }
 
+type GetUsersSavedAlbumsParams struct {
+	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+	Limit int `json:"limit"`
+	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+	Offset int    `json:"offset"`
+	Market string `json:"market"`
+}
+
+type GetUsersSavedAlbumsResponse struct {
+	Pagination
+	Items []SavedAlbum `json:"items"`
+}
+
 // Get a list of the albums saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) GetUsersSavedAlbums(id string) {}
+func (c *Client) GetUsersSavedAlbums(params *GetUsersSavedAlbumsParams) (*GetUsersSavedAlbumsResponse, error) {
+	albums := GetUsersSavedAlbumsResponse{}
+	var err *SpotifyError
+
+	c.get("/me/albums").QueryStruct(params).Receive(&albums, &err)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &albums, nil
+}
+
+type SaveAlbumsForCurrentUserParams struct {
+	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
+	IDs string `url:"ids"`
+}
 
 // Save one or more albums to the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveAlbumsForCurrentUser() {}
+func (c *Client) SaveAlbumsForCurrentUser(ids []string) error {
+	var res struct{}
+	var err *SpotifyError
+
+	params := SaveAlbumsForCurrentUserParams{
+		IDs: strings.Join(ids, ","),
+	}
+
+	c.put("/me/albums").QueryStruct(params).Receive(&res, &err)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+type RemoveAlbumsForCurrentUserParams struct {
+	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
+	IDs string `url:"ids"`
+}
 
 // Remove one or more albums from the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveAlbumsForCurrentUser() {}
+func (c *Client) RemoveAlbumsForCurrentUser(ids []string) error {
+	var res struct{}
+	var err *SpotifyError
+
+	params := RemoveAlbumsForCurrentUserParams{
+		IDs: strings.Join(ids, ","),
+	}
+
+	c.delete("/me/albums").QueryStruct(params).Receive(&res, &err)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+type CheckUsersSavedAlbumsParams struct {
+	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
+	IDs string `url:"ids"`
+}
 
 // Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedAlbums() {}
+func (c *Client) CheckUsersSavedAlbums(ids []string) error {
+	var res struct{}
+	var err *SpotifyError
+
+	params := CheckUsersSavedAlbumsParams{
+		IDs: strings.Join(ids, ","),
+	}
+
+	c.get("/me/albums/contains").QueryStruct(params).Receive(&res, &err)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+type GetNewReleasesParams struct {
+	// A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.
+	Country string `url:"country"`
+	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+	Limit int `url:"limit"`
+	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+	Offset int `url:"offset"`
+}
+
+type GetNewReleasesResponse struct {
+	Albums struct {
+		Pagination
+		Items []Album `json:"items"`
+	} `json:"albums"`
+}
 
 // Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
-func (c *Client) GetNewReleases() {}
+func (c *Client) GetNewReleases(params *GetNewReleasesParams) (*GetNewReleasesResponse, error) {
+	releases := GetNewReleasesResponse{}
+	var err *SpotifyError
+
+	c.get("/browse/new-releases").QueryStruct(params).Receive(&releases, &err)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &releases, nil
+}
