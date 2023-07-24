@@ -67,6 +67,8 @@ func (c *Client) GetShow(id string, market string) (*GetShowResponse, error) {
 }
 
 type GetSeveralShowsParams struct {
+	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
+	IDs    string `url:"ids,omitempty"`
 	Market string `url:"market"`
 }
 
@@ -80,6 +82,7 @@ func (c *Client) GetSeveralShows(ids []string, market string) (*GetSeveralShowsR
 	var err *SpotifyError
 
 	params := GetSeveralShowsParams{
+		IDs:    strings.Join(ids, ","),
 		Market: market,
 	}
 

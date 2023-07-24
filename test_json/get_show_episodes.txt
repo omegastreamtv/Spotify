@@ -1,0 +1,450 @@
+{
+  "href": "https://api.spotify.com/v1/shows/38bS44xjbVVZ3No3ByF1dJ/episodes?offset=0&limit=10&market=ES",
+  "items": [
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/3a3c4ab877ecee7d4a235790e860aa72995fcc94",
+      "description": "Vill du ha sällskap av en nedsupen björn i hängmattan? Hör Vetenskapsradion Historia bläddra bland 1700-talsfiskar, Edith Södergrans fotografier och ryska krigsplaner i sommarens boktipsprogram! Luta dig tillbaka i solstolen och låt Vetenskapsradion Historia tipsa dig om sommarens bästa historiska böcker. Historienördarna Kristina Ekero Eriksson, Urban Björstadius och Tobias Svanelid bläddrar bland drottningar, runristare och nedsupna björnar för att vaska fram guldkornen i vårens historieboksutgivning. Böckerna som tipsas om är:Hedvig Eleonora och hennes tid av Eva Helen UlvrosHotet från Ryssland av Oscar JonssonFienden av Dick HarrisonEn annan Edith av Nina UlmajaKvinnorna, makten, religionen av Jan-Gunnar Rosenblad och Gundel SöderholmBaltikums befrielse av Tobias Berglund och Niclas SennertegFinlands svenska historia av Martin HårdstedtGunila Axén av Jelena ZetterströmPetrus Artedi Ichtyologia av Jakob ChristenssonNationens avskum, militärens elit av Lars Ericson WolkeTyde den som kan av Torun Zachrisson och Magnus KällströmPromenerandets historia av Kekke Stadin",
+      "duration_ms": 2160000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5AmVFYRKXAkd10ZRWlBkxu"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5AmVFYRKXAkd10ZRWlBkxu",
+      "html_description": "<p>Vill du ha sällskap av en nedsupen björn i hängmattan? Hör Vetenskapsradion Historia bläddra bland 1700-talsfiskar, Edith Södergrans fotografier och ryska krigsplaner i sommarens boktipsprogram!</p> <p>Luta dig tillbaka i solstolen och låt Vetenskapsradion Historia tipsa dig om sommarens bästa historiska böcker. Historienördarna Kristina Ekero Eriksson, Urban Björstadius och Tobias Svanelid bläddrar bland drottningar, runristare och nedsupna björnar för att vaska fram guldkornen i vårens historieboksutgivning.</p><p> </p><p>Böckerna som tipsas om är:</p><p>Hedvig Eleonora och hennes tid av Eva Helen Ulvros</p><p>Hotet från Ryssland av Oscar Jonsson</p><p>Fienden av Dick Harrison</p><p>En annan Edith av Nina Ulmaja</p><p>Kvinnorna, makten, religionen av Jan-Gunnar Rosenblad och Gundel Söderholm</p><p>Baltikums befrielse av Tobias Berglund och Niclas Sennerteg</p><p>Finlands svenska historia av Martin Hårdstedt</p><p>Gunila Axén av Jelena Zetterström</p><p>Petrus Artedi Ichtyologia av Jakob Christensson</p><p>Nationens avskum, militärens elit av Lars Ericson Wolke</p><p>Tyde den som kan av Torun Zachrisson och Magnus Källström</p><p>Promenerandets historia av Kekke Stadin</p>",
+      "id": "5AmVFYRKXAkd10ZRWlBkxu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a9936ced0aacbc3bb42766418",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f9936ced0aacbc3bb42766418",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d9936ced0aacbc3bb42766418",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Nedsupen björn i hängmattan?",
+      "release_date": "2023-06-20",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:5AmVFYRKXAkd10ZRWlBkxu"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/e6883f764d4b237a70d186d9bad4d66ac1e9ed22",
+      "description": "Ödlepungar, götiska dryckesoffer och yxmördade fornmänniskor samsas i Vetenskapsradion Historias 1000:e program, som sänds inför publik där Tobias Svanelid samlas tre namnkunniga historiker på scenen. Tobias Svanelid firar Vetenskapsradion Historias 1000:e program med en sändning inför publik, där en historikerpanel bland annat diskuterar Sveriges födelse, vikingarnas symbolvärde och vad historieintresse gör med oss människor.Ifrån scenen på Ekermanska malmgården på Södermalm i Stockholm sänds alltså den tusende upplagan av Vetenskapsradion Historia. Ett program som drog igång i januari 2000 och som programletts av Tobias Svanelid.På scenen diskuterar historikern Bo Eriksson och arkeologerna Kristina Ekero Eriksson och Jonathan Lindström Sveriges potentiella födelsedagar och historia, Gustav Vasas despotism och vikingarnas attraktionsvärde och svenskhet. Dessutom hör vi om ödlepungar, götiska dryckesoffer och värdet av historia i en föränderlig tid.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5trZFEgnvz1GtWWOmEvc3p"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5trZFEgnvz1GtWWOmEvc3p",
+      "html_description": "<p>Ödlepungar, götiska dryckesoffer och yxmördade fornmänniskor samsas i Vetenskapsradion Historias 1000:e program, som sänds inför publik där Tobias Svanelid samlas tre namnkunniga historiker på scenen.</p> <p>Tobias Svanelid firar Vetenskapsradion Historias 1000:e program med en sändning inför publik, där en historikerpanel bland annat diskuterar Sveriges födelse, vikingarnas symbolvärde och vad historieintresse gör med oss människor.</p><p>Ifrån scenen på Ekermanska malmgården på Södermalm i Stockholm sänds alltså den tusende upplagan av Vetenskapsradion Historia. Ett program som drog igång i januari 2000 och som programletts av Tobias Svanelid.</p><p>På scenen diskuterar historikern Bo Eriksson och arkeologerna Kristina Ekero Eriksson och Jonathan Lindström Sveriges potentiella födelsedagar och historia, Gustav Vasas despotism och vikingarnas attraktionsvärde och svenskhet. Dessutom hör vi om ödlepungar, götiska dryckesoffer och värdet av historia i en föränderlig tid.</p>",
+      "id": "5trZFEgnvz1GtWWOmEvc3p",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a801fdf1d46d8b6aafc8ad993",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f801fdf1d46d8b6aafc8ad993",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d801fdf1d46d8b6aafc8ad993",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Vi firar 1000 program!",
+      "release_date": "2023-06-13",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:5trZFEgnvz1GtWWOmEvc3p"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/0880e608e3db7dde0721d94e00c967b3ce8bee8a",
+      "description": "För femhundra år sedan valdes Gustav Eriksson Vasa till svensk kung. Tobias Svanelid återvänder till valplatsen i Strängnäs för att diskutera valet och kungen och hur vi minns Gustav Vasa idag. Utanför Strängnäs domkyrka valdes Gustav Eriksson till Sveriges kung den 6 juni 1523. Tobias Svanelid återvänder till ett nästan heligt landskap där kungavalet ägde rum för femhundra år sedan, på kyrkbacken, i Roggeborgen och de osynliga resterna av Sankt Eskils kapell. Historikern Olle Ferm och Elin Andersson vid Roggeborgen guidar runt vid de mytomspunna platserna och reder ut hur kungavalet gick till, vem som egentligen var hjärnan bakom mötet i Strängnäs och vad Hansestaden Lübeck hade för intresse av en ny svensk kung.Dessutom tecknar historikerna Roger Axelsson och Åsa Karlsson bilden av Gustav Vasa som en maktgirig koleriker, men också en person som höjdes till skyarna av Gustav III och odödliggjordes i såväl Sveriges första kungastaty som 1700-talsoperan Gustav Vasa.",
+      "duration_ms": 2685000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/4lDLntgGQavVxfqPzJqPAn"
+      },
+      "href": "https://api.spotify.com/v1/episodes/4lDLntgGQavVxfqPzJqPAn",
+      "html_description": "<p>För femhundra år sedan valdes Gustav Eriksson Vasa till svensk kung. Tobias Svanelid återvänder till valplatsen i Strängnäs för att diskutera valet och kungen och hur vi minns Gustav Vasa idag.</p> <p>Utanför Strängnäs domkyrka valdes Gustav Eriksson till Sveriges kung den 6 juni 1523. Tobias Svanelid återvänder till ett nästan heligt landskap där kungavalet ägde rum för femhundra år sedan, på kyrkbacken, i Roggeborgen och de osynliga resterna av Sankt Eskils kapell. Historikern Olle Ferm och Elin Andersson vid Roggeborgen guidar runt vid de mytomspunna platserna och reder ut hur kungavalet gick till, vem som egentligen var hjärnan bakom mötet i Strängnäs och vad Hansestaden Lübeck hade för intresse av en ny svensk kung.</p><p>Dessutom tecknar historikerna Roger Axelsson och Åsa Karlsson bilden av Gustav Vasa som en maktgirig koleriker, men också en person som höjdes till skyarna av Gustav III och odödliggjordes i såväl Sveriges första kungastaty som 1700-talsoperan Gustav Vasa.</p>",
+      "id": "4lDLntgGQavVxfqPzJqPAn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8aec33e4cbd72c7f6294bf2eb4",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fec33e4cbd72c7f6294bf2eb4",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dec33e4cbd72c7f6294bf2eb4",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Gustav Vasas kungaval 1523",
+      "release_date": "2023-06-06",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:4lDLntgGQavVxfqPzJqPAn"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/d3de45be4459c6b629d6ce423edfa0e70084433c",
+      "description": "Innebar valet av Gustav Vasa till svensk kung och det moderna Sveriges födelse? Vetenskapsradion Historia reder ut argumenten kring jubiléet som inte tycks firas så mycket som många hoppats. 6 juni 1523 valdes Gustav Vasa till kung av Sverige. I år menar vissa att händelsen borde uppmärksammas som Sveriges femhundraårsdag, medan kritiker anser att kungavalet inte markerade något principiellt nytt för Sverige.Tobias Svanelid går till botten med femhundraårsdagen och pratar med personerna som vill uppmärksamma kungavalet och försöker förstå varför det stora firandet ändå tycks utebli. Vad säger historikerna i frågan och hur kan en folklorist förklara varför 1523 inte blivit lika viktigt för oss svenskar som 1789 blivit för fransmännen och 1814 för Norge?",
+      "duration_ms": 2685000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/1VoXREJtZJSp0LStFHaa9o"
+      },
+      "href": "https://api.spotify.com/v1/episodes/1VoXREJtZJSp0LStFHaa9o",
+      "html_description": "<p>Innebar valet av Gustav Vasa till svensk kung och det moderna Sveriges födelse? Vetenskapsradion Historia reder ut argumenten kring jubiléet som inte tycks firas så mycket som många hoppats.</p> <p>6 juni 1523 valdes Gustav Vasa till kung av Sverige. I år menar vissa att händelsen borde uppmärksammas som Sveriges femhundraårsdag, medan kritiker anser att kungavalet inte markerade något principiellt nytt för Sverige.</p><p>Tobias Svanelid går till botten med femhundraårsdagen och pratar med personerna som vill uppmärksamma kungavalet och försöker förstå varför det stora firandet ändå tycks utebli. Vad säger historikerna i frågan och hur kan en folklorist förklara varför 1523 inte blivit lika viktigt för oss svenskar som 1789 blivit för fransmännen och 1814 för Norge?</p>",
+      "id": "1VoXREJtZJSp0LStFHaa9o",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a1721e8d8a5670a661f3c4eac",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f1721e8d8a5670a661f3c4eac",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d1721e8d8a5670a661f3c4eac",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Ska vi fira Sveriges 500-årsdag?",
+      "release_date": "2023-05-30",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:1VoXREJtZJSp0LStFHaa9o"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/342e34870c826032bd71dc0316e2cffab8df2f4b",
+      "description": "Historia är viktigt för Sverigedemokraterna, och vilka historiska personer och händelser som passar in partiets världsbild analyseras nu av historikern Julia Håkansson. Vikingen, Engelbrekt och Karl XII är Sverigedemokraternas älsklingspersoner i den svenska historien, men på senare år har folkhemmet kommit att ta över rollen som historisk idealbild. Historikern Julia Håkansson är aktuell med en avhandling om Sverigedemokraternas historiesyn och varför historia verkar vara så viktigt för partiet.Dessutom om Tryckfrihetsförordningen 1766 som just utnämnts till ett nytt svenskt världsminne av Unesco. Bok- och bibliotekshistorikern Jonas Nordin beskriver den unika reformen på 1700-talet då Sverige blev först att tillåta yttrandefrihet i en skala som världen aldrig tidigare erfarit.Och så reder Dick Harrison ut varför det bara är brittiska men inga andra monarker som låter kröna sig numera.Programledare är Tobias Svanelid.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5MKC7i0cVbXCJiT3TrxuNt"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5MKC7i0cVbXCJiT3TrxuNt",
+      "html_description": "<p>Historia är viktigt för Sverigedemokraterna, och vilka historiska personer och händelser som passar in partiets världsbild analyseras nu av historikern Julia Håkansson.</p> <p>Vikingen, Engelbrekt och Karl XII är Sverigedemokraternas älsklingspersoner i den svenska historien, men på senare år har folkhemmet kommit att ta över rollen som historisk idealbild. Historikern Julia Håkansson är aktuell med en avhandling om Sverigedemokraternas historiesyn och varför historia verkar vara så viktigt för partiet.</p><p>Dessutom om Tryckfrihetsförordningen 1766 som just utnämnts till ett nytt svenskt världsminne av Unesco. Bok- och bibliotekshistorikern Jonas Nordin beskriver den unika reformen på 1700-talet då Sverige blev först att tillåta yttrandefrihet i en skala som världen aldrig tidigare erfarit.</p><p>Och så reder Dick Harrison ut varför det bara är brittiska men inga andra monarker som låter kröna sig numera.</p><p>Programledare är Tobias Svanelid.</p>",
+      "id": "5MKC7i0cVbXCJiT3TrxuNt",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8ae17f5a0aaf73a99ae3229cf3",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fe17f5a0aaf73a99ae3229cf3",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68de17f5a0aaf73a99ae3229cf3",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Så formar Sverigedemokraterna historien",
+      "release_date": "2023-05-23",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:5MKC7i0cVbXCJiT3TrxuNt"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/e25208154c785a438cd87aa2299f911f172062bc",
+      "description": "Kringresande akrobater, skäggiga damer och kanariefågelspektakel roade 17- och 1800-talets svenskar. Vi tar pulsen på en svunnen nöjeskultur. Och kartlägger handskriftens plågsamma historia. Dresserade kanariefåglar, trollkarlar och akrobater turnerade Sverige runt på 17- och 1800-talet. Dåtidens underhållare var tidens superstjärnor och slipade entreprenörer som nu undersöks av idéhistorikern Leif Runefelt. Vetenskapsradion Historia promenerar tillsammans med honom på Djurgården i Stockholm för att söka efter spåren av dåtidens kringresande underhållningskultur.Dessutom uppmärksammar vi handskriftens plågsamma historia. Såväl medeltidens manuskriptskrivande munkar som 1800-talets skrivkrampande stålpenneskrivare fick lida för konsten att skriva för hand. Litteraturvetaren Thomas Götselius undersöker vad handskriftens historia kan berätta om historiska texter och vår egen tids förhållande till tangentbord, skärmar och hur artificiell intelligens nu författar våra böcker.Programledare är Tobias Svanelid.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/27tZeGuSMu1dj6WzN5fDbY"
+      },
+      "href": "https://api.spotify.com/v1/episodes/27tZeGuSMu1dj6WzN5fDbY",
+      "html_description": "<p>Kringresande akrobater, skäggiga damer och kanariefågelspektakel roade 17- och 1800-talets svenskar. Vi tar pulsen på en svunnen nöjeskultur. Och kartlägger handskriftens plågsamma historia.</p> <p>Dresserade kanariefåglar, trollkarlar och akrobater turnerade Sverige runt på 17- och 1800-talet. Dåtidens underhållare var tidens superstjärnor och slipade entreprenörer som nu undersöks av idéhistorikern Leif Runefelt. Vetenskapsradion Historia promenerar tillsammans med honom på Djurgården i Stockholm för att söka efter spåren av dåtidens kringresande underhållningskultur.</p><p>Dessutom uppmärksammar vi handskriftens plågsamma historia. Såväl medeltidens manuskriptskrivande munkar som 1800-talets skrivkrampande stålpenneskrivare fick lida för konsten att skriva för hand. Litteraturvetaren Thomas Götselius undersöker vad handskriftens historia kan berätta om historiska texter och vår egen tids förhållande till tangentbord, skärmar och hur artificiell intelligens nu författar våra böcker.</p><p>Programledare är Tobias Svanelid.</p>",
+      "id": "27tZeGuSMu1dj6WzN5fDbY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a6f06c00c48e757d565405b87",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f6f06c00c48e757d565405b87",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d6f06c00c48e757d565405b87",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Dresserade kanariefåglar roade 1800-talet",
+      "release_date": "2023-05-16",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:27tZeGuSMu1dj6WzN5fDbY"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/518f159e5f4dda284b4611696998c19cdee4a513",
+      "description": "Skrattspeglar och kortväxta personer skapade succén Liseberg. 100 år efter invigningen besöker vi nöjesfältet som skulle göra Göteborg roligare. Och så uppmärksammar vi okända spionbasen Kari. Krockbilar, bergbanor, dansbanor och ett eget Lilleputtland skulle göra Göteborg roligare och dra folk till staden. Tobias Svanelid besöker 100-årsjubilerande Liseberg som trots invigningsårets regnsommar blev en stor succé och som allt sedan dess roat göteborgare och andra med åkattraktioner, musik och dans.Dessutom uppmärksammar vi de arkeologiska undersökningarna av den första allierade spionbasen på svensk mark under andra världskriget. Mitt under brinnande krig tillät det förment alliansfria Sverige de allierade att anlägga en radiomast och en sabotagebas för norska och allierade spioner i trakterna av Torne träsk. Nu avslöjas vardagslivet på basen, och dess okända historia.",
+      "duration_ms": 2685000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/5VArykQcDSfiqaaNqh0o1p"
+      },
+      "href": "https://api.spotify.com/v1/episodes/5VArykQcDSfiqaaNqh0o1p",
+      "html_description": "<p>Skrattspeglar och kortväxta personer skapade succén Liseberg. 100 år efter invigningen besöker vi nöjesfältet som skulle göra Göteborg roligare. Och så uppmärksammar vi okända spionbasen Kari.</p> <p>Krockbilar, bergbanor, dansbanor och ett eget Lilleputtland skulle göra Göteborg roligare och dra folk till staden. Tobias Svanelid besöker 100-årsjubilerande Liseberg som trots invigningsårets regnsommar blev en stor succé och som allt sedan dess roat göteborgare och andra med åkattraktioner, musik och dans.</p><p>Dessutom uppmärksammar vi de arkeologiska undersökningarna av den första allierade spionbasen på svensk mark under andra världskriget. Mitt under brinnande krig tillät det förment alliansfria Sverige de allierade att anlägga en radiomast och en sabotagebas för norska och allierade spioner i trakterna av Torne träsk. Nu avslöjas vardagslivet på basen, och dess okända historia.</p>",
+      "id": "5VArykQcDSfiqaaNqh0o1p",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a3a95289e736b6562c123a197",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f3a95289e736b6562c123a197",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d3a95289e736b6562c123a197",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Liseberg gjorde Göteborg roligare",
+      "release_date": "2023-05-09",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:5VArykQcDSfiqaaNqh0o1p"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/024bdb6d57cb4a5acecc396fc648992c441705c4",
+      "description": "Vilka var Sveriges bästa och sämsta kungar och vem hade fulast frisyr? Panelen återsamlas för att debattera kungar genom historien. Och så granskar vi bioaktuella filmen om de tre musketörerna! Historiepanelen träffas för att diskutera kungens 50 år på tronen och listar Sveriges bästa och värsta kungar. Hör om Gustav III som turistguide, om Magnus Erikssons misslyckanden och rikskanslern som var bättre än Gustav II Adolf, men också om Karl IX:s hopplösa frisyr och bibliskt inspirerade lagstiftning.Dessutom går vi på bio för att granska aktuella De tre musketörerna – d’Artagnans historievetenskapliga förtjänster och tillkortakommanden. Historikerna Mats Hallenberg och Magnus Linnarsson gillar filmens ambitioner, men är tveksamma till 1600-talsmusköternas träffsäkerhet.Och så reder Dick Harrison ut om det är vår långa alliansfrihet eller bara ren och skär tur som gjort att Sverige klarat sig undan krig under drygt 200 år.Programledare är Tobias Svanelid.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/3BB21jA2vdM6sNVXl0vndg"
+      },
+      "href": "https://api.spotify.com/v1/episodes/3BB21jA2vdM6sNVXl0vndg",
+      "html_description": "<p>Vilka var Sveriges bästa och sämsta kungar och vem hade fulast frisyr? Panelen återsamlas för att debattera kungar genom historien. Och så granskar vi bioaktuella filmen om de tre musketörerna!</p> <p>Historiepanelen träffas för att diskutera kungens 50 år på tronen och listar Sveriges bästa och värsta kungar. Hör om Gustav III som turistguide, om Magnus Erikssons misslyckanden och rikskanslern som var bättre än Gustav II Adolf, men också om Karl IX:s hopplösa frisyr och bibliskt inspirerade lagstiftning.</p><p>Dessutom går vi på bio för att granska aktuella De tre musketörerna – d’Artagnans historievetenskapliga förtjänster och tillkortakommanden. Historikerna Mats Hallenberg och Magnus Linnarsson gillar filmens ambitioner, men är tveksamma till 1600-talsmusköternas träffsäkerhet.</p><p>Och så reder Dick Harrison ut om det är vår långa alliansfrihet eller bara ren och skär tur som gjort att Sverige klarat sig undan krig under drygt 200 år.</p><p>Programledare är Tobias Svanelid.</p>",
+      "id": "3BB21jA2vdM6sNVXl0vndg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8aa2ec8db962dcf68ddb282034",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fa2ec8db962dcf68ddb282034",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68da2ec8db962dcf68ddb282034",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "De var Sveriges sämsta kungar",
+      "release_date": "2023-05-02",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:3BB21jA2vdM6sNVXl0vndg"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/0507794c1e7bb25ad1711cff19b4a931d24269b7",
+      "description": "En norsk korstågskung steg i land i det påstått hedniska Småland år 1123. Tobias Svanelid undersöker historien kring Kalmare ledung och hur lilla fiskeläget Simrishamn då steg fram i historiens ljus. År 1123 seglade hundratals norska skepp in i Kalmarsund i syfte att kristna de hedniska smålänningarna. Händelsen som gått till historien som Kalmare ledung var mer av en storpolitisk revirmarkering än ett heligt krig, menar historikern Dick Harrison, och fick också konsekvensen att lilla fiskeläget Simrishamn stapplade in i historiens ljus.Tobias Svanelid reser till Simrishamn för att med museichefen Lena Alebo prata om stadens historia, som alltså började för 900 år sedan, och som man firar stort i år. Och så reder vi ut vad som egentligen hände under Kalmare ledung, och hur hedniska smålänningarna egentligen var år 1123.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/34cKuUWCbsM85VCOE07wYF"
+      },
+      "href": "https://api.spotify.com/v1/episodes/34cKuUWCbsM85VCOE07wYF",
+      "html_description": "<p>En norsk korstågskung steg i land i det påstått hedniska Småland år 1123. Tobias Svanelid undersöker historien kring Kalmare ledung och hur lilla fiskeläget Simrishamn då steg fram i historiens ljus.</p> <p>År 1123 seglade hundratals norska skepp in i Kalmarsund i syfte att kristna de hedniska smålänningarna. Händelsen som gått till historien som Kalmare ledung var mer av en storpolitisk revirmarkering än ett heligt krig, menar historikern Dick Harrison, och fick också konsekvensen att lilla fiskeläget Simrishamn stapplade in i historiens ljus.</p><p>Tobias Svanelid reser till Simrishamn för att med museichefen Lena Alebo prata om stadens historia, som alltså började för 900 år sedan, och som man firar stort i år. Och så reder vi ut vad som egentligen hände under Kalmare ledung, och hur hedniska smålänningarna egentligen var år 1123.</p>",
+      "id": "34cKuUWCbsM85VCOE07wYF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a145e74df87ddae67af4b5454",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f145e74df87ddae67af4b5454",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d145e74df87ddae67af4b5454",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Norges korståg mot Småland",
+      "release_date": "2023-04-25",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:34cKuUWCbsM85VCOE07wYF"
+    },
+    {
+      "audio_preview_url": "https://p.scdn.co/mp3-preview/4c0ab334d2fe63f375016b6925a1d137ca1871c2",
+      "description": "Sverige hade sin egen Biggles! Hör om Gustaf Lönnbergs fantastiska historia i brittiska RAF och hur de svenska piloterna i allierad tjänst stred mot Hitler med glömdes bort av hemlandet. Flera svenskar stred i det brittiska flygvapnet RAF mot Hitlertyskland. I den aktuella boken Svenska flygare mot Hitler, frivilliga i Royal Air Force 1939-45 kartlägger militärhistorikerna Lars Gyllenhaal och Lennart Westberg deras öden och äventyr. Flera av dem blev rikt dekorerade av den brittiska staten, men hemma i Sverige sågs de med misstänksamhet, och deras historia har glömts bort. För lika mycket som svenskarna älskade den fiktive Biggles, lika mycket hade man svårt att förstå sina landsmäns erfarenheter från kriget, berättar Lars Gyllenhaal.Dessutom diskuterar vi surrogatens och livsmedelssubstitutens historia i Sverige. Idag har kaffeprisets uppgång skapat krigsrubriker, men redan på 1700-talet försökte man komma runt de höga kaffepriserna med hjälp av fantasifulla surrogat, berättar historikern Hanna Hodacs som kartlägger surrogathistorien i ett nytt forskningsprojekt.Och så reder Dick Harrison ut historien om våra svenska socknar och hur de egentligen uppstod.Programledare är Tobias Svanelid.",
+      "duration_ms": 2685024,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/3bFIYSSgoNnwhMNKyj1Jjb"
+      },
+      "href": "https://api.spotify.com/v1/episodes/3bFIYSSgoNnwhMNKyj1Jjb",
+      "html_description": "<p>Sverige hade sin egen Biggles! Hör om Gustaf Lönnbergs fantastiska historia i brittiska RAF och hur de svenska piloterna i allierad tjänst stred mot Hitler med glömdes bort av hemlandet.</p> <p>Flera svenskar stred i det brittiska flygvapnet RAF mot Hitlertyskland. I den aktuella boken Svenska flygare mot Hitler, frivilliga i Royal Air Force 1939-45 kartlägger militärhistorikerna Lars Gyllenhaal och Lennart Westberg deras öden och äventyr. Flera av dem blev rikt dekorerade av den brittiska staten, men hemma i Sverige sågs de med misstänksamhet, och deras historia har glömts bort. För lika mycket som svenskarna älskade den fiktive Biggles, lika mycket hade man svårt att förstå sina landsmäns erfarenheter från kriget, berättar Lars Gyllenhaal.</p><p>Dessutom diskuterar vi surrogatens och livsmedelssubstitutens historia i Sverige. Idag har kaffeprisets uppgång skapat krigsrubriker, men redan på 1700-talet försökte man komma runt de höga kaffepriserna med hjälp av fantasifulla surrogat, berättar historikern Hanna Hodacs som kartlägger surrogathistorien i ett nytt forskningsprojekt.</p><p>Och så reder Dick Harrison ut historien om våra svenska socknar och hur de egentligen uppstod.</p><p>Programledare är Tobias Svanelid.</p>",
+      "id": "3bFIYSSgoNnwhMNKyj1Jjb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8ac73a44acb6f83e1efb29d501",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1fc73a44acb6f83e1efb29d501",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68dc73a44acb6f83e1efb29d501",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "sv",
+      "languages": [
+        "sv"
+      ],
+      "name": "Sveriges Biggles",
+      "release_date": "2023-04-18",
+      "release_date_precision": "day",
+      "resume_point": {
+        "fully_played": false,
+        "resume_position_ms": 0
+      },
+      "type": "episode",
+      "uri": "spotify:episode:3bFIYSSgoNnwhMNKyj1Jjb"
+    }
+  ],
+  "limit": 10,
+  "next": "https://api.spotify.com/v1/shows/38bS44xjbVVZ3No3ByF1dJ/episodes?offset=10&limit=10&market=ES",
+  "offset": 0,
+  "previous": null,
+  "total": 500
+}
