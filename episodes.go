@@ -44,13 +44,17 @@ type Episode struct {
 	URI string `json:"uri"`
 	// Included in the response when a content restriction is applied.
 	Restrictions Restrictions `json:"restrictions"`
+}
+
+type FullEpisode struct {
+	Episode
 	// The show on which the episode belongs.
 	Show Show `json:"show"`
 }
 
 type SavedEpisode struct {
 	AddedAt string `json:"added_at"`
-	Episode
+	FullEpisode
 }
 
 type GetEpisodeParams struct {
@@ -58,7 +62,7 @@ type GetEpisodeParams struct {
 }
 
 type GetEpisodeResponse struct {
-	Episode
+	FullEpisode
 }
 
 // Get Spotify catalog information for a single episode identified by its unique Spotify ID.
@@ -86,7 +90,7 @@ type GetSeveralEpisodesParams struct {
 }
 
 type GetSeveralEpisodesResponse struct {
-	Episodes []Episode `json:"episodes"`
+	Episodes []FullEpisode `json:"episodes"`
 }
 
 // Get Spotify catalog information for several episodes based on their Spotify IDs.
