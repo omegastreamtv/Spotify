@@ -269,8 +269,8 @@ type CheckUsersSavedAudiobooksParams struct {
 // Check if one or more audiobooks are already saved in the current Spotify user's library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedAudiobooks(ids []string) error {
-	var res struct{}
+func (c *Client) CheckUsersSavedAudiobooks(ids []string) ([]bool, error) {
+	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedAudiobooksParams{
@@ -280,8 +280,8 @@ func (c *Client) CheckUsersSavedAudiobooks(ids []string) error {
 	c.get("/me/audiobooks/contains").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	return nil
+	return res, nil
 }
