@@ -1,6 +1,6 @@
 # Spotify
 
-![Coverage](https://img.shields.io/badge/Coverage-81.5%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-75.5%25-brightgreen)
 
 Spotify is a Go wrapper for Spotify's web API.
 
@@ -11,18 +11,19 @@ go get github.com/omegastreamtv/spotify
 ```
 
 ## Endpoints
-*All the `Params`, `Body` and `Response` types are named exactly the same as the function.*
+
+_All the `Params`, `Body` and `Response` types are named exactly the same as the function._
 
 ### Albums
 
 - [x] [Get Album (`GetAlbum`)](https://developer.spotify.com/documentation/web-api/reference/get-an-album)
 - [x] [Get Several Albums (`GetSeveralAlbums`)](https://developer.spotify.com/documentation/web-api/reference/get-multiple-albums)
 - [x] [Get Album Tracks (`GetAlbumTracks`)](https://developer.spotify.com/documentation/web-api/reference/get-an-albums-tracks)
-- [ ] [Get User's Saved Albums (`GetUsersSavedAlbums`)](https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums)
-- [ ] [Save Albums for Current User (`SaveAlbumsForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/save-albums-user)
-- [ ] [Remove Users' Saved Albums (`RemoveAlbumsForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/remove-albums-user)
-- [ ] [Check USer's Saved Albums (`CheckUsersSavedAlbums`)](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-albums)
-- [ ] [Get New Releases (`GetNewReleases`)](https://developer.spotify.com/documentation/web-api/reference/get-new-releases)
+- [x] [Get User's Saved Albums (`GetUsersSavedAlbums`)](https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums)
+- [x] [Save Albums for Current User (`SaveAlbumsForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/save-albums-user)
+- [x] [Remove Users' Saved Albums (`RemoveAlbumsForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/remove-albums-user)
+- [x] [Check USer's Saved Albums (`CheckUsersSavedAlbums`)](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-albums)
+- [x] [Get New Releases (`GetNewReleases`)](https://developer.spotify.com/documentation/web-api/reference/get-new-releases)
 
 ### Artists
 
@@ -55,7 +56,7 @@ go get github.com/omegastreamtv/spotify
 ### Episodes
 
 - [x] [Get Episode (`GetEpisode`)](https://developer.spotify.com/documentation/web-api/reference/get-an-episode)
-- [x] [Get Several Episodes (`GetSeveralEpisodes`)]([url](https://developer.spotify.com/documentation/web-api/reference/get-multiple-episodes))
+- [x] [Get Several Episodes (`GetSeveralEpisodes`)](<[url](https://developer.spotify.com/documentation/web-api/reference/get-multiple-episodes)>)
 - [x] [Get User's Saved Episodes (`GetUsersSavedEpisodes`)](https://developer.spotify.com/documentation/web-api/reference/get-users-saved-episodes)
 - [x] [Save Episodes for Current User (`SaveEpisodesForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/save-episodes-user)
 - [x] [Remove User's Saved Episodes (`RemoveUsersSavedEpisodes`)](https://developer.spotify.com/documentation/web-api/reference/remove-episodes-user)
