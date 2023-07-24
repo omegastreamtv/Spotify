@@ -1,6 +1,6 @@
 # Spotify
 
-![Coverage](https://img.shields.io/badge/Coverage-9.4%25-red)
+![Coverage](https://img.shields.io/badge/Coverage-9.1%25-red)
 
 Spotify is a Go wrapper for Spotify's web API.
 
@@ -43,8 +43,8 @@ go get github.com/omegastreamtv/spotify
 
 ### Categories
 
-- [ ] Get Several Browse Categories
-- [ ] Get Single Browse Category
+- [x] Get Several Browse Categories
+- [x] Get Single Browse Category
 
 ### Chapters
 
