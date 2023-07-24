@@ -1,0 +1,737 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2u01kCKA5wDvvztuH8lyT0"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "deathstep",
+        "dubstep",
+        "riddim dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2u01kCKA5wDvvztuH8lyT0",
+      "id": "2u01kCKA5wDvvztuH8lyT0",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eba679fb6384ec42e9c5ea8758",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174a679fb6384ec42e9c5ea8758",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178a679fb6384ec42e9c5ea8758",
+          "width": 160
+        }
+      ],
+      "name": "SVDDEN DEATH",
+      "popularity": 50,
+      "type": "artist",
+      "uri": "spotify:artist:2u01kCKA5wDvvztuH8lyT0"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5R5MLOQbI4lb7GHYioPqoN"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "dance-punk",
+        "pov: indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5R5MLOQbI4lb7GHYioPqoN",
+      "id": "5R5MLOQbI4lb7GHYioPqoN",
+      "images": [
+        {
+          "height": 800,
+          "url": "https://i.scdn.co/image/786910afed9a2c3589d522a062c64fb4197d55ca",
+          "width": 1000
+        },
+        {
+          "height": 512,
+          "url": "https://i.scdn.co/image/1f1b7c62c4e57973551a3a636fbd0126662501ed",
+          "width": 640
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/d9f2edae660cdb52c5fdc2987c070310cdade75c",
+          "width": 200
+        },
+        {
+          "height": 51,
+          "url": "https://i.scdn.co/image/2b94f00a36de925f62c5ac71d4204124f7aa7802",
+          "width": 64
+        }
+      ],
+      "name": "Mindless Self Indulgence",
+      "popularity": 61,
+      "type": "artist",
+      "uri": "spotify:artist:5R5MLOQbI4lb7GHYioPqoN"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3NJ94iuAmmMjbszODYT6pO"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3NJ94iuAmmMjbszODYT6pO",
+      "id": "3NJ94iuAmmMjbszODYT6pO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebda3630f6732d14437a4ab33d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174da3630f6732d14437a4ab33d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178da3630f6732d14437a4ab33d",
+          "width": 160
+        }
+      ],
+      "name": "Subtronics",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:3NJ94iuAmmMjbszODYT6pO"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6MwPCCR936cYfM1dLsGVnl"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "alternative metal",
+        "metalcore"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6MwPCCR936cYfM1dLsGVnl",
+      "id": "6MwPCCR936cYfM1dLsGVnl",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb58f2b24b02877506d74b612b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517458f2b24b02877506d74b612b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17858f2b24b02877506d74b612b",
+          "width": 160
+        }
+      ],
+      "name": "Motionless In White",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:6MwPCCR936cYfM1dLsGVnl"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0e86yPdC41PGRkLp2Q1Bph"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "pov: indie",
+        "vancouver indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0e86yPdC41PGRkLp2Q1Bph",
+      "id": "0e86yPdC41PGRkLp2Q1Bph",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb89ee23db7dea7c6314463a74",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517489ee23db7dea7c6314463a74",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17889ee23db7dea7c6314463a74",
+          "width": 160
+        }
+      ],
+      "name": "Mother Mother",
+      "popularity": 70,
+      "type": "artist",
+      "uri": "spotify:artist:0e86yPdC41PGRkLp2Q1Bph"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0yrzVTuk6PgF51NYgfgKXe"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "louisville indie",
+        "pov: indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0yrzVTuk6PgF51NYgfgKXe",
+      "id": "0yrzVTuk6PgF51NYgfgKXe",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb03315ac9f7334814f0b5288a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517403315ac9f7334814f0b5288a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17803315ac9f7334814f0b5288a",
+          "width": 160
+        }
+      ],
+      "name": "GRLwood",
+      "popularity": 51,
+      "type": "artist",
+      "uri": "spotify:artist:0yrzVTuk6PgF51NYgfgKXe"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2FJC1Wce3SiCCbIoYwVWq0"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep",
+        "riddim dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2FJC1Wce3SiCCbIoYwVWq0",
+      "id": "2FJC1Wce3SiCCbIoYwVWq0",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebfebb66977031ddd43f4dd975",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174febb66977031ddd43f4dd975",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178febb66977031ddd43f4dd975",
+          "width": 160
+        }
+      ],
+      "name": "Monxx",
+      "popularity": 41,
+      "type": "artist",
+      "uri": "spotify:artist:2FJC1Wce3SiCCbIoYwVWq0"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/43tAs3kRWvyu1B7eZOv2pp"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep",
+        "electronic trap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/43tAs3kRWvyu1B7eZOv2pp",
+      "id": "43tAs3kRWvyu1B7eZOv2pp",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb3a0a9d7bf92cea2c64822cb9",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051743a0a9d7bf92cea2c64822cb9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1783a0a9d7bf92cea2c64822cb9",
+          "width": 160
+        }
+      ],
+      "name": "Herobust",
+      "popularity": 37,
+      "type": "artist",
+      "uri": "spotify:artist:43tAs3kRWvyu1B7eZOv2pp"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/25oLRSUjJk4YHNUsQXk7Ut"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "jamtronica",
+        "jazztronica",
+        "livetronica"
+      ],
+      "href": "https://api.spotify.com/v1/artists/25oLRSUjJk4YHNUsQXk7Ut",
+      "id": "25oLRSUjJk4YHNUsQXk7Ut",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb70fa7f3e6cb3df4c100fd43a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517470fa7f3e6cb3df4c100fd43a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17870fa7f3e6cb3df4c100fd43a",
+          "width": 160
+        }
+      ],
+      "name": "GRiZ",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:25oLRSUjJk4YHNUsQXk7Ut"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3V1h3kAdiVDBiwlY2i6dJz"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3V1h3kAdiVDBiwlY2i6dJz",
+      "id": "3V1h3kAdiVDBiwlY2i6dJz",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb7d5a5406261aa70f71e42eb6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051747d5a5406261aa70f71e42eb6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1787d5a5406261aa70f71e42eb6",
+          "width": 160
+        }
+      ],
+      "name": "12th Planet",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:3V1h3kAdiVDBiwlY2i6dJz"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5mlbvTfWUOfDrUIK6dkNzv"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "alt z"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5mlbvTfWUOfDrUIK6dkNzv",
+      "id": "5mlbvTfWUOfDrUIK6dkNzv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6a1adf31a45fc3350dc2b126",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746a1adf31a45fc3350dc2b126",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786a1adf31a45fc3350dc2b126",
+          "width": 160
+        }
+      ],
+      "name": "Poppy",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:5mlbvTfWUOfDrUIK6dkNzv"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6Cqy862jSCV7qdNrCDqvNK"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6Cqy862jSCV7qdNrCDqvNK",
+      "id": "6Cqy862jSCV7qdNrCDqvNK",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb505a4d490c4fc922e396a09a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174505a4d490c4fc922e396a09a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178505a4d490c4fc922e396a09a",
+          "width": 160
+        }
+      ],
+      "name": "Hairitage",
+      "popularity": 47,
+      "type": "artist",
+      "uri": "spotify:artist:6Cqy862jSCV7qdNrCDqvNK"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6Z8O8PugLuKyLFVkZLQDRZ"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "deathstep",
+        "dubstep",
+        "riddim dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6Z8O8PugLuKyLFVkZLQDRZ",
+      "id": "6Z8O8PugLuKyLFVkZLQDRZ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe7381aa9fd387107517f971f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e7381aa9fd387107517f971f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e7381aa9fd387107517f971f",
+          "width": 160
+        }
+      ],
+      "name": "Midnight Tyrannosaurus",
+      "popularity": 43,
+      "type": "artist",
+      "uri": "spotify:artist:6Z8O8PugLuKyLFVkZLQDRZ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0tvpihdAsKiNnP6sWS3jUI"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "bass trap",
+        "electronic trap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0tvpihdAsKiNnP6sWS3jUI",
+      "id": "0tvpihdAsKiNnP6sWS3jUI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebd1fa76f62c61486dd01295c4",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174d1fa76f62c61486dd01295c4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178d1fa76f62c61486dd01295c4",
+          "width": 160
+        }
+      ],
+      "name": "TroyBoi",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:0tvpihdAsKiNnP6sWS3jUI"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1ZpDxqXS6HAvoZyCzQfKRb"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/1ZpDxqXS6HAvoZyCzQfKRb",
+      "id": "1ZpDxqXS6HAvoZyCzQfKRb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6dc2b46539097968b388d207",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746dc2b46539097968b388d207",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786dc2b46539097968b388d207",
+          "width": 160
+        }
+      ],
+      "name": "LEVEL UP",
+      "popularity": 41,
+      "type": "artist",
+      "uri": "spotify:artist:1ZpDxqXS6HAvoZyCzQfKRb"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3T0BepBNnd3kw2m10rh8yW"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "experimental bass"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3T0BepBNnd3kw2m10rh8yW",
+      "id": "3T0BepBNnd3kw2m10rh8yW",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebca0212a4fce1a79cbc84dd15",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ca0212a4fce1a79cbc84dd15",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ca0212a4fce1a79cbc84dd15",
+          "width": 160
+        }
+      ],
+      "name": "TVBOO",
+      "popularity": 38,
+      "type": "artist",
+      "uri": "spotify:artist:3T0BepBNnd3kw2m10rh8yW"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4aBx7mA6lUOVhEsjokZrXb"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep",
+        "filthstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4aBx7mA6lUOVhEsjokZrXb",
+      "id": "4aBx7mA6lUOVhEsjokZrXb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebff3f8c844a503e1ba7218810",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ff3f8c844a503e1ba7218810",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ff3f8c844a503e1ba7218810",
+          "width": 160
+        }
+      ],
+      "name": "MUST DIE!",
+      "popularity": 41,
+      "type": "artist",
+      "uri": "spotify:artist:4aBx7mA6lUOVhEsjokZrXb"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4dvZ0abeUaiHm7Fu9Gj0PQ"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep",
+        "filthstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4dvZ0abeUaiHm7Fu9Gj0PQ",
+      "id": "4dvZ0abeUaiHm7Fu9Gj0PQ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8ae9ce4858e16db9fe94dfd0",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051748ae9ce4858e16db9fe94dfd0",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1788ae9ce4858e16db9fe94dfd0",
+          "width": 160
+        }
+      ],
+      "name": "Eptic",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:4dvZ0abeUaiHm7Fu9Gj0PQ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4llAOeA6kEF4ytaB2fsmcW"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "indietronica",
+        "pixel",
+        "pov: indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4llAOeA6kEF4ytaB2fsmcW",
+      "id": "4llAOeA6kEF4ytaB2fsmcW",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ae390841cf7a97bf3a59bb5d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ae390841cf7a97bf3a59bb5d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ae390841cf7a97bf3a59bb5d",
+          "width": 64
+        }
+      ],
+      "name": "Lemon Demon",
+      "popularity": 61,
+      "type": "artist",
+      "uri": "spotify:artist:4llAOeA6kEF4ytaB2fsmcW"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5c3akKV3CUqAVOnGZqf4S3"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5c3akKV3CUqAVOnGZqf4S3",
+      "id": "5c3akKV3CUqAVOnGZqf4S3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb2a58d6a9f85106b99b863558",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051742a58d6a9f85106b99b863558",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1782a58d6a9f85106b99b863558",
+          "width": 160
+        }
+      ],
+      "name": "Barely Alive",
+      "popularity": 44,
+      "type": "artist",
+      "uri": "spotify:artist:5c3akKV3CUqAVOnGZqf4S3"
+    }
+  ],
+  "total": 25,
+  "limit": 20,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=20&offset=20",
+  "previous": null
+}
