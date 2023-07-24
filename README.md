@@ -53,12 +53,12 @@ go get github.com/omegastreamtv/spotify
 
 ### Episodes
 
-- [ ] Get Episode
-- [ ] Get Several Episodes
-- [ ] Get User's Saved Episodes
-- [ ] Save Episodes for Current User
-- [ ] Remove User's Saved Episodes
-- [ ] Check USer's Saved Episodes
+- [x] Get Episode
+- [x] Get Several Episodes
+- [x] Get User's Saved Episodes
+- [x] Save Episodes for Current User
+- [x] Remove User's Saved Episodes
+- [x] Check User's Saved Episodes
 
 ### Genres
 
