@@ -1,5 +1,6 @@
 # Spotify
-![Coverage](https://img.shields.io/badge/Coverage-12.1%25-red)
+
+![Coverage](https://img.shields.io/badge/Coverage-9.4%25-red)
 
 Spotify is a Go wrapper for Spotify's web API.
 
@@ -131,13 +132,13 @@ go get github.com/omegastreamtv/spotify
 
 ### Users
 
-- [ ] Get Current User's Profile
-- [ ] Get User's Top Items
-- [ ] Get User's Profile
-- [ ] Follow Playlist
-- [ ] Unfollow Playlist
-- [ ] Get Followed Artists
-- [ ] Follow Artists or Users
-- [ ] Unfollow Artists or Users
-- [ ] Check if User Follows Artists or Users
-- [ ] Check if Users Follow Playlist
+- [x] Get Current User's Profile
+- [x] Get User's Top Items (split into `GetUsersTopArtists` and `GetUsersTopTracks`)
+- [x] Get User's Profile
+- [x] Follow Playlist
+- [x] Unfollow Playlist
+- [x] Get Followed Artists
+- [x] Follow Artists or Users
+- [x] Unfollow Artists or Users
+- [x] Check if User Follows Artists or Users
+- [x] Check if Users Follow Playlist
