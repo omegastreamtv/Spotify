@@ -354,15 +354,9 @@ type GetUsersSavedTracksResponse struct {
 // Get a list of the songs saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) GetUsersSavedTracks(market string, limit int, offset int) (*GetUsersSavedTracksResponse, error) {
+func (c *Client) GetUsersSavedTracks(params *GetUsersSavedTracksParams) (*GetUsersSavedTracksResponse, error) {
 	tracks := GetUsersSavedTracksResponse{}
 	var err *SpotifyError
-
-	params := GetUsersSavedTracksParams{
-		Market: market,
-		Limit:  limit,
-		Offset: offset,
-	}
 
 	c.get("/me/tracks").QueryStruct(params).Receive(&tracks, &err)
 

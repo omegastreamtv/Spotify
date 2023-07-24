@@ -1,0 +1,1659 @@
+{
+  "href": "https://api.spotify.com/v1/me/tracks?offset=0&limit=20",
+  "items": [
+    {
+      "added_at": "2017-10-03T01:10:06Z",
+      "track": {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF"
+              },
+              "href": "https://api.spotify.com/v1/artists/4nDoRrQiYLoBzwC5BhVJzF",
+              "id": "4nDoRrQiYLoBzwC5BhVJzF",
+              "name": "Camila Cabello",
+              "type": "artist",
+              "uri": "spotify:artist:4nDoRrQiYLoBzwC5BhVJzF"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5chBPOVY2I0bG5V3igb5QL"
+          },
+          "href": "https://api.spotify.com/v1/albums/5chBPOVY2I0bG5V3igb5QL",
+          "id": "5chBPOVY2I0bG5V3igb5QL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d93cf4d07ba50d7b32ca7c44",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d93cf4d07ba50d7b32ca7c44",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d93cf4d07ba50d7b32ca7c44",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Havana (feat. Young Thug)",
+          "release_date": "2017-08-03",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:5chBPOVY2I0bG5V3igb5QL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF"
+            },
+            "href": "https://api.spotify.com/v1/artists/4nDoRrQiYLoBzwC5BhVJzF",
+            "id": "4nDoRrQiYLoBzwC5BhVJzF",
+            "name": "Camila Cabello",
+            "type": "artist",
+            "uri": "spotify:artist:4nDoRrQiYLoBzwC5BhVJzF"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/50co4Is1HCEo8bhOyUWKpn"
+            },
+            "href": "https://api.spotify.com/v1/artists/50co4Is1HCEo8bhOyUWKpn",
+            "id": "50co4Is1HCEo8bhOyUWKpn",
+            "name": "Young Thug",
+            "type": "artist",
+            "uri": "spotify:artist:50co4Is1HCEo8bhOyUWKpn"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 217306,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USSM11706905"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1rfofaqEpACxVEHIZBJe6W"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1rfofaqEpACxVEHIZBJe6W",
+        "id": "1rfofaqEpACxVEHIZBJe6W",
+        "is_local": false,
+        "is_playable": true,
+        "linked_from": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0ofbQMrRDsUaVKq2mGLEAb"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0ofbQMrRDsUaVKq2mGLEAb",
+          "id": "0ofbQMrRDsUaVKq2mGLEAb",
+          "type": "track",
+          "uri": "spotify:track:0ofbQMrRDsUaVKq2mGLEAb"
+        },
+        "name": "Havana (feat. Young Thug)",
+        "popularity": 83,
+        "preview_url": "https://p.scdn.co/mp3-preview/49653dbbec996f228cb6edc046d318cd5a249ee6?cid=0b297fa8a249464ba34f5861d4140e58",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:1rfofaqEpACxVEHIZBJe6W"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 262560,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414224"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02FgozogtnZghe8DtBeUAt"
+        },
+        "href": "https://api.spotify.com/v1/tracks/02FgozogtnZghe8DtBeUAt",
+        "id": "02FgozogtnZghe8DtBeUAt",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Never Enough",
+        "popularity": 37,
+        "preview_url": null,
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:02FgozogtnZghe8DtBeUAt"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 282133,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414212"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0P1wH403SZCVHRrHzdSAUu"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0P1wH403SZCVHRrHzdSAUu",
+        "id": "0P1wH403SZCVHRrHzdSAUu",
+        "is_local": false,
+        "is_playable": true,
+        "name": "I'm Gone",
+        "popularity": 41,
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:0P1wH403SZCVHRrHzdSAUu"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 559533,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414228"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2JEqqPu4UYnzcNxDy9JVu3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2JEqqPu4UYnzcNxDy9JVu3",
+        "id": "2JEqqPu4UYnzcNxDy9JVu3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Under Pressure",
+        "popularity": 44,
+        "preview_url": null,
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:2JEqqPu4UYnzcNxDy9JVu3"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 312373,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414232"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2mRh9gO4YlLJo6vFRgT13V"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2mRh9gO4YlLJo6vFRgT13V",
+        "id": "2mRh9gO4YlLJo6vFRgT13V",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Till The End",
+        "popularity": 44,
+        "preview_url": null,
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:2mRh9gO4YlLJo6vFRgT13V"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 295360,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414230"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3QSQMtxZLxMIhRxeDqgSvj"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3QSQMtxZLxMIhRxeDqgSvj",
+        "id": "3QSQMtxZLxMIhRxeDqgSvj",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Metropolis",
+        "popularity": 41,
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:3QSQMtxZLxMIhRxeDqgSvj"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 182800,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414206"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3RyT0M0ZVETTPFIWPiFL0x"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3RyT0M0ZVETTPFIWPiFL0x",
+        "id": "3RyT0M0ZVETTPFIWPiFL0x",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Intro",
+        "popularity": 37,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3RyT0M0ZVETTPFIWPiFL0x"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 244880,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414220"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3bA1iq8gddrg5DvgyqdXD5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3bA1iq8gddrg5DvgyqdXD5",
+        "id": "3bA1iq8gddrg5DvgyqdXD5",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Bounce",
+        "popularity": 40,
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:3bA1iq8gddrg5DvgyqdXD5"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 292933,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414209"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4gKTgPgFEttvPSzHA8EOo3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4gKTgPgFEttvPSzHA8EOo3",
+        "id": "4gKTgPgFEttvPSzHA8EOo3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Soul Food",
+        "popularity": 43,
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:4gKTgPgFEttvPSzHA8EOo3"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 167320,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414216"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5SiH1JfdmqgWrK6BHBjbCX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5SiH1JfdmqgWrK6BHBjbCX",
+        "id": "5SiH1JfdmqgWrK6BHBjbCX",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Gang Related",
+        "popularity": 45,
+        "preview_url": null,
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:5SiH1JfdmqgWrK6BHBjbCX"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 203506,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414226"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5g8bR5hEuANnazd1mnLq05"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5g8bR5hEuANnazd1mnLq05",
+        "id": "5g8bR5hEuANnazd1mnLq05",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Nikki",
+        "popularity": 42,
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:5g8bR5hEuANnazd1mnLq05"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 337746,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414218"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/73JNvc6jFSZkx4R84kyPzL"
+        },
+        "href": "https://api.spotify.com/v1/tracks/73JNvc6jFSZkx4R84kyPzL",
+        "id": "73JNvc6jFSZkx4R84kyPzL",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Buried Alive",
+        "popularity": 40,
+        "preview_url": null,
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:73JNvc6jFSZkx4R84kyPzL"
+      }
+    },
+    {
+      "added_at": "2017-09-18T22:57:02Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+              },
+              "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+              "id": "4xRYI6VqpkE3UwrDrAZL8L",
+              "name": "Logic",
+              "type": "artist",
+              "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mmsiTfdurVQwtBCO9MDD5"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mmsiTfdurVQwtBCO9MDD5",
+          "id": "3mmsiTfdurVQwtBCO9MDD5",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735d349db0ade7b17f7c60b049",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025d349db0ade7b17f7c60b049",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515d349db0ade7b17f7c60b049",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under Pressure",
+          "release_date": "2014-10-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3mmsiTfdurVQwtBCO9MDD5"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xRYI6VqpkE3UwrDrAZL8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xRYI6VqpkE3UwrDrAZL8L",
+            "id": "4xRYI6VqpkE3UwrDrAZL8L",
+            "name": "Logic",
+            "type": "artist",
+            "uri": "spotify:artist:4xRYI6VqpkE3UwrDrAZL8L"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 246773,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71414222"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7w97IYlna881b8oOnzckg0"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7w97IYlna881b8oOnzckg0",
+        "id": "7w97IYlna881b8oOnzckg0",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Growing Pains III",
+        "popularity": 37,
+        "preview_url": null,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:7w97IYlna881b8oOnzckg0"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 216386,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116410"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0E4rAAAzRPE8I7tYzNq99p"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0E4rAAAzRPE8I7tYzNq99p",
+        "id": "0E4rAAAzRPE8I7tYzNq99p",
+        "is_local": false,
+        "is_playable": true,
+        "name": "All I Want Is You",
+        "popularity": 38,
+        "preview_url": null,
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:0E4rAAAzRPE8I7tYzNq99p"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1YfEcTuGvBQ8xSD1f53UnK"
+            },
+            "href": "https://api.spotify.com/v1/artists/1YfEcTuGvBQ8xSD1f53UnK",
+            "id": "1YfEcTuGvBQ8xSD1f53UnK",
+            "name": "Busta Rhymes",
+            "type": "artist",
+            "uri": "spotify:artist:1YfEcTuGvBQ8xSD1f53UnK"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 225333,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116408"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Pd4lsvSDPkcNCxbcz0UeV"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0Pd4lsvSDPkcNCxbcz0UeV",
+        "id": "0Pd4lsvSDPkcNCxbcz0UeV",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Drummer Boy",
+        "popularity": 42,
+        "preview_url": null,
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:0Pd4lsvSDPkcNCxbcz0UeV"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/75FnCoo4FBxH5K1Rrx0k5A"
+            },
+            "href": "https://api.spotify.com/v1/artists/75FnCoo4FBxH5K1Rrx0k5A",
+            "id": "75FnCoo4FBxH5K1Rrx0k5A",
+            "name": "The Band Perry",
+            "type": "artist",
+            "uri": "spotify:artist:75FnCoo4FBxH5K1Rrx0k5A"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 204400,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116411"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/192yj763UcVbfyxFrVmIac"
+        },
+        "href": "https://api.spotify.com/v1/tracks/192yj763UcVbfyxFrVmIac",
+        "id": "192yj763UcVbfyxFrVmIac",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Home This Christmas",
+        "popularity": 34,
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:192yj763UcVbfyxFrVmIac"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4iHNK0tOyZPYnBU7nGAgpQ"
+            },
+            "href": "https://api.spotify.com/v1/artists/4iHNK0tOyZPYnBU7nGAgpQ",
+            "id": "4iHNK0tOyZPYnBU7nGAgpQ",
+            "name": "Mariah Carey",
+            "type": "artist",
+            "uri": "spotify:artist:4iHNK0tOyZPYnBU7nGAgpQ"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 240333,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116441"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1IUtgwxLYzDVd41EgbKUjX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1IUtgwxLYzDVd41EgbKUjX",
+        "id": "1IUtgwxLYzDVd41EgbKUjX",
+        "is_local": false,
+        "is_playable": true,
+        "name": "All I Want For Christmas Is You (SuperFestive!) Duet with Mariah Carey",
+        "popularity": 44,
+        "preview_url": null,
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:1IUtgwxLYzDVd41EgbKUjX"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 216746,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116391"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1JJUsWVriEtXr8lHSQXTIy"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1JJUsWVriEtXr8lHSQXTIy",
+        "id": "1JJUsWVriEtXr8lHSQXTIy",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Santa Claus Is Coming To Town",
+        "popularity": 40,
+        "preview_url": null,
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:1JJUsWVriEtXr8lHSQXTIy"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 173040,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71116432"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1c3KqIIDoomFj4551PD1A5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1c3KqIIDoomFj4551PD1A5",
+        "id": "1c3KqIIDoomFj4551PD1A5",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Someday At Christmas",
+        "popularity": 32,
+        "preview_url": null,
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:1c3KqIIDoomFj4551PD1A5"
+      }
+    },
+    {
+      "added_at": "2017-09-10T14:52:39Z",
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+              },
+              "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+              "id": "1uNFoZAHBGtllmzznpCI3s",
+              "name": "Justin Bieber",
+              "type": "artist",
+              "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/63MKT9hwmiMFFdFp5SdB1p"
+          },
+          "href": "https://api.spotify.com/v1/albums/63MKT9hwmiMFFdFp5SdB1p",
+          "id": "63MKT9hwmiMFFdFp5SdB1p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730315efc555d5a157b0392652",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020315efc555d5a157b0392652",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510315efc555d5a157b0392652",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Under The Mistletoe (Deluxe Edition)",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:63MKT9hwmiMFFdFp5SdB1p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uNFoZAHBGtllmzznpCI3s",
+            "id": "1uNFoZAHBGtllmzznpCI3s",
+            "name": "Justin Bieber",
+            "type": "artist",
+            "uri": "spotify:artist:1uNFoZAHBGtllmzznpCI3s"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 212320,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71027052"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3O5zp6tOdGFWi0NdzC0frI"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3O5zp6tOdGFWi0NdzC0frI",
+        "id": "3O5zp6tOdGFWi0NdzC0frI",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Pray",
+        "popularity": 49,
+        "preview_url": null,
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:3O5zp6tOdGFWi0NdzC0frI"
+      }
+    }
+  ],
+  "limit": 20,
+  "next": "https://api.spotify.com/v1/me/tracks?offset=20&limit=20",
+  "offset": 0,
+  "previous": null,
+  "total": 286
+}
