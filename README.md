@@ -46,8 +46,8 @@ go get github.com/omegastreamtv/spotify
 
 ### Chapters
 
-- [ ] Get a Chapter
-- [ ] Get Several Chapters
+- [x] Get a Chapter
+- [x] Get Several Chapters
 
 ### Episodes
 
