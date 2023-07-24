@@ -1,0 +1,22 @@
+{
+  "display_name": "testuser",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/testuser"
+  },
+  "href": "https://api.spotify.com/v1/users/testuser",
+  "id": "testuser",
+  "images": [],
+  "type": "user",
+  "uri": "spotify:user:testuser",
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "country": "US",
+  "product": "free",
+  "explicit_content": {
+    "filter_enabled": false,
+    "filter_locked": false
+  },
+  "email": "testuser@gmail.com"
+}
