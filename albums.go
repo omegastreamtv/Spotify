@@ -37,7 +37,7 @@ type Album struct {
 	// The Spotify URI for the album.
 	URI string `json:"uri"`
 	// The copyright statements of the album.
-	Copyrights []Copyrights `json:"copyrights"`
+	Copyrights []Copyright `json:"copyrights"`
 	// Known external IDs for the album.
 	ExternalIDs ExternalIDs `json:"external_ids"`
 	// A list of the genres the album is associated with. If not yet classified, the array is empty.

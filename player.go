@@ -33,7 +33,7 @@ type Restrictions struct {
 }
 
 // The copyright statements of the show.
-type Copyrights struct {
+type Copyright struct {
 	// The copyright text for this content.
 	Text string `json:"text"`
 	// The type of copyright: C = the copyright, P = the sound recording (performance) copyright.
