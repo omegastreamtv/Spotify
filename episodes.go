@@ -203,8 +203,8 @@ type CheckUsersSavedEpisodesParams struct {
 // Required scope: user-library-read
 //
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
-func (c *Client) CheckUsersSavedEpisodes(ids []string) error {
-	var res struct{}
+func (c *Client) CheckUsersSavedEpisodes(ids []string) ([]bool, error) {
+	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedEpisodesParams{
@@ -214,8 +214,8 @@ func (c *Client) CheckUsersSavedEpisodes(ids []string) error {
 	c.get("/me/episodes/contains").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	return nil
+	return res, nil
 }
