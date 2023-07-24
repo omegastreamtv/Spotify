@@ -44,7 +44,12 @@ func NewClient(options *Options, client *http.Client) (*Client, error) {
 		mu:              sync.RWMutex{},
 		userAccessToken: "",
 		httpClient:      http.DefaultClient,
-		baseURL:         options.BaseURL,
+		baseURL:         URL,
+	}
+
+	if options.BaseURL != "" {
+		fmt.Println("here 2", options.BaseURL)
+		c.baseURL = options.BaseURL
 	}
 
 	if options.ClientID == "" {
@@ -111,6 +116,7 @@ func (c *Client) get(path string) *sling.Sling {
 		fmt.Println("use userAccessToken")
 	}
 
+	fmt.Println("HERE", c.baseURL)
 	req := sling.New().Get(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
