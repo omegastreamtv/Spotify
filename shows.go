@@ -6,23 +6,40 @@ import (
 )
 
 type Show struct {
-	AvailableMarkets   []string     `json:"available_markets"`
-	Copyrights         []Copyright  `json:"copyrights"`
-	Description        string       `json:"description"`
-	HTMLDescription    string       `json:"html_description"`
-	Explicit           bool         `json:"explicit"`
-	ExternalURLs       ExternalURLs `json:"external_ur_ls"`
-	Href               string       `json:"href"`
-	ID                 string       `json:"id"`
-	Images             []Image      `json:"images"`
-	IsExternallyHosted bool         `json:"is_externally_hosted"`
-	Languages          []string     `json:"languages"`
-	MediaType          string       `json:"media_type"`
-	Name               string       `json:"name"`
-	Publisher          string       `json:"publisher"`
-	Type               string       `json:"type"`
-	URI                string       `json:"uri"`
-	TotalEpisodes      int          `json:"total_episodes"`
+	// A list of the countries in which the show can be played, identified by their ISO 3166-1 alpha-2 code.
+	AvailableMarkets []string `json:"available_markets"`
+	// The copyright statements of the show.
+	Copyrights []Copyright `json:"copyrights"`
+	// A description of the show. HTML tags are stripped away from this field, use html_description field in case HTML tags are needed.
+	Description string `json:"description"`
+	// A description of the show. This field may contain HTML tags.
+	HTMLDescription string `json:"html_description"`
+	// Whether or not the show has explicit content (true = yes it does; false = no it does not OR unknown).
+	Explicit bool `json:"explicit"`
+	// External URLs for this show.
+	ExternalURLs ExternalURLs `json:"external_ur_ls"`
+	// A link to the Web API endpoint providing full details of the show.
+	Href string `json:"href"`
+	// The Spotify ID for the show.
+	ID string `json:"id"`
+	// The cover art for the show in various sizes, widest first.
+	Images []Image `json:"images"`
+	// True if all of the shows episodes are hosted outside of Spotify's CDN. This field might be null in some cases.
+	IsExternallyHosted bool `json:"is_externally_hosted"`
+	// A list of the languages used in the show, identified by their ISO 639 code.
+	Languages []string `json:"languages"`
+	// The media type of the show.
+	MediaType string `json:"media_type"`
+	// The name of the episode.
+	Name string `json:"name"`
+	// The publisher of the show.
+	Publisher string `json:"publisher"`
+	// The object type.
+	Type string `json:"type"`
+	// The Spotify URI for the show.
+	URI string `json:"uri"`
+	// The total number of episodes in the show.
+	TotalEpisodes int `json:"total_episodes"`
 }
 
 type FullShow struct {
