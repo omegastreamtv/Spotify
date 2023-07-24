@@ -1,9 +1,6 @@
 # Spotify
 ![Coverage](https://img.shields.io/badge/Coverage-12.1%25-red)
 
-[![Format](https://github.com/omegastreamtv/Spotify/actions/workflows/format.yaml/badge.svg?branch=main)](https://github.com/omegastreamtv/Spotify/actions/workflows/format.yaml)
-![Coverage](https://github.com/omegastreamtv/Spotify/blob/main/badge.svg)
-
 Spotify is a Go wrapper for Spotify's web API.
 
 ## Install
