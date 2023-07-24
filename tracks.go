@@ -385,14 +385,11 @@ type SaveTracksForCurrentUserBody struct {
 	IDs []string `json:"ids"`
 }
 
-type SaveTracksForCurrentUserResponse string
-
-var saveTracksForCurrentUserResponse SaveTracksForCurrentUserResponse = "Track saved"
-
 // Save one or more tracks to the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveTracksForCurrentUser(ids []string) (*SaveTracksForCurrentUserResponse, error) {
+func (c *Client) SaveTracksForCurrentUser(ids []string) error {
+	var res struct{}
 	var err *SpotifyError
 
 	params := SaveTracksForCurrentUserParams{
@@ -403,13 +400,13 @@ func (c *Client) SaveTracksForCurrentUser(ids []string) (*SaveTracksForCurrentUs
 		IDs: ids,
 	}
 
-	c.put("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&saveTracksForCurrentUserResponse, err)
+	c.put("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, err)
 
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	return &saveTracksForCurrentUserResponse, nil
+	return nil
 }
 
 type RemoveUsersSavedTracksParams struct {
@@ -424,14 +421,11 @@ type RemoveUsersSavedTracksBody struct {
 	IDs []string `json:"ids"`
 }
 
-type RemoveUsersSavedTracksResponse string
-
-var removeUsersSavedTracksResponse RemoveUsersSavedTracksResponse = "Track removed"
-
 // Remove one or more tracks from the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveUsersSavedTracks(ids []string) (*RemoveUsersSavedTracksResponse, error) {
+func (c *Client) RemoveUsersSavedTracks(ids []string) error {
+	var res struct{}
 	var err *SpotifyError
 
 	params := RemoveUsersSavedTracksParams{
@@ -442,13 +436,13 @@ func (c *Client) RemoveUsersSavedTracks(ids []string) (*RemoveUsersSavedTracksRe
 		IDs: ids,
 	}
 
-	c.delete("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(removeUsersSavedTracksResponse, err)
+	c.delete("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, err)
 
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	return &removeUsersSavedTracksResponse, nil
+	return nil
 }
 
 type CheckUsersSavedTracksParams struct {
