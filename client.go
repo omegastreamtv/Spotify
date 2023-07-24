@@ -48,7 +48,6 @@ func NewClient(options *Options, client *http.Client) (*Client, error) {
 	}
 
 	if options.BaseURL != "" {
-		fmt.Println("here 2", options.BaseURL)
 		c.baseURL = options.BaseURL
 	}
 
@@ -61,8 +60,6 @@ func NewClient(options *Options, client *http.Client) (*Client, error) {
 	if client == nil {
 		c.httpClient = client
 	}
-
-	fmt.Println(c.opts.BaseURL)
 
 	return c, nil
 }
@@ -113,10 +110,8 @@ func (c *Client) get(path string) *sling.Sling {
 	tokenToUse := c.appAccessToken
 	if c.userAccessToken != "" {
 		tokenToUse = c.userAccessToken
-		fmt.Println("use userAccessToken")
 	}
 
-	fmt.Println("HERE", c.baseURL)
 	req := sling.New().Get(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
@@ -130,7 +125,6 @@ func (c *Client) put(path string) *sling.Sling {
 	tokenToUse := c.appAccessToken
 	if c.userAccessToken != "" {
 		tokenToUse = c.userAccessToken
-		fmt.Println("use userAccessToken")
 	}
 
 	req := sling.New().Put(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
@@ -146,7 +140,6 @@ func (c *Client) delete(path string) *sling.Sling {
 	tokenToUse := c.appAccessToken
 	if c.userAccessToken != "" {
 		tokenToUse = c.userAccessToken
-		fmt.Println("use userAccessToken")
 	}
 
 	req := sling.New().Delete(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
