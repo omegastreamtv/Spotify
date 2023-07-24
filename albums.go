@@ -61,21 +61,25 @@ type FullAlbum struct {
 }
 
 type GetAlbumResponse struct {
-	Album FullAlbum `json:"album"`
+	Album
+	Tracks struct {
+		Pagination
+		Items []Track `json:"items"`
+	} `json:"tracks"`
 }
 
 // Get Spotify catalog information for a single album.
 func (c *Client) GetAlbum(id string, market string) (*GetAlbumResponse, error) {
-	album := FullAlbum{}
+	album := GetAlbumResponse{}
 	var err *SpotifyError
+
 	c.get(fmt.Sprintf("/albums/%s", id)).Receive(&album, &err)
+
 	if err != nil {
 		return nil, err
 	}
 
-	return &GetAlbumResponse{
-		Album: album,
-	}, nil
+	return &album, nil
 }
 
 type GetSeveralAlbumsParams struct {
@@ -106,6 +110,7 @@ func (c *Client) GetSeveralAlbums(ids []string, market string) (*GetSeveralAlbum
 	}
 
 	c.get("/albums").QueryStruct(params).Receive(&albums, &err)
+
 	if err != nil {
 		return nil, err
 	}
@@ -144,15 +149,16 @@ type GetAlbumTracksResponse struct {
 
 // Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.
 func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAlbumTracksResponse, error) {
-	albums := GetAlbumTracksResponse{}
+	tracks := GetAlbumTracksResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/albums/%v/tracks", id)).QueryStruct(params).Receive(&albums, &err)
+	c.get(fmt.Sprintf("/albums/%s/tracks", id)).QueryStruct(params).Receive(&tracks, &err)
+
 	if err != nil {
 		return nil, err
 	}
 
-	return &albums, nil
+	return &tracks, nil
 }
 
 // Get a list of the albums saved in the current Spotify user's 'Your Music' library.
