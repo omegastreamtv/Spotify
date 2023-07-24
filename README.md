@@ -43,8 +43,8 @@ go get github.com/omegastreamtv/spotify
 
 ### Categories
 
-- [ ] Get Several Browse Categories
-- [ ] Get Single Browse Category
+- [x] Get Several Browse Categories
+- [x] Get Single Browse Category
 
 ### Chapters
 
