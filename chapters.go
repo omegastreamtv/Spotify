@@ -84,7 +84,7 @@ func (c *Client) GetAChapter(id string, market string) (*GetAChapterResponse, er
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/chapters/%s", id)).QueryStruct(params).Receive(&chapter, err)
+	c.get(fmt.Sprintf("/chapters/%s", id)).QueryStruct(params).Receive(&chapter, &err)
 
 	if err != nil {
 		return nil, err
@@ -118,7 +118,7 @@ func (c *Client) GetSeveralChapters(ids []string, market string) (*GetSeveralCha
 		Market: market,
 	}
 
-	c.get("/chapters").QueryStruct(params).Receive(&chapters, err)
+	c.get("/chapters").QueryStruct(params).Receive(&chapters, &err)
 
 	if err != nil {
 		return nil, err

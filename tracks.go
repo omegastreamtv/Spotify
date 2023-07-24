@@ -288,7 +288,7 @@ func (c *Client) GetTrack(id string, market string) (*GetTrackResponse, error) {
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/tracks/%s", id)).QueryStruct(params).Receive(&track, err)
+	c.get(fmt.Sprintf("/tracks/%s", id)).QueryStruct(params).Receive(&track, &err)
 
 	if err != nil {
 		return nil, err
@@ -323,7 +323,7 @@ func (c *Client) GetSeveralTracks(market string, ids []string) (*GetSeveralTrack
 		IDs:    strings.Join(ids, ","),
 	}
 
-	c.get("/tracks").QueryStruct(params).Receive(&tracks, err)
+	c.get("/tracks").QueryStruct(params).Receive(&tracks, &err)
 
 	if err != nil {
 		return nil, err
@@ -364,7 +364,7 @@ func (c *Client) GetUsersSavedTracks(market string, limit int, offset int) (*Get
 		Offset: offset,
 	}
 
-	c.get("/me/tracks").QueryStruct(params).Receive(&tracks, err)
+	c.get("/me/tracks").QueryStruct(params).Receive(&tracks, &err)
 
 	if err != nil {
 		return nil, err
@@ -400,7 +400,7 @@ func (c *Client) SaveTracksForCurrentUser(ids []string) error {
 		IDs: ids,
 	}
 
-	c.put("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, err)
+	c.put("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -436,7 +436,7 @@ func (c *Client) RemoveUsersSavedTracks(ids []string) error {
 		IDs: ids,
 	}
 
-	c.delete("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, err)
+	c.delete("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -463,7 +463,7 @@ func (c *Client) CheckUsersSavedTracks(ids []string) (*CheckUsersSavedTracksResp
 		IDs: strings.Join(ids, ","),
 	}
 
-	c.get("/me/tracks/contains").QueryStruct(params).Receive(&foundEach, err)
+	c.get("/me/tracks/contains").QueryStruct(params).Receive(&foundEach, &err)
 
 	if err != nil {
 		return nil, err
@@ -490,7 +490,7 @@ func (c *Client) GetMultiTracksAudioFeatures(ids []string) (*GetMultiTracksAudio
 		IDs: strings.Join(ids, ","),
 	}
 
-	c.get("/audio-features").QueryStruct(params).Receive(&features, err)
+	c.get("/audio-features").QueryStruct(params).Receive(&features, &err)
 
 	if err != nil {
 		return nil, err
@@ -510,7 +510,7 @@ func (c *Client) GetSingleTracksAudioFeatures(id string) (*GetSingleTracksAudioF
 	features := GetSingleTracksAudioFeaturesResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-features/%s", id)).Receive(&features, err)
+	c.get(fmt.Sprintf("/audio-features/%s", id)).Receive(&features, &err)
 
 	if err != nil {
 		return nil, err
@@ -528,7 +528,7 @@ func (c *Client) GetTracksAudioAnalysis(id string) (*GetTracksAudioAnalysisRespo
 	analysis := GetTracksAudioAnalysisResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-analysis/%s", id)).Receive(&analysis, err)
+	c.get(fmt.Sprintf("/audio-analysis/%s", id)).Receive(&analysis, &err)
 
 	if err != nil {
 		return nil, err
@@ -672,7 +672,7 @@ func (c *Client) GetRecommendations(payload GetRecommendationsBody) (*GetRecomme
 	recs := GetRecommendationsResponse{}
 	var err *SpotifyError
 
-	c.get("/recommendations").BodyJSON(payload).Receive(&recs, err)
+	c.get("/recommendations").BodyJSON(payload).Receive(&recs, &err)
 
 	if err != nil {
 		return nil, err
