@@ -127,7 +127,7 @@ func (c *Client) put(path string) *sling.Sling {
 		fmt.Println("use userAccessToken")
 	}
 
-	req := sling.New().Put(URL+path).Set("Authorization", "Bearer "+tokenToUse)
+	req := sling.New().Put(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
 
@@ -143,7 +143,7 @@ func (c *Client) delete(path string) *sling.Sling {
 		fmt.Println("use userAccessToken")
 	}
 
-	req := sling.New().Delete(URL+path).Set("Authorization", "Bearer "+tokenToUse)
+	req := sling.New().Delete(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
 	c.userAccessToken = ""
 	c.mu.Unlock()
 

@@ -1,0 +1,121 @@
+{
+  "href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20",
+  "items": [
+    {
+      "authors": [
+        {
+          "name": "James McBride"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "ET",
+        "US"
+      ],
+      "copyrights": [],
+      "description": "Author(s): James McBride\nNarrator(s): Dominic Hoffman\n\n<P><b>OPRAH’S BOOK CLUB PICK</b></p><p><b>A <i>NEW YORK TIMES</i> BESTSELLER</b></p><p><b>From the author of the National Book Award–winning <i>The Good Lord Bird</i> and the bestselling modern classic <i>The Color of Water</i>, comes one of the most celebrated novels of the year.</b></p><p>In September 1969, a fumbling, cranky old church deacon known as Sportcoat shuffles into the courtyard of the Cause Houses housing project in south Brooklyn, pulls a .38 from his pocket, and, in front of everybody, shoots the project's drug dealer at point-blank range.</p><p>The reasons for this desperate burst of violence and the consequences that spring from it lie at the heart of <i>Deacon King Kong</i>, James McBride's funny, moving novel and his first since his National Book Award&ndash;winning <i>The Good Lord Bird</i>. In <i>Deacon King Kong</i>, McBride brings to vivid life the people affected by the shooting: the victim, the African-American and Latinx residents who witnessed it, the white neighbors, the local cops assigned to investigate, the members of the Five Ends Baptist Church where Sportcoat was deacon, the neighborhood's Italian mobsters, and Sportcoat himself. </p><p>As the story deepens, it becomes clear that the lives of the characters&mdash;caught in the tumultuous swirl of 1960s New York&mdash;overlap in unexpected ways. When the truth does emerge, McBride shows us that not all secrets are meant to be hidden, that the best way to grow is to face change without fear, and that the seeds of love lie in hope and compassion.</p><p>Bringing to these pages both his masterly storytelling skills and his abiding faith in humanity, James McBride has written a novel every bit as involving as <i>The Good Lord Bird</i> and as emotionally honest as <i>The Color of Water</i>. Told with insight and wit, <i>Deacon King Kong</i> demonstrates that love and faith live in all of us.</P>",
+      "edition": "Unabridged",
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/show/5j3Wklm3kYLvMj4twkJvhY"
+      },
+      "href": "https://api.spotify.com/v1/audiobooks/5j3Wklm3kYLvMj4twkJvhY",
+      "html_description": "Author(s): James McBride<br/>Narrator(s): Dominic Hoffman<br/>&lt;P&gt;&lt;b&gt;OPRAH’S BOOK CLUB PICK&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;A &lt;i&gt;NEW YORK TIMES&lt;/i&gt; BESTSELLER&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;From the author of the National Book Award–winning &lt;i&gt;The Good Lord Bird&lt;/i&gt; and the bestselling modern classic &lt;i&gt;The Color of Water&lt;/i&gt;, comes one of the most celebrated novels of the year.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;In September 1969, a fumbling, cranky old church deacon known as Sportcoat shuffles into the courtyard of the Cause Houses housing project in south Brooklyn, pulls a .38 from his pocket, and, in front of everybody, shoots the project&#39;s drug dealer at point-blank range.&lt;/p&gt;&lt;p&gt;The reasons for this desperate burst of violence and the consequences that spring from it lie at the heart of &lt;i&gt;Deacon King Kong&lt;/i&gt;, James McBride&#39;s funny, moving novel and his first since his National Book Award&amp;ndash;winning &lt;i&gt;The Good Lord Bird&lt;/i&gt;. In &lt;i&gt;Deacon King Kong&lt;/i&gt;, McBride brings to vivid life the people affected by the shooting: the victim, the African-American and Latinx residents who witnessed it, the white neighbors, the local cops assigned to investigate, the members of the Five Ends Baptist Church where Sportcoat was deacon, the neighborhood&#39;s Italian mobsters, and Sportcoat himself. &lt;/p&gt;&lt;p&gt;As the story deepens, it becomes clear that the lives of the characters&amp;mdash;caught in the tumultuous swirl of 1960s New York&amp;mdash;overlap in unexpected ways. When the truth does emerge, McBride shows us that not all secrets are meant to be hidden, that the best way to grow is to face change without fear, and that the seeds of love lie in hope and compassion.&lt;/p&gt;&lt;p&gt;Bringing to these pages both his masterly storytelling skills and his abiding faith in humanity, James McBride has written a novel every bit as involving as &lt;i&gt;The Good Lord Bird&lt;/i&gt; and as emotionally honest as &lt;i&gt;The Color of Water&lt;/i&gt;. Told with insight and wit, &lt;i&gt;Deacon King Kong&lt;/i&gt; demonstrates that love and faith live in all of us.&lt;/P&gt;",
+      "id": "5j3Wklm3kYLvMj4twkJvhY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab676663000022a81cec37185dc96df1c3b2df56",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab6766630000db5b1cec37185dc96df1c3b2df56",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6766630000703b1cec37185dc96df1c3b2df56",
+          "width": 64
+        }
+      ],
+      "languages": [
+        "English"
+      ],
+      "media_type": "audio",
+      "name": "Deacon King Kong (Oprah's Book Club): A Novel",
+      "narrators": [
+        {
+          "name": "Dominic Hoffman"
+        }
+      ],
+      "publisher": "Penguin Random House",
+      "total_chapters": null,
+      "type": "audiobook",
+      "uri": "spotify:show:5j3Wklm3kYLvMj4twkJvhY"
+    },
+    {
+      "authors": [
+        {
+          "name": "James Clear"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "ET",
+        "US"
+      ],
+      "copyrights": [
+        {
+          "text": "Penguin Random House 2018",
+          "type": "C"
+        }
+      ],
+      "description": "Author(s): James Clear\nNarrator(s): James Clear\n\n<p><b><i>Tiny Changes, Remarkable Results</i></b></p><p>No matter your goals, <i>Atomic Habits</i> offers a proven framework for improving&mdash;every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.</p><p>If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.</p><p>Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, listeners will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.</p><p>Learn how to:<ul><li>Make time for new habits (even when life gets crazy);</li><li>Overcome a lack of motivation and willpower;</li><li>Design your environment to make success easier;</li><li>Get back on track when you fall off course;</li><li>...and much more.</ul></li></p><p><i>Atomic Habits</i> will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits&mdash;whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.</p>",
+      "edition": "Unabridged",
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/show/40ygvasZaqVMMBkgYoUy8C"
+      },
+      "href": "https://api.spotify.com/v1/audiobooks/40ygvasZaqVMMBkgYoUy8C",
+      "html_description": "Author(s): James Clear<br/>Narrator(s): James Clear<br/>&lt;p&gt;&lt;b&gt;&lt;i&gt;Tiny Changes, Remarkable Results&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;No matter your goals, &lt;i&gt;Atomic Habits&lt;/i&gt; offers a proven framework for improving&amp;mdash;every day. James Clear, one of the world&#39;s leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.&lt;/p&gt;&lt;p&gt;If you&#39;re having trouble changing your habits, the problem isn&#39;t you. The problem is your system. Bad habits repeat themselves again and again not because you don&#39;t want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you&#39;ll get a proven system that can take you to new heights.&lt;/p&gt;&lt;p&gt;Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, listeners will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.&lt;/p&gt;&lt;p&gt;Learn how to:&lt;ul&gt;&lt;li&gt;Make time for new habits (even when life gets crazy);&lt;/li&gt;&lt;li&gt;Overcome a lack of motivation and willpower;&lt;/li&gt;&lt;li&gt;Design your environment to make success easier;&lt;/li&gt;&lt;li&gt;Get back on track when you fall off course;&lt;/li&gt;&lt;li&gt;...and much more.&lt;/ul&gt;&lt;/li&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Atomic Habits&lt;/i&gt; will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits&amp;mdash;whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.&lt;/p&gt;",
+      "id": "40ygvasZaqVMMBkgYoUy8C",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab676663000022a877fd4f6994f63554196df1d0",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab6766630000db5b77fd4f6994f63554196df1d0",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6766630000703b77fd4f6994f63554196df1d0",
+          "width": 64
+        }
+      ],
+      "languages": [
+        "English"
+      ],
+      "media_type": "audio",
+      "name": "Atomic Habits: An Easy and Proven Way to Build Good Habits and Break Bad Ones",
+      "narrators": [
+        {
+          "name": "James Clear"
+        }
+      ],
+      "publisher": "Penguin Random House",
+      "total_chapters": null,
+      "type": "audiobook",
+      "uri": "spotify:show:40ygvasZaqVMMBkgYoUy8C"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 2
+}
