@@ -314,7 +314,7 @@ type GetSeveralTracksResponse struct {
 }
 
 // Get Spotify catalog information for multiple tracks based on their Spotify IDs.
-func (c *Client) GetSeveralTracks(market string, ids []string) (*GetSeveralTracksResponse, error) {
+func (c *Client) GetSeveralTracks(ids []string, market string) (*GetSeveralTracksResponse, error) {
 	tracks := GetSeveralTracksResponse{}
 	var err *SpotifyError
 
