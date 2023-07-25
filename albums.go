@@ -253,8 +253,8 @@ type CheckUsersSavedAlbumsParams struct {
 // Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedAlbums(ids []string) error {
-	var res struct{}
+func (c *Client) CheckUsersSavedAlbums(ids []string) ([]bool, error) {
+	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedAlbumsParams{
@@ -264,10 +264,10 @@ func (c *Client) CheckUsersSavedAlbums(ids []string) error {
 	c.get("/me/albums/contains").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	return nil
+	return res, nil
 }
 
 type GetNewReleasesParams struct {
