@@ -195,9 +195,9 @@ func (c *Client) GetUsersSavedAlbums(params *GetUsersSavedAlbumsParams) (*GetUse
 	return &albums, nil
 }
 
-type SaveAlbumsForCurrentUserParams struct {
-	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
-	IDs string `url:"ids"`
+type SaveAlbumsForCurrentUserBody struct {
+	// A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request.
+	IDs []string `json:"ids"`
 }
 
 // Save one or more albums to the current user's 'Your Music' library.
@@ -207,11 +207,11 @@ func (c *Client) SaveAlbumsForCurrentUser(ids []string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	params := SaveAlbumsForCurrentUserParams{
-		IDs: strings.Join(ids, ","),
+	payload := SaveAlbumsForCurrentUserBody{
+		IDs: ids,
 	}
 
-	c.put("/me/albums").QueryStruct(params).Receive(&res, &err)
+	c.put("/me/albums").BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -220,9 +220,9 @@ func (c *Client) SaveAlbumsForCurrentUser(ids []string) error {
 	return nil
 }
 
-type RemoveAlbumsForCurrentUserParams struct {
-	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
-	IDs string `url:"ids"`
+type RemoveAlbumsForCurrentUserBody struct {
+	// A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request.
+	IDs []string `json:"ids"`
 }
 
 // Remove one or more albums from the current user's 'Your Music' library.
@@ -232,11 +232,11 @@ func (c *Client) RemoveAlbumsForCurrentUser(ids []string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	params := RemoveAlbumsForCurrentUserParams{
-		IDs: strings.Join(ids, ","),
+	payload := RemoveAlbumsForCurrentUserBody{
+		IDs: ids,
 	}
 
-	c.delete("/me/albums").QueryStruct(params).Receive(&res, &err)
+	c.delete("/me/albums").BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
