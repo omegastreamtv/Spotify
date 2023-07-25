@@ -206,11 +206,6 @@ type FollowArtistsOrUsersParams struct {
 	IDs string `url:"ids"`
 }
 
-type FollowArtistsOrUsersBody struct {
-	// A JSON array of the artist or user Spotify IDs.
-	IDs []string `url:"ids"`
-}
-
 // Add the current user as a follower of one or more artists or other Spotify users.
 //
 // Required scope: user-follow-modify
@@ -223,11 +218,7 @@ func (c *Client) FollowArtistsOrUsers(typ string, ids []string) error {
 		IDs:  strings.Join(ids, ","),
 	}
 
-	payload := FollowArtistsOrUsersBody{
-		IDs: ids,
-	}
-
-	c.put("/me/following").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
+	c.put("/me/following").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -243,11 +234,6 @@ type UnfollowArtistsOrUsersParams struct {
 	IDs string `url:"ids"`
 }
 
-type UnfollowArtistsOrUsersBody struct {
-	// A JSON array of the artist or user Spotify IDs.
-	IDs []string `url:"ids"`
-}
-
 // Remove the current user as a follower of one or more artists or other Spotify users.
 //
 // Required scope: user-follow-modify
@@ -260,11 +246,7 @@ func (c *Client) UnfollowArtistsOrUsers(typ string, ids []string) error {
 		IDs:  strings.Join(ids, ","),
 	}
 
-	payload := UnfollowArtistsOrUsersBody{
-		IDs: ids,
-	}
-
-	c.delete("/me/following").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
+	c.delete("/me/following").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
 		return err

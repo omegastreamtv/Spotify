@@ -367,15 +367,8 @@ func (c *Client) GetUsersSavedTracks(params *GetUsersSavedTracksParams) (*GetUse
 	return &tracks, nil
 }
 
-type SaveTracksForCurrentUserParams struct {
-	// A comma-separated list of the Spotify IDs. Maximum: 50 IDs.
-	IDs string `url:"ids"`
-}
-
 type SaveTracksForCurrentUserBody struct {
-	// A JSON array of the Spotify IDs.
-	//
-	// A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
+	// A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request.
 	IDs []string `json:"ids"`
 }
 
@@ -386,15 +379,11 @@ func (c *Client) SaveTracksForCurrentUser(ids []string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	params := SaveTracksForCurrentUserParams{
-		IDs: strings.Join(ids, ","),
-	}
-
 	payload := SaveTracksForCurrentUserBody{
 		IDs: ids,
 	}
 
-	c.put("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
+	c.put("/me/tracks").BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -403,15 +392,8 @@ func (c *Client) SaveTracksForCurrentUser(ids []string) error {
 	return nil
 }
 
-type RemoveUsersSavedTracksParams struct {
-	// A comma-separated list of the Spotify IDs. Maximum: 50 IDs.
-	IDs string `url:"ids"`
-}
-
 type RemoveUsersSavedTracksBody struct {
-	// A JSON array of the Spotify IDs.
-	//
-	// A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
+	// A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request.
 	IDs []string `json:"ids"`
 }
 
@@ -422,15 +404,11 @@ func (c *Client) RemoveUsersSavedTracks(ids []string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	params := RemoveUsersSavedTracksParams{
-		IDs: strings.Join(ids, ","),
-	}
-
 	payload := RemoveUsersSavedTracksBody{
 		IDs: ids,
 	}
 
-	c.delete("/me/tracks").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
+	c.delete("/me/tracks").BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
