@@ -6,8 +6,6 @@ import (
 )
 
 type User struct {
-	// The name displayed on the user's profile. null if not available.
-	DisplayName string `json:"display_name"`
 	// Known external URLs for this user.
 	ExternalURLs ExternalURLs `json:"external_ur_ls"`
 	// Information about the followers of the user.
@@ -16,16 +14,22 @@ type User struct {
 	Href string `json:"href"`
 	// The Spotify user ID for the user.
 	ID string `json:"id"`
-	// The user's profile image.
-	Images []Image `json:"images"`
 	// The object type: "user"
 	Type string `json:"type"`
 	// The Spotify URI for the user.
 	URI string `json:"uri"`
 }
 
-type FullUser struct {
+type BasicUser struct {
 	User
+	// The name displayed on the user's profile. null if not available.
+	DisplayName string `json:"display_name"`
+	// The user's profile image.
+	Images []Image `json:"images"`
+}
+
+type FullUser struct {
+	BasicUser
 	// The country of the user, as set in the user's account profile. An ISO 3166-1 alpha-2 country code. This field is only available when the current user has granted access to the user-read-private scope.
 	Country string `json:"country"`
 	// The user's email address, as entered by the user when creating their account. Important! This email address is unverified; there is no proof that it actually belongs to the user. This field is only available when the current user has granted access to the user-read-email scope.
