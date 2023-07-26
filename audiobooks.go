@@ -72,7 +72,7 @@ type GetAnAudiobookResponse struct {
 // Get Spotify catalog information for a single audiobook.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetAnAudiobook(id string, market Market) (*GetAnAudiobookResponse, error) {
+func (c *Client) GetAnAudiobook(audiobookId string, market Market) (*GetAnAudiobookResponse, error) {
 	audiobook := GetAnAudiobookResponse{}
 	var err *SpotifyError
 
@@ -80,7 +80,7 @@ func (c *Client) GetAnAudiobook(id string, market Market) (*GetAnAudiobookRespon
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/audiobooks/%s", id)).QueryStruct(params).Receive(&audiobook, &err)
+	c.get(fmt.Sprintf("/audiobooks/%s", audiobookId)).QueryStruct(params).Receive(&audiobook, &err)
 
 	if err != nil {
 		return nil, err
@@ -102,12 +102,12 @@ type GetSeveralAudiobooksResponse struct {
 // Get Spotify catalog information for several audiobooks identified by their Spotify IDs.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetSeveralAudiobooks(ids []string, market Market) (*GetSeveralAudiobooksResponse, error) {
+func (c *Client) GetSeveralAudiobooks(audiobookIds []string, market Market) (*GetSeveralAudiobooksResponse, error) {
 	audiobooks := GetSeveralAudiobooksResponse{}
 	var err *SpotifyError
 
 	params := GetSeveralAudiobooksParams{
-		IDs:    strings.Join(ids, ","),
+		IDs:    strings.Join(audiobookIds, ","),
 		Market: market,
 	}
 
@@ -136,11 +136,11 @@ type GetAudiobookChaptersResponse struct {
 // Get Spotify catalog information about an audiobook's chapters.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetAudiobookChapters(id string, params GetAudiobookChaptersParams) (*GetAudiobookChaptersResponse, error) {
+func (c *Client) GetAudiobookChapters(audiobookId string, params *GetAudiobookChaptersParams) (*GetAudiobookChaptersResponse, error) {
 	chapters := GetAudiobookChaptersResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/audiobooks/%s/chapters", id)).QueryStruct(params).Receive(&chapters, &err)
+	c.get(fmt.Sprintf("/audiobooks/%s/chapters", audiobookId)).QueryStruct(params).Receive(&chapters, &err)
 
 	if err != nil {
 		return nil, err
@@ -164,14 +164,9 @@ type GetUsersSavedAudioBooksResponse struct {
 // Get a list of the audiobooks saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) GetUsersSavedAudioBooks(limit int, offset int) (*GetUsersSavedAudioBooksResponse, error) {
+func (c *Client) GetUsersSavedAudioBooks(params *GetUsersSavedAudioBooksParams) (*GetUsersSavedAudioBooksResponse, error) {
 	audiobooks := GetUsersSavedAudioBooksResponse{}
 	var err *SpotifyError
-
-	params := GetUsersSavedAudioBooksParams{
-		Limit:  limit,
-		Offset: offset,
-	}
 
 	c.get("/me/audiobooks").QueryStruct(params).Receive(&audiobooks, &err)
 
@@ -187,29 +182,18 @@ type SaveAudiobooksForCurrentUserParams struct {
 	IDs string `url:"ids"`
 }
 
-type SaveAudiobooksForCurrentUserBody struct {
-	// A JSON array of the Spotify IDs.
-	//
-	// A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
-	IDs []string `json:"ids"`
-}
-
 // Save one or more audiobooks to the current Spotify user's library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveAudiobooksForCurrentUser(ids []string) error {
+func (c *Client) SaveAudiobooksForCurrentUser(audiobookIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := SaveAudiobooksForCurrentUserParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(audiobookIds, ","),
 	}
 
-	payload := SaveAudiobooksForCurrentUserBody{
-		IDs: ids,
-	}
-
-	c.put("/me/audiobooks").QueryStruct(params).BodyJSON(payload).Receive(&res, &err)
+	c.put("/me/audiobooks").QueryStruct(params).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -226,12 +210,12 @@ type RemoveUsersSavedAudiobooksParams struct {
 // Remove one or more audiobooks from the Spotify user's library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveUsersSavedAudiobooks(ids []string) error {
+func (c *Client) RemoveUsersSavedAudiobooks(audiobookIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := RemoveUsersSavedAudiobooksParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(audiobookIds, ","),
 	}
 
 	c.delete("/me/audiobooks").QueryStruct(params).Receive(&res, &err)
@@ -251,12 +235,12 @@ type CheckUsersSavedAudiobooksParams struct {
 // Check if one or more audiobooks are already saved in the current Spotify user's library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedAudiobooks(ids []string) ([]bool, error) {
+func (c *Client) CheckUsersSavedAudiobooks(audiobookIds []string) ([]bool, error) {
 	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedAudiobooksParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(audiobookIds, ","),
 	}
 
 	c.get("/me/audiobooks/contains").QueryStruct(params).Receive(&res, &err)

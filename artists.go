@@ -41,10 +41,10 @@ type GetArtistsResponse struct {
 }
 
 // Get Spotify catalog information for a single artist identified by their unique Spotify ID.
-func (c *Client) GetArtist(id string) (*GetArtistsResponse, error) {
+func (c *Client) GetArtist(artistId string) (*GetArtistsResponse, error) {
 	artist := GetArtistsResponse{}
 	var err *SpotifyError
-	c.get(fmt.Sprintf("/artists/%s", id)).Receive(&artist, &err)
+	c.get(fmt.Sprintf("/artists/%s", artistId)).Receive(&artist, &err)
 	if err != nil {
 		return nil, err
 	}
@@ -62,11 +62,11 @@ type GetSeveralArtistsResponse struct {
 }
 
 // Get Spotify catalog information for several artists based on their Spotify IDs.
-func (c *Client) GetSeveralArtists(ids []string) (*GetSeveralArtistsResponse, error) {
+func (c *Client) GetSeveralArtists(artistIds []string) (*GetSeveralArtistsResponse, error) {
 	artists := GetSeveralArtistsResponse{}
 
 	params := GetSeveralArtistsParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(artistIds, ","),
 	}
 
 	var err *SpotifyError
@@ -118,11 +118,11 @@ type GetArtistsAlbumsResponse struct {
 }
 
 // Get Spotify catalog information about an artist's albums.
-func (c *Client) GetArtistsAlbums(id string, params *GetArtistsAlbumsParams) (*GetArtistsAlbumsResponse, error) {
+func (c *Client) GetArtistsAlbums(artistId string, params *GetArtistsAlbumsParams) (*GetArtistsAlbumsResponse, error) {
 	albums := GetArtistsAlbumsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/artists/%s/albums", id)).QueryStruct(params).Receive(&albums, &err)
+	c.get(fmt.Sprintf("/artists/%s/albums", artistId)).QueryStruct(params).Receive(&albums, &err)
 
 	if err != nil {
 		return nil, err
@@ -140,11 +140,11 @@ type GetArtistsTopTracksResponse struct {
 }
 
 // Get Spotify catalog information about an artist's top tracks by country.
-func (c *Client) GetArtistsTopTracks(id string, params *GetArtistsTopTracksParams) (*GetArtistsTopTracksResponse, error) {
+func (c *Client) GetArtistsTopTracks(artistId string, params *GetArtistsTopTracksParams) (*GetArtistsTopTracksResponse, error) {
 	tracks := GetArtistsTopTracksResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/artists/%s/top-tracks", id)).QueryStruct(params).Receive(&tracks, &err)
+	c.get(fmt.Sprintf("/artists/%s/top-tracks", artistId)).QueryStruct(params).Receive(&tracks, &err)
 	if err != nil {
 		return nil, err
 	}
@@ -157,11 +157,11 @@ type GetArtistsRelatedArtistsResponse struct {
 }
 
 // Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history.
-func (c *Client) GetArtistsRelatedArtists(id string) (*GetArtistsRelatedArtistsResponse, error) {
+func (c *Client) GetArtistsRelatedArtists(artistId string) (*GetArtistsRelatedArtistsResponse, error) {
 	artists := GetArtistsRelatedArtistsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/artists/%s/related-artists", id)).Receive(&artists, &err)
+	c.get(fmt.Sprintf("/artists/%s/related-artists", artistId)).Receive(&artists, &err)
 	if err != nil {
 		return nil, err
 	}

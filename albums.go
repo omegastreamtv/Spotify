@@ -74,11 +74,11 @@ type GetAlbumResponse struct {
 }
 
 // Get Spotify catalog information for a single album.
-func (c *Client) GetAlbum(id string, market string) (*GetAlbumResponse, error) {
+func (c *Client) GetAlbum(albumId string, market string) (*GetAlbumResponse, error) {
 	album := GetAlbumResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/albums/%s", id)).Receive(&album, &err)
+	c.get(fmt.Sprintf("/albums/%s", albumId)).Receive(&album, &err)
 
 	if err != nil {
 		return nil, err
@@ -98,13 +98,13 @@ type GetSeveralAlbumsResponse struct {
 }
 
 // Get Spotify catalog information for multiple albums identified by their Spotify IDs.
-func (c *Client) GetSeveralAlbums(ids []string, market Market) (*GetSeveralAlbumsResponse, error) {
+func (c *Client) GetSeveralAlbums(albumIds []string, market Market) (*GetSeveralAlbumsResponse, error) {
 	albums := GetSeveralAlbumsResponse{}
 	var err *SpotifyError
 
 	params := GetSeveralAlbumsParams{
 		// Convert ids slice to a comma-separated string
-		IDs:    strings.Join(ids, ","),
+		IDs:    strings.Join(albumIds, ","),
 		Market: market,
 	}
 
@@ -141,11 +141,11 @@ type GetAlbumTracksResponse struct {
 }
 
 // Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.
-func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAlbumTracksResponse, error) {
+func (c *Client) GetAlbumTracks(albumId string, params *GetAlbumTracksParams) (*GetAlbumTracksResponse, error) {
 	tracks := GetAlbumTracksResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/albums/%s/tracks", id)).QueryStruct(params).Receive(&tracks, &err)
+	c.get(fmt.Sprintf("/albums/%s/tracks", albumId)).QueryStruct(params).Receive(&tracks, &err)
 
 	if err != nil {
 		return nil, err
@@ -191,12 +191,12 @@ type SaveAlbumsForCurrentUserBody struct {
 // Save one or more albums to the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveAlbumsForCurrentUser(ids []string) error {
+func (c *Client) SaveAlbumsForCurrentUser(albumIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	payload := SaveAlbumsForCurrentUserBody{
-		IDs: ids,
+		IDs: albumIds,
 	}
 
 	c.put("/me/albums").BodyJSON(payload).Receive(&res, &err)
@@ -216,12 +216,12 @@ type RemoveAlbumsForCurrentUserBody struct {
 // Remove one or more albums from the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveAlbumsForCurrentUser(ids []string) error {
+func (c *Client) RemoveAlbumsForCurrentUser(albumIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	payload := RemoveAlbumsForCurrentUserBody{
-		IDs: ids,
+		IDs: albumIds,
 	}
 
 	c.delete("/me/albums").BodyJSON(payload).Receive(&res, &err)
@@ -241,12 +241,12 @@ type CheckUsersSavedAlbumsParams struct {
 // Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedAlbums(ids []string) ([]bool, error) {
+func (c *Client) CheckUsersSavedAlbums(albumIds []string) ([]bool, error) {
 	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedAlbumsParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(albumIds, ","),
 	}
 
 	c.get("/me/albums/contains").QueryStruct(params).Receive(&res, &err)

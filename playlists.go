@@ -100,11 +100,11 @@ type GetPlaylistResponse struct {
 }
 
 // Get a playlist owned by a Spotify user.
-func (c *Client) GetPlaylist(id string, params *GetPlaylistParams) (*GetPlaylistResponse, error) {
+func (c *Client) GetPlaylist(playlistId string, params *GetPlaylistParams) (*GetPlaylistResponse, error) {
 	playlist := GetPlaylistResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/playlists/%s", id)).QueryStruct(params).Receive(&playlist, &err)
+	c.get(fmt.Sprintf("/playlists/%s", playlistId)).QueryStruct(params).Receive(&playlist, &err)
 
 	if err != nil {
 		return nil, err
@@ -129,11 +129,11 @@ type ChangePlaylistDetailsBody struct {
 // Change a playlist's name and public/private state. (The user must, of course, own the playlist.)
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) ChangePlaylistDetails(id string, body *ChangePlaylistDetailsBody) error {
+func (c *Client) ChangePlaylistDetails(playlistId string, body *ChangePlaylistDetailsBody) error {
 	var res struct{}
 	var err *SpotifyError
 
-	c.put(fmt.Sprintf("/playlists/%s", id)).BodyJSON(body).Receive(&res, &err)
+	c.put(fmt.Sprintf("/playlists/%s", playlistId)).BodyJSON(body).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -168,11 +168,11 @@ type GetPlaylistItemsResponse struct {
 // Get full details of the items of a playlist owned by a Spotify user.
 //
 // Required scope: playlist-read-private
-func (c *Client) GetPlaylistItems(id string, params *GetPlaylistItemsParams) (*GetPlaylistItemsResponse, error) {
+func (c *Client) GetPlaylistItems(playlistId string, params *GetPlaylistItemsParams) (*GetPlaylistItemsResponse, error) {
 	items := GetPlaylistItemsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/playlists/%s/tracks", id)).QueryStruct(params).Receive(&items, &err)
+	c.get(fmt.Sprintf("/playlists/%s/tracks", playlistId)).QueryStruct(params).Receive(&items, &err)
 
 	if err != nil {
 		return nil, err
@@ -207,11 +207,11 @@ type UpdatePlaylistItemsResponse struct {
 // Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can't be applied together in a single request.
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) UpdatePlaylistItems(id string, body *UpdatePlaylistItemsBody) (*UpdatePlaylistItemsResponse, error) {
+func (c *Client) UpdatePlaylistItems(playlistId string, body *UpdatePlaylistItemsBody) (*UpdatePlaylistItemsResponse, error) {
 	playlist := UpdatePlaylistItemsResponse{}
 	var err *SpotifyError
 
-	c.put(fmt.Sprintf("/playlists/%s/tracks", id)).BodyJSON(body).Receive(&playlist, &err)
+	c.put(fmt.Sprintf("/playlists/%s/tracks", playlistId)).BodyJSON(body).Receive(&playlist, &err)
 
 	if err != nil {
 		return nil, err
@@ -235,11 +235,11 @@ type AddItemsToPlaylistResponse struct {
 // Add one or more items to a user's playlist.
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) AddItemsToPlaylist(id string, body *AddItemsToPlaylistBody) (*AddItemsToPlaylistResponse, error) {
+func (c *Client) AddItemsToPlaylist(playlistId string, body *AddItemsToPlaylistBody) (*AddItemsToPlaylistResponse, error) {
 	playlist := AddItemsToPlaylistResponse{}
 	var err *SpotifyError
 
-	c.post(fmt.Sprintf("/playlists/%s/tracks", id)).BodyJSON(body).Receive(&playlist, &err)
+	c.post(fmt.Sprintf("/playlists/%s/tracks", playlistId)).BodyJSON(body).Receive(&playlist, &err)
 
 	if err != nil {
 		return nil, err
@@ -264,11 +264,11 @@ type RemovePlaylistItemsResponse struct {
 // Remove one or more items from a user's playlist.
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) RemovePlaylistItems(id string, body *RemovePlaylistItemsBody) (*RemovePlaylistItemsResponse, error) {
+func (c *Client) RemovePlaylistItems(playlistId string, body *RemovePlaylistItemsBody) (*RemovePlaylistItemsResponse, error) {
 	playlist := RemovePlaylistItemsResponse{}
 	var err *SpotifyError
 
-	c.delete(fmt.Sprintf("/playlists/%s/tracks", id)).BodyJSON(body).Receive(&playlist, &err)
+	c.delete(fmt.Sprintf("/playlists/%s/tracks", playlistId)).BodyJSON(body).Receive(&playlist, &err)
 
 	if err != nil {
 		return nil, err
@@ -320,11 +320,11 @@ type GetUsersPlaylistsResponse struct {
 // Get a list of the playlists owned or followed by a Spotify user.
 //
 // Required scope: playlist-read-private, playlist-read-collaborative
-func (c *Client) GetUsersPlaylists(id string, params *GetUsersPlaylistsParams) (*GetUsersPlaylistsResponse, error) {
+func (c *Client) GetUsersPlaylists(userId string, params *GetUsersPlaylistsParams) (*GetUsersPlaylistsResponse, error) {
 	playlists := GetUsersPlaylistsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/users/%s/playlists", id)).QueryStruct(params).Receive(&playlists, &err)
+	c.get(fmt.Sprintf("/users/%s/playlists", userId)).QueryStruct(params).Receive(&playlists, &err)
 
 	if err != nil {
 		return nil, err
@@ -351,11 +351,11 @@ type CreatePlaylistResponse struct {
 // Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) CreatePlaylist(id string, body *CreatePlaylistBody) (*CreatePlaylistResponse, error) {
+func (c *Client) CreatePlaylist(userId string, body *CreatePlaylistBody) (*CreatePlaylistResponse, error) {
 	playlist := CreatePlaylistResponse{}
 	var err *SpotifyError
 
-	c.post(fmt.Sprintf("/users/%s/playlists", id)).BodyJSON(body).Receive(&playlist, &err)
+	c.post(fmt.Sprintf("/users/%s/playlists", userId)).BodyJSON(body).Receive(&playlist, &err)
 
 	if err != nil {
 		return nil, err
@@ -419,11 +419,11 @@ type GetCategorysPlaylistsResponse struct {
 }
 
 // Get a list of Spotify playlists tagged with a particular category.
-func (c *Client) GetCategorysPlaylists(id string, params *GetCategorysPlaylistsParams) (*GetCategorysPlaylistsResponse, error) {
+func (c *Client) GetCategorysPlaylists(catId string, params *GetCategorysPlaylistsParams) (*GetCategorysPlaylistsResponse, error) {
 	playlists := GetCategorysPlaylistsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/browse/categories/%s/playlists", id)).QueryStruct(params).Receive(&playlists, &err)
+	c.get(fmt.Sprintf("/browse/categories/%s/playlists", catId)).QueryStruct(params).Receive(&playlists, &err)
 
 	if err != nil {
 		return nil, err
@@ -436,11 +436,11 @@ func (c *Client) GetCategorysPlaylists(id string, params *GetCategorysPlaylistsP
 type GetPlaylistCoverImageResponse []Image
 
 // Get the current image associated with a specific playlist.
-func (c *Client) GetPlaylistCoverImage(id string) (*GetPlaylistCoverImageResponse, error) {
+func (c *Client) GetPlaylistCoverImage(playlistId string) (*GetPlaylistCoverImageResponse, error) {
 	images := GetPlaylistCoverImageResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/playlists/%s/images", id)).Receive(&images, &err)
+	c.get(fmt.Sprintf("/playlists/%s/images", playlistId)).Receive(&images, &err)
 
 	if err != nil {
 		return nil, err
@@ -455,11 +455,11 @@ type AddCustomPlaylistCoverImageBody []byte
 // Replace the image used to represent a specific playlist.
 //
 // Required scope: ugc-image-upload, playlist-modify-public, playlist-modify-private
-func (c *Client) AddCustomPlaylistCoverImage(id string) error {
+func (c *Client) AddCustomPlaylistCoverImage(playlistId string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	c.put(fmt.Sprintf("/playlists/%s/images", id)).Receive(&res, &err)
+	c.put(fmt.Sprintf("/playlists/%s/images", playlistId)).Receive(&res, &err)
 
 	if err != nil {
 		return err
