@@ -95,13 +95,7 @@ type GetArtistsAlbumsParams struct {
 	//
 	// Example value: "single,appears_on"
 	IncludeGroups string `url:"include_groups,omitempty"`
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market        Market `url:"market,omitempty"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	//
 	// Example value: 10
@@ -129,6 +123,7 @@ func (c *Client) GetArtistsAlbums(id string, params *GetArtistsAlbumsParams) (*G
 	var err *SpotifyError
 
 	c.get(fmt.Sprintf("/artists/%s/albums", id)).QueryStruct(params).Receive(&albums, &err)
+
 	if err != nil {
 		return nil, err
 	}
@@ -137,13 +132,7 @@ func (c *Client) GetArtistsAlbums(id string, params *GetArtistsAlbumsParams) (*G
 }
 
 type GetArtistsTopTracksParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 }
 
 type GetArtistsTopTracksResponse struct {

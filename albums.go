@@ -89,14 +89,8 @@ func (c *Client) GetAlbum(id string, market string) (*GetAlbumResponse, error) {
 
 type GetSeveralAlbumsParams struct {
 	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
-	IDs string `url:"ids,omitempty"`
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	IDs    string `url:"ids,omitempty"`
+	Market Market `url:"market,omitempty"`
 }
 
 type GetSeveralAlbumsResponse struct {
@@ -104,7 +98,7 @@ type GetSeveralAlbumsResponse struct {
 }
 
 // Get Spotify catalog information for multiple albums identified by their Spotify IDs.
-func (c *Client) GetSeveralAlbums(ids []string, market string) (*GetSeveralAlbumsResponse, error) {
+func (c *Client) GetSeveralAlbums(ids []string, market Market) (*GetSeveralAlbumsResponse, error) {
 	albums := GetSeveralAlbumsResponse{}
 	var err *SpotifyError
 
@@ -124,13 +118,7 @@ func (c *Client) GetSeveralAlbums(ids []string, market string) (*GetSeveralAlbum
 }
 
 type GetAlbumTracksParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	//
 	// Example value: 10
@@ -168,10 +156,10 @@ func (c *Client) GetAlbumTracks(id string, params *GetAlbumTracksParams) (*GetAl
 
 type GetUsersSavedAlbumsParams struct {
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
-	Limit int `json:"limit"`
+	Limit int `url:"limit"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
-	Offset int    `json:"offset"`
-	Market string `json:"market"`
+	Offset int    `url:"offset"`
+	Market Market `url:"market"`
 }
 
 type GetUsersSavedAlbumsResponse struct {

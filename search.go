@@ -16,14 +16,8 @@ type SearchForItemParams struct {
 	// The upc, tag:new and tag:hipster filters can only be used while searching albums. The tag:new filter will return albums released in the past two weeks and tag:hipster can be used to return only albums with the lowest 10% popularity.
 	Q string `url:"q"`
 	// A comma-separated list of item types to search across. Search results include hits from all the specified item types. For example: q=abacab&type=album,track returns both albums and tracks matching "abacab".
-	Type []string `url:"type"`
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Type   []string `url:"type"`
+	Market Market   `url:"market,omitempty"`
 	// The maximum number of results to return in each item type.
 	Limit int `url:"limit,omitempty"`
 	// The index of the first result to return. Use with limit to get the next page of search results.

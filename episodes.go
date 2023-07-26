@@ -58,7 +58,7 @@ type SavedEpisode struct {
 }
 
 type GetEpisodeParams struct {
-	Market string `url:"market"`
+	Market Market `url:"market"`
 }
 
 type GetEpisodeResponse struct {
@@ -66,7 +66,7 @@ type GetEpisodeResponse struct {
 }
 
 // Get Spotify catalog information for a single episode identified by its unique Spotify ID.
-func (c *Client) GetEpisode(id string, market string) (*GetEpisodeResponse, error) {
+func (c *Client) GetEpisode(id string, market Market) (*GetEpisodeResponse, error) {
 	episode := GetEpisodeResponse{}
 	var err *SpotifyError
 
@@ -86,7 +86,7 @@ func (c *Client) GetEpisode(id string, market string) (*GetEpisodeResponse, erro
 type GetSeveralEpisodesParams struct {
 	// A comma-separated list of the Spotify IDs for the episodes. Maximum: 50 IDs.
 	IDs    string `url:"ids"`
-	Market string `url:"market"`
+	Market Market `url:"market"`
 }
 
 type GetSeveralEpisodesResponse struct {
@@ -96,7 +96,7 @@ type GetSeveralEpisodesResponse struct {
 // Get Spotify catalog information for several episodes based on their Spotify IDs.
 //
 // Required scope: user-read-playback-position
-func (c *Client) GetSeveralEpisodes(ids []string, market string) (*GetSeveralEpisodesResponse, error) {
+func (c *Client) GetSeveralEpisodes(ids []string, market Market) (*GetSeveralEpisodesResponse, error) {
 	episodes := GetSeveralEpisodesResponse{}
 	var err *SpotifyError
 
@@ -115,7 +115,7 @@ func (c *Client) GetSeveralEpisodes(ids []string, market string) (*GetSeveralEpi
 }
 
 type GetUsersSavedEpisodesParams struct {
-	Market string `url:"market"`
+	Market Market `url:"market"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	Limit int `url:"limit"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
