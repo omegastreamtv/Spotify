@@ -46,7 +46,7 @@ func TestGetUsersSavedEpisodes(t *testing.T) {
 	defer server.Close()
 
 	res, err := client.GetUsersSavedEpisodes(&GetUsersSavedEpisodesParams{
-		Market: "ES",
+		Market: MarketSpain,
 		Limit:  20,
 		Offset: 0,
 	})

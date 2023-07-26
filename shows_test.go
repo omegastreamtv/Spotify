@@ -46,7 +46,7 @@ func TestGetShowEpisodes(t *testing.T) {
 	defer server.Close()
 
 	res, err := client.GetShowEpisodes("38bS44xjbVVZ3No3ByF1dJ", &GetShowEpisodesParams{
-		Market: "ES",
+		Market: MarketSpain,
 		Limit:  10,
 		Offset: 0,
 	})

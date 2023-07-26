@@ -12,7 +12,7 @@ func TestSearchForItem(t *testing.T) {
 	res, err := client.SearchForItem(SearchForItemParams{
 		Q:      "remaster,track:Doxy,artist:Miles,Davis",
 		Type:   []string{"album"},
-		Market: "ES",
+		Market: MarketSpain,
 		Limit:  20,
 		Offset: 0,
 	})
