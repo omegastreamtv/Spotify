@@ -1,6 +1,6 @@
 # Spotify
 
-![Coverage](https://img.shields.io/badge/Coverage-68.3%25-yellow)
+![Coverage](https://img.shields.io/badge/Coverage-83.5%25-brightgreen)
 
 Spotify is a Go wrapper for Spotify's web API.
 
