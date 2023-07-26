@@ -1,6 +1,6 @@
 # Spotify
 
-![Coverage](https://img.shields.io/badge/Coverage-82.7%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-68.3%25-yellow)
 
 Spotify is a Go wrapper for Spotify's web API.
 
@@ -73,20 +73,20 @@ _All the `Params`, `Body` and `Response` types are named exactly the same as the
 ### Player
 
 - [x] [Get Playback State (`GetPlaybackState`)](https://developer.spotify.com/documentation/web-api/reference/get-information-about-the-users-current-playback)
-- [ ] [Transfer Playback (`TransferPlayback`)](https://developer.spotify.com/documentation/web-api/reference/transfer-a-users-playback)
-- [ ] [Get Available Devices (`GetAvailableDevices`)](https://developer.spotify.com/documentation/web-api/reference/get-a-users-available-devices)
-- [ ] [Get Currently Playing Track (`GetCurrentlyPlayingTrack`)](https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track)
-- [ ] [Start/Resume Playback (`StartResumePlayback`)](https://developer.spotify.com/documentation/web-api/reference/start-a-users-playback)
-- [ ] [Pause Playback (`PausePlayback`)](https://developer.spotify.com/documentation/web-api/reference/pause-a-users-playback)
-- [ ] [Skip To Next (`SkipToNext`)](https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-next-track)
-- [ ] [Skip To Previous (`SkipToPrevious`)](https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-previous-track)
-- [ ] [Skip to Position (`SeekToPosition`)](https://developer.spotify.com/documentation/web-api/reference/seek-to-position-in-currently-playing-track)
-- [ ] [Set Repeat Mode (`SetRepeatMode`)](https://developer.spotify.com/documentation/web-api/reference/set-repeat-mode-on-users-playback)
-- [ ] [Set Playback Volume (`SetPlaybackVolume`)](https://developer.spotify.com/documentation/web-api/reference/set-volume-for-users-playback)
-- [ ] [Toggle Playback Shuffle (`TogglePlaybackShuffle`)](https://developer.spotify.com/documentation/web-api/reference/toggle-shuffle-for-users-playback)
-- [ ] [Get Recently Played Tracks (`GetRecentlyPlayedTracks`)](https://developer.spotify.com/documentation/web-api/reference/get-recently-played)
-- [ ] [Get The User's Queue (`GetTheUsersQueue`)](https://developer.spotify.com/documentation/web-api/reference/get-queue)
-- [ ] [Add Item to Playback Queue (`AddItemToPlaybackQueue`)](https://developer.spotify.com/documentation/web-api/reference/add-to-queue)
+- [x] [Transfer Playback (`TransferPlayback`)](https://developer.spotify.com/documentation/web-api/reference/transfer-a-users-playback)
+- [x] [Get Available Devices (`GetAvailableDevices`)](https://developer.spotify.com/documentation/web-api/reference/get-a-users-available-devices)
+- [x] [Get Currently Playing Track (`GetCurrentlyPlayingTrack`)](https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track)
+- [x] [Start/Resume Playback (`StartResumePlayback`)](https://developer.spotify.com/documentation/web-api/reference/start-a-users-playback)
+- [x] [Pause Playback (`PausePlayback`)](https://developer.spotify.com/documentation/web-api/reference/pause-a-users-playback)
+- [x] [Skip To Next (`SkipToNext`)](https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-next-track)
+- [x] [Skip To Previous (`SkipToPrevious`)](https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-previous-track)
+- [x] [Skip to Position (`SeekToPosition`)](https://developer.spotify.com/documentation/web-api/reference/seek-to-position-in-currently-playing-track)
+- [x] [Set Repeat Mode (`SetRepeatMode`)](https://developer.spotify.com/documentation/web-api/reference/set-repeat-mode-on-users-playback)
+- [x] [Set Playback Volume (`SetPlaybackVolume`)](https://developer.spotify.com/documentation/web-api/reference/set-volume-for-users-playback)
+- [x] [Toggle Playback Shuffle (`TogglePlaybackShuffle`)](https://developer.spotify.com/documentation/web-api/reference/toggle-shuffle-for-users-playback)
+- [x] [Get Recently Played Tracks (`GetRecentlyPlayedTracks`)](https://developer.spotify.com/documentation/web-api/reference/get-recently-played)
+- [x] [Get The User's Queue (`GetTheUsersQueue`)](https://developer.spotify.com/documentation/web-api/reference/get-queue)
+- [x] [Add Item to Playback Queue (`AddItemToPlaybackQueue`)](https://developer.spotify.com/documentation/web-api/reference/add-to-queue)
 
 ### Playlists
 
