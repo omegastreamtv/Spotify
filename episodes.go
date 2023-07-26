@@ -180,12 +180,12 @@ type RemoveUsersSavedEpisodesBody struct {
 // Required scope: user-library-modify
 //
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
-func (c *Client) RemoveUsersSavedEpisodes(ids []string) error {
+func (c *Client) RemoveUsersSavedEpisodes(episodeIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	payload := RemoveUsersSavedEpisodesBody{
-		IDs: ids,
+		IDs: episodeIds,
 	}
 
 	c.delete("/me/episodes").BodyJSON(payload).Receive(&res, &err)
@@ -207,12 +207,12 @@ type CheckUsersSavedEpisodesParams struct {
 // Required scope: user-library-read
 //
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
-func (c *Client) CheckUsersSavedEpisodes(ids []string) ([]bool, error) {
+func (c *Client) CheckUsersSavedEpisodes(episodeIds []string) ([]bool, error) {
 	var res []bool
 	var err *SpotifyError
 
 	params := CheckUsersSavedEpisodesParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(episodeIds, ","),
 	}
 
 	c.get("/me/episodes/contains").QueryStruct(params).Receive(&res, &err)

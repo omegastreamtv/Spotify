@@ -66,7 +66,7 @@ type GetShowResponse struct {
 // Get Spotify catalog information for a single show identified by its unique Spotify ID.
 //
 // Required scope: user-read-playback-position
-func (c *Client) GetShow(id string, market Market) (*GetShowResponse, error) {
+func (c *Client) GetShow(showId string, market Market) (*GetShowResponse, error) {
 	show := GetShowResponse{}
 	var err *SpotifyError
 
@@ -74,7 +74,7 @@ func (c *Client) GetShow(id string, market Market) (*GetShowResponse, error) {
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/shows/%s", id)).QueryStruct(params).Receive(&show, &err)
+	c.get(fmt.Sprintf("/shows/%s", showId)).QueryStruct(params).Receive(&show, &err)
 
 	if err != nil {
 		return nil, err
@@ -94,12 +94,12 @@ type GetSeveralShowsResponse struct {
 }
 
 // Get Spotify catalog information for several shows based on their Spotify IDs.
-func (c *Client) GetSeveralShows(ids []string, market Market) (*GetSeveralShowsResponse, error) {
+func (c *Client) GetSeveralShows(showIds []string, market Market) (*GetSeveralShowsResponse, error) {
 	shows := GetSeveralShowsResponse{}
 	var err *SpotifyError
 
 	params := GetSeveralShowsParams{
-		IDs:    strings.Join(ids, ","),
+		IDs:    strings.Join(showIds, ","),
 		Market: market,
 	}
 
@@ -126,11 +126,11 @@ type GetShowEpisodesResponse struct {
 }
 
 // Get Spotify catalog information about an show’s episodes. Optional parameters can be used to limit the number of episodes returned.
-func (c *Client) GetShowEpisodes(id string, params *GetShowEpisodesParams) (*GetShowEpisodesResponse, error) {
+func (c *Client) GetShowEpisodes(showId string, params *GetShowEpisodesParams) (*GetShowEpisodesResponse, error) {
 	episodes := GetShowEpisodesResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/shows/%s/episodes", id)).QueryStruct(params).Receive(&episodes, &err)
+	c.get(fmt.Sprintf("/shows/%s/episodes", showId)).QueryStruct(params).Receive(&episodes, &err)
 
 	if err != nil {
 		return nil, err
@@ -174,12 +174,12 @@ type SaveShowsForCurrentUserParams struct {
 // Save one or more shows to current Spotify user's library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveShowsForCurrentUser(ids []string) error {
+func (c *Client) SaveShowsForCurrentUser(showIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := SaveShowsForCurrentUserParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(showIds, ","),
 	}
 
 	c.put("/me/shows").QueryStruct(params).Receive(&res, &err)
@@ -200,12 +200,12 @@ type RemoveUsersSavedShowsParams struct {
 // Delete one or more shows from current Spotify user's library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveUsersSavedShows(ids []string, market Market) error {
+func (c *Client) RemoveUsersSavedShows(showIds []string, market Market) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := RemoveUsersSavedShowsParams{
-		IDs:    strings.Join(ids, ","),
+		IDs:    strings.Join(showIds, ","),
 		Market: market,
 	}
 
@@ -225,12 +225,12 @@ type CheckUsersSavedShowsParams struct {
 // Check if one or more shows is already saved in the current Spotify user's library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedShows(ids []string) error {
+func (c *Client) CheckUsersSavedShows(showIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := CheckUsersSavedShowsParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(showIds, ","),
 	}
 
 	c.get("/me/shows/contains").QueryStruct(params).Receive(&res, &err)

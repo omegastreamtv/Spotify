@@ -274,7 +274,7 @@ type GetTrackResponse struct {
 	Track
 }
 
-func (c *Client) GetTrack(id string, market Market) (*GetTrackResponse, error) {
+func (c *Client) GetTrack(trackId string, market Market) (*GetTrackResponse, error) {
 	track := GetTrackResponse{}
 	var err *SpotifyError
 
@@ -282,7 +282,7 @@ func (c *Client) GetTrack(id string, market Market) (*GetTrackResponse, error) {
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/tracks/%s", id)).QueryStruct(params).Receive(&track, &err)
+	c.get(fmt.Sprintf("/tracks/%s", trackId)).QueryStruct(params).Receive(&track, &err)
 
 	if err != nil {
 		return nil, err
@@ -302,13 +302,13 @@ type GetSeveralTracksResponse struct {
 }
 
 // Get Spotify catalog information for multiple tracks based on their Spotify IDs.
-func (c *Client) GetSeveralTracks(ids []string, market Market) (*GetSeveralTracksResponse, error) {
+func (c *Client) GetSeveralTracks(trackIds []string, market Market) (*GetSeveralTracksResponse, error) {
 	tracks := GetSeveralTracksResponse{}
 	var err *SpotifyError
 
 	params := GetSeveralTracksParams{
 		Market: market,
-		IDs:    strings.Join(ids, ","),
+		IDs:    strings.Join(trackIds, ","),
 	}
 
 	c.get("/tracks").QueryStruct(params).Receive(&tracks, &err)
@@ -357,12 +357,12 @@ type SaveTracksForCurrentUserBody struct {
 // Save one or more tracks to the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) SaveTracksForCurrentUser(ids []string) error {
+func (c *Client) SaveTracksForCurrentUser(trackIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	payload := SaveTracksForCurrentUserBody{
-		IDs: ids,
+		IDs: trackIds,
 	}
 
 	c.put("/me/tracks").BodyJSON(payload).Receive(&res, &err)
@@ -382,12 +382,12 @@ type RemoveUsersSavedTracksBody struct {
 // Remove one or more tracks from the current user's 'Your Music' library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveUsersSavedTracks(ids []string) error {
+func (c *Client) RemoveUsersSavedTracks(trackIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	payload := RemoveUsersSavedTracksBody{
-		IDs: ids,
+		IDs: trackIds,
 	}
 
 	c.delete("/me/tracks").BodyJSON(payload).Receive(&res, &err)
@@ -409,12 +409,12 @@ type CheckUsersSavedTracksResponse []bool
 // Check if one or more tracks is already saved in the current Spotify user's 'Your Music' library.
 //
 // Required scope: user-library-read
-func (c *Client) CheckUsersSavedTracks(ids []string) (*CheckUsersSavedTracksResponse, error) {
+func (c *Client) CheckUsersSavedTracks(trackIds []string) (*CheckUsersSavedTracksResponse, error) {
 	foundEach := CheckUsersSavedTracksResponse{}
 	var err *SpotifyError
 
 	params := CheckUsersSavedTracksParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(trackIds, ","),
 	}
 
 	c.get("/me/tracks/contains").QueryStruct(params).Receive(&foundEach, &err)
@@ -436,12 +436,12 @@ type GetMultiTracksAudioFeaturesResponse struct {
 }
 
 // Get audio features for multiple tracks based on their Spotify IDs.
-func (c *Client) GetMultiTracksAudioFeatures(ids []string) (*GetMultiTracksAudioFeaturesResponse, error) {
+func (c *Client) GetMultiTracksAudioFeatures(trackIds []string) (*GetMultiTracksAudioFeaturesResponse, error) {
 	features := GetMultiTracksAudioFeaturesResponse{}
 	var err *SpotifyError
 
 	params := GetMultiTracksAudioFeaturesParams{
-		IDs: strings.Join(ids, ","),
+		IDs: strings.Join(trackIds, ","),
 	}
 
 	c.get("/audio-features").QueryStruct(params).Receive(&features, &err)
@@ -460,11 +460,11 @@ type GetSingleTracksAudioFeaturesResponse struct {
 // Get Track's Audio Features
 //
 // Get audio feature information for a single track identified by its unique Spotify ID.
-func (c *Client) GetSingleTracksAudioFeatures(id string) (*GetSingleTracksAudioFeaturesResponse, error) {
+func (c *Client) GetSingleTracksAudioFeatures(trackId string) (*GetSingleTracksAudioFeaturesResponse, error) {
 	features := GetSingleTracksAudioFeaturesResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-features/%s", id)).Receive(&features, &err)
+	c.get(fmt.Sprintf("/audio-features/%s", trackId)).Receive(&features, &err)
 
 	if err != nil {
 		return nil, err
@@ -478,11 +478,11 @@ type GetTracksAudioAnalysisResponse struct {
 }
 
 // Get a low-level audio analysis for a track in the Spotify catalog. The audio analysis describes the track’s structure and musical content, including rhythm, pitch, and timbre.
-func (c *Client) GetTracksAudioAnalysis(id string) (*GetTracksAudioAnalysisResponse, error) {
+func (c *Client) GetTracksAudioAnalysis(trackId string) (*GetTracksAudioAnalysisResponse, error) {
 	analysis := GetTracksAudioAnalysisResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-analysis/%s", id)).Receive(&analysis, &err)
+	c.get(fmt.Sprintf("/audio-analysis/%s", trackId)).Receive(&analysis, &err)
 
 	if err != nil {
 		return nil, err

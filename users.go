@@ -121,11 +121,11 @@ type GetUsersProfileResponse struct {
 }
 
 // Get public profile information about a Spotify user.
-func (c *Client) GetUsersProfile(id string) (*GetUsersProfileResponse, error) {
+func (c *Client) GetUsersProfile(userId string) (*GetUsersProfileResponse, error) {
 	profile := GetUsersProfileResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/users/%s", id)).Receive(&profile, &err)
+	c.get(fmt.Sprintf("/users/%s", userId)).Receive(&profile, &err)
 
 	if err != nil {
 		return nil, err
@@ -142,11 +142,11 @@ type FollowPlaylistBody struct {
 // Add the current user as a follower of a playlist.
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) FollowPlaylist(id string, payload *FollowPlaylistBody) error {
+func (c *Client) FollowPlaylist(playlistId string, payload *FollowPlaylistBody) error {
 	var res struct{}
 	var err *SpotifyError
 
-	c.put(fmt.Sprintf("/playlists/%s/followers", id)).BodyJSON(payload).Receive(&res, &err)
+	c.put(fmt.Sprintf("/playlists/%s/followers", playlistId)).BodyJSON(payload).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -158,11 +158,11 @@ func (c *Client) FollowPlaylist(id string, payload *FollowPlaylistBody) error {
 // Remove the current user as a follower of a playlist.
 //
 // Required scope: playlist-modify-public, playlist-modify-private
-func (c *Client) UnfollowPlaylist(id string) error {
+func (c *Client) UnfollowPlaylist(playlistId string) error {
 	var res struct{}
 	var err *SpotifyError
 
-	c.delete(fmt.Sprintf("/playlists/%s/followers", id)).Receive(&res, &err)
+	c.delete(fmt.Sprintf("/playlists/%s/followers", playlistId)).Receive(&res, &err)
 
 	if err != nil {
 		return err
@@ -213,13 +213,13 @@ type FollowArtistsOrUsersParams struct {
 // Add the current user as a follower of one or more artists or other Spotify users.
 //
 // Required scope: user-follow-modify
-func (c *Client) FollowArtistsOrUsers(typ string, ids []string) error {
+func (c *Client) FollowArtistsOrUsers(typ string, artistIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := FollowArtistsOrUsersParams{
 		Type: typ,
-		IDs:  strings.Join(ids, ","),
+		IDs:  strings.Join(artistIds, ","),
 	}
 
 	c.put("/me/following").QueryStruct(params).Receive(&res, &err)
@@ -241,13 +241,13 @@ type UnfollowArtistsOrUsersParams struct {
 // Remove the current user as a follower of one or more artists or other Spotify users.
 //
 // Required scope: user-follow-modify
-func (c *Client) UnfollowArtistsOrUsers(typ string, ids []string) error {
+func (c *Client) UnfollowArtistsOrUsers(typ string, artistIds []string) error {
 	var res struct{}
 	var err *SpotifyError
 
 	params := UnfollowArtistsOrUsersParams{
 		Type: typ,
-		IDs:  strings.Join(ids, ","),
+		IDs:  strings.Join(artistIds, ","),
 	}
 
 	c.delete("/me/following").QueryStruct(params).Receive(&res, &err)
@@ -271,13 +271,13 @@ type CheckIfUserFollowsArtistsOrUsersResponse []bool
 // Check to see if the current user is following one or more artists or other Spotify users.
 //
 //	Required scope: user-follow-read
-func (c *Client) CheckIfUserFollowsArtistsOrUsers(typ string, ids []string) (*CheckIfUserFollowsArtistsOrUsersResponse, error) {
+func (c *Client) CheckIfUserFollowsArtistsOrUsers(typ string, artistIds []string) (*CheckIfUserFollowsArtistsOrUsersResponse, error) {
 	resEach := CheckIfUserFollowsArtistsOrUsersResponse{}
 	var err *SpotifyError
 
 	params := CheckIfUserFollowsArtistsOrUsersParams{
 		Type: typ,
-		IDs:  strings.Join(ids, ","),
+		IDs:  strings.Join(artistIds, ","),
 	}
 
 	c.get("/me/following/contains").QueryStruct(params).Receive(&resEach, &err)
