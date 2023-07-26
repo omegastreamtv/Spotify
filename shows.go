@@ -56,7 +56,7 @@ type SavedShow struct {
 }
 
 type GetShowParams struct {
-	Market string `url:"market"`
+	Market Market `url:"market"`
 }
 
 type GetShowResponse struct {
@@ -66,7 +66,7 @@ type GetShowResponse struct {
 // Get Spotify catalog information for a single show identified by its unique Spotify ID.
 //
 // Required scope: user-read-playback-position
-func (c *Client) GetShow(id string, market string) (*GetShowResponse, error) {
+func (c *Client) GetShow(id string, market Market) (*GetShowResponse, error) {
 	show := GetShowResponse{}
 	var err *SpotifyError
 
@@ -86,7 +86,7 @@ func (c *Client) GetShow(id string, market string) (*GetShowResponse, error) {
 type GetSeveralShowsParams struct {
 	// A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
 	IDs    string `url:"ids,omitempty"`
-	Market string `url:"market"`
+	Market Market `url:"market"`
 }
 
 type GetSeveralShowsResponse struct {
@@ -94,7 +94,7 @@ type GetSeveralShowsResponse struct {
 }
 
 // Get Spotify catalog information for several shows based on their Spotify IDs.
-func (c *Client) GetSeveralShows(ids []string, market string) (*GetSeveralShowsResponse, error) {
+func (c *Client) GetSeveralShows(ids []string, market Market) (*GetSeveralShowsResponse, error) {
 	shows := GetSeveralShowsResponse{}
 	var err *SpotifyError
 
@@ -113,7 +113,7 @@ func (c *Client) GetSeveralShows(ids []string, market string) (*GetSeveralShowsR
 }
 
 type GetShowEpisodesParams struct {
-	Market string `url:"market"`
+	Market Market `url:"market"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	Limit int `url:"limit"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -194,13 +194,13 @@ func (c *Client) SaveShowsForCurrentUser(ids []string) error {
 type RemoveUsersSavedShowsParams struct {
 	// A comma-separated list of the Spotify IDs for the shows. Maximum: 50 IDs.
 	IDs    string `url:"ids"`
-	Market string `url:"market"`
+	Market Market `url:"market"`
 }
 
 // Delete one or more shows from current Spotify user's library.
 //
 // Required scope: user-library-modify
-func (c *Client) RemoveUsersSavedShows(ids []string, market string) error {
+func (c *Client) RemoveUsersSavedShows(ids []string, market Market) error {
 	var res struct{}
 	var err *SpotifyError
 

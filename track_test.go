@@ -46,7 +46,7 @@ func TestGetUsersSavedTracks(t *testing.T) {
 	defer server.Close()
 
 	res, err := client.GetUsersSavedTracks(&GetUsersSavedTracksParams{
-		Market: "ES",
+		Market: MarketSpain,
 		Limit:  20,
 		Offset: 0,
 	})

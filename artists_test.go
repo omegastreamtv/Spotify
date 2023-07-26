@@ -67,7 +67,7 @@ func TestGetArtistsTopTracks(t *testing.T) {
 	defer server.Close()
 
 	res, err := client.GetArtistsTopTracks("0TnOYISbd1XYRBk9myaseg", &GetArtistsTopTracksParams{
-		Market: "es",
+		Market: MarketSpain,
 	})
 	if err != nil {
 		t.Fatal(err)

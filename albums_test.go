@@ -38,7 +38,7 @@ func TestGetAlbumTracks(t *testing.T) {
 	defer server.Close()
 
 	res, err := client.GetAlbumTracks("4aawyAB9vmqN3uQ7FjRGTy", &GetAlbumTracksParams{
-		Market: "es",
+		Market: MarketSpain,
 	})
 	if err != nil {
 		t.Fatal(err)
@@ -56,7 +56,7 @@ func TestGetUsersSavedAlbums(t *testing.T) {
 	res, err := client.GetUsersSavedAlbums(&GetUsersSavedAlbumsParams{
 		Limit:  20,
 		Offset: 0,
-		Market: "ES",
+		Market: MarketSpain,
 	})
 	if err != nil {
 		t.Fatal(err)

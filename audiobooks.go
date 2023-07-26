@@ -62,13 +62,7 @@ type FullAudiobook struct {
 }
 
 type GetAnAudiobookParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 }
 
 type GetAnAudiobookResponse struct {
@@ -78,7 +72,7 @@ type GetAnAudiobookResponse struct {
 // Get Spotify catalog information for a single audiobook.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetAnAudiobook(id string, market string) (*GetAnAudiobookResponse, error) {
+func (c *Client) GetAnAudiobook(id string, market Market) (*GetAnAudiobookResponse, error) {
 	audiobook := GetAnAudiobookResponse{}
 	var err *SpotifyError
 
@@ -97,14 +91,8 @@ func (c *Client) GetAnAudiobook(id string, market string) (*GetAnAudiobookRespon
 
 type GetSeveralAudiobooksParams struct {
 	// A comma-separated list of the Spotify IDs.
-	IDs string `url:"ids"`
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market"`
+	IDs    string `url:"ids"`
+	Market Market `url:"market"`
 }
 
 type GetSeveralAudiobooksResponse struct {
@@ -114,7 +102,7 @@ type GetSeveralAudiobooksResponse struct {
 // Get Spotify catalog information for several audiobooks identified by their Spotify IDs.
 //
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetSeveralAudiobooks(ids []string, market string) (*GetSeveralAudiobooksResponse, error) {
+func (c *Client) GetSeveralAudiobooks(ids []string, market Market) (*GetSeveralAudiobooksResponse, error) {
 	audiobooks := GetSeveralAudiobooksResponse{}
 	var err *SpotifyError
 
@@ -133,13 +121,7 @@ func (c *Client) GetSeveralAudiobooks(ids []string, market string) (*GetSeveralA
 }
 
 type GetAudiobookChaptersParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market"`
+	Market Market `url:"market"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	Limit int `url:"limit"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.

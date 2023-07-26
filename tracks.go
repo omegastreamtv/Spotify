@@ -267,20 +267,14 @@ type AudioAnalysis struct {
 }
 
 type GetTrackParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 }
 
 type GetTrackResponse struct {
 	Track
 }
 
-func (c *Client) GetTrack(id string, market string) (*GetTrackResponse, error) {
+func (c *Client) GetTrack(id string, market Market) (*GetTrackResponse, error) {
 	track := GetTrackResponse{}
 	var err *SpotifyError
 
@@ -298,13 +292,7 @@ func (c *Client) GetTrack(id string, market string) (*GetTrackResponse, error) {
 }
 
 type GetSeveralTracksParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 	// A comma-separated list of the Spotify IDs.
 	IDs string `url:"ids"`
 }
@@ -314,7 +302,7 @@ type GetSeveralTracksResponse struct {
 }
 
 // Get Spotify catalog information for multiple tracks based on their Spotify IDs.
-func (c *Client) GetSeveralTracks(ids []string, market string) (*GetSeveralTracksResponse, error) {
+func (c *Client) GetSeveralTracks(ids []string, market Market) (*GetSeveralTracksResponse, error) {
 	tracks := GetSeveralTracksResponse{}
 	var err *SpotifyError
 
@@ -333,13 +321,7 @@ func (c *Client) GetSeveralTracks(ids []string, market string) (*GetSeveralTrack
 }
 
 type GetUsersSavedTracksParams struct {
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `url:"market,omitempty"`
+	Market Market `url:"market,omitempty"`
 	// The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 	Limit int `url:"limit,omitempty"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -511,14 +493,8 @@ func (c *Client) GetTracksAudioAnalysis(id string) (*GetTracksAudioAnalysisRespo
 
 type GetRecommendationsBody struct {
 	// The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20. Minimum: 1. Maximum: 100.
-	Limit int `json:"limit,omitempty"`
-	// An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned.
-	//
-	// If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.
-	//
-	// Note: If neither market or user country are provided, the content is considered unavailable for the client.
-	// Users can view the country that is associated with their account in the account settings.
-	Market string `json:"market,omitempty"`
+	Limit  int    `json:"limit,omitempty"`
+	Market Market `json:"market,omitempty"`
 	// A comma separated list of Spotify IDs for seed artists. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.
 	//
 	// Note: only required if seed_genres and seed_tracks are not set.
