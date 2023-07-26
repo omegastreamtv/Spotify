@@ -38,7 +38,7 @@ func TestGetAudiobookChapters(t *testing.T) {
 	client, server := testClientFile(http.StatusOK, "get_audiobook_chapters.txt")
 	defer server.Close()
 
-	res, err := client.GetAudiobookChapters("7iHfbu1YPACw6oZPAFJtqe", GetAudiobookChaptersParams{})
+	res, err := client.GetAudiobookChapters("7iHfbu1YPACw6oZPAFJtqe", &GetAudiobookChaptersParams{})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -52,7 +52,10 @@ func TestGetUsersSavedAudioBooks(t *testing.T) {
 	client, server := testClientFile(http.StatusOK, "get_users_saved_audiobooks.txt")
 	defer server.Close()
 
-	res, err := client.GetUsersSavedAudioBooks(10, 5)
+	res, err := client.GetUsersSavedAudioBooks(&GetUsersSavedAudioBooksParams{
+		Limit:  10,
+		Offset: 5,
+	})
 	if err != nil {
 		t.Fatal(err)
 	}

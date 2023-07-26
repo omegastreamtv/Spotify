@@ -9,7 +9,7 @@ func TestSearchForItem(t *testing.T) {
 	client, server := testClientFile(http.StatusOK, "search_for_item.txt")
 	defer server.Close()
 
-	res, err := client.SearchForItem(SearchForItemParams{
+	res, err := client.SearchForItem(&SearchForItemParams{
 		Q:      "remaster,track:Doxy,artist:Miles,Davis",
 		Type:   []string{"album"},
 		Market: MarketSpain,

@@ -70,7 +70,7 @@ type GetAChapterResponse struct {
 // Get Spotify catalog information for a single chapter.
 //
 // Note: Chapters are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetAChapter(id string, market Market) (*GetAChapterResponse, error) {
+func (c *Client) GetAChapter(chatperId string, market Market) (*GetAChapterResponse, error) {
 	chapter := GetAChapterResponse{}
 	var err *SpotifyError
 
@@ -78,7 +78,7 @@ func (c *Client) GetAChapter(id string, market Market) (*GetAChapterResponse, er
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/chapters/%s", id)).QueryStruct(params).Receive(&chapter, &err)
+	c.get(fmt.Sprintf("/chapters/%s", chatperId)).QueryStruct(params).Receive(&chapter, &err)
 
 	if err != nil {
 		return nil, err
@@ -98,7 +98,7 @@ type GetSeveralChaptersResponse struct {
 // Get Spotify catalog information for several chapters identified by their Spotify IDs.
 //
 // Note: Chapters are only available for the US, UK, Ireland, New Zealand and Australia markets.
-func (c *Client) GetSeveralChapters(ids []string, market Market) (*GetSeveralChaptersResponse, error) {
+func (c *Client) GetSeveralChapters(chatperIds []string, market Market) (*GetSeveralChaptersResponse, error) {
 	chapters := GetSeveralChaptersResponse{}
 	var err *SpotifyError
 
