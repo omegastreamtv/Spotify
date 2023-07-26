@@ -1,0 +1,22 @@
+{
+  "devices": [
+    {
+      "id": "00000000000795952bea8191910aa90000000000",
+      "is_active": false,
+      "is_private_session": false,
+      "is_restricted": false,
+      "name": "DESKTOP-NAME",
+      "type": "Computer",
+      "volume_percent": 0
+    },
+    {
+      "id": "3e0d9411-0000-0000-0000-24774b312edd",
+      "is_active": true,
+      "is_private_session": false,
+      "is_restricted": false,
+      "name": "Roku",
+      "type": "TV",
+      "volume_percent": 100
+    }
+  ]
+}
