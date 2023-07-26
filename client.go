@@ -119,6 +119,21 @@ func (c *Client) get(path string) *sling.Sling {
 	return req
 }
 
+func (c *Client) post(path string) *sling.Sling {
+	c.mu.Lock()
+
+	tokenToUse := c.appAccessToken
+	if c.userAccessToken != "" {
+		tokenToUse = c.userAccessToken
+	}
+
+	req := sling.New().Post(c.baseURL+path).Set("Authorization", "Bearer "+tokenToUse)
+	c.userAccessToken = ""
+	c.mu.Unlock()
+
+	return req
+}
+
 func (c *Client) put(path string) *sling.Sling {
 	c.mu.Lock()
 
