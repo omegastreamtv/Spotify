@@ -90,19 +90,19 @@ _All the `Params`, `Body` and `Response` types are named exactly the same as the
 
 ### Playlists
 
-- [ ] [Get Playlist (`GetPlaylist`)](https://developer.spotify.com/documentation/web-api/reference/get-playlist)
-- [ ] [Change Playlist Details (`ChangePlaylistDetails`)](https://developer.spotify.com/documentation/web-api/reference/change-playlist-details)
-- [ ] [Get Playlist Items (`GetPlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/get-playlists-tracks)
-- [ ] [Update Playlist Items (`UpdatePlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/reorder-or-replace-playlists-tracks)
-- [ ] [Add Items to Playlist (`AddItemsToPlaylist`)](https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist)
-- [ ] [Remove Playlist Items (`RemovePlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/remove-tracks-playlist)
-- [ ] [Get Current User's Playlists (`GetCurrentUsersPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-a-list-of-current-users-playlists)
-- [ ] [Get User's Playlist (`GetUsersPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-list-users-playlists)
-- [ ] [Create Playlist (`CreatePlaylist`)](https://developer.spotify.com/documentation/web-api/reference/create-playlist)
-- [ ] [Get Featured Playlists (`GetFeaturedPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-featured-playlists)
-- [ ] [Get Category's Playlists (`GetCategorysPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-a-categories-playlists)
-- [ ] [Get Playlist Cover Image (`GetPlaylistCoverImage`)](https://developer.spotify.com/documentation/web-api/reference/get-playlist-cover)
-- [ ] [Add Custom Playlist Cover Image (`AddCustomPlaylistCoverImage`)](https://developer.spotify.com/documentation/web-api/reference/upload-custom-playlist-cover)
+- [x] [Get Playlist (`GetPlaylist`)](https://developer.spotify.com/documentation/web-api/reference/get-playlist)
+- [x] [Change Playlist Details (`ChangePlaylistDetails`)](https://developer.spotify.com/documentation/web-api/reference/change-playlist-details)
+- [x] [Get Playlist Items (`GetPlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/get-playlists-tracks)
+- [x] [Update Playlist Items (`UpdatePlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/reorder-or-replace-playlists-tracks)
+- [x] [Add Items to Playlist (`AddItemsToPlaylist`)](https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist)
+- [x] [Remove Playlist Items (`RemovePlaylistItems`)](https://developer.spotify.com/documentation/web-api/reference/remove-tracks-playlist)
+- [x] [Get Current User's Playlists (`GetCurrentUsersPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-a-list-of-current-users-playlists)
+- [x] [Get User's Playlist (`GetUsersPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-list-users-playlists)
+- [x] [Create Playlist (`CreatePlaylist`)](https://developer.spotify.com/documentation/web-api/reference/create-playlist)
+- [x] [Get Featured Playlists (`GetFeaturedPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-featured-playlists)
+- [x] [Get Category's Playlists (`GetCategorysPlaylists`)](https://developer.spotify.com/documentation/web-api/reference/get-a-categories-playlists)
+- [x] [Get Playlist Cover Image (`GetPlaylistCoverImage`)](https://developer.spotify.com/documentation/web-api/reference/get-playlist-cover)
+- [x] [Add Custom Playlist Cover Image (`AddCustomPlaylistCoverImage`)](https://developer.spotify.com/documentation/web-api/reference/upload-custom-playlist-cover)
 
 ### Search
 

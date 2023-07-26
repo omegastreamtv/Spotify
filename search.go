@@ -41,7 +41,7 @@ type SearchForItemResponse struct {
 	} `json:"albums"`
 	Playlists struct {
 		Pagination
-		Items []Playlist `json:"items"`
+		Items []BasicPlaylist `json:"items"`
 	} `json:"playlists"`
 	Shows struct {
 		Pagination
