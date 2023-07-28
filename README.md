@@ -10,6 +10,29 @@ Spotify is a Go wrapper for Spotify's web API.
 go get github.com/omegastreamtv/spotify
 ```
 
+```go
+client, err := spotify.NewClient(
+spotify.WithClientID(os.Getenv("SPOTIFY_ID")),
+spotify.WithClientSecret(os.Getenv("SPOTIFY_SECRET")),
+spotify.WithRedirectURI("http://localhost:8080/callback"),
+)
+if err != nil {
+	log.Fatal(err)
+}
+
+client.SetAppAccessToken(token.AccessToken)
+
+singleAlbum, err := client.GetAlbum("382ObEPsp2rxGrnsizN5TX", "es")
+if err != nil {
+	if spotifyErr, ok := err.(*spotify.SpotifyError); ok {
+		fmt.Println(spotifyErr.Err.Status, spotifyErr.Err.Message)
+	}
+
+    log.Fatal(err)
+	return
+}
+```
+
 ## Endpoints
 
 _All the `Params`, `Body` and `Response` types are named exactly the same as the function._

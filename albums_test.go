@@ -108,25 +108,3 @@ func TestCheckUsersSavedAlbums(t *testing.T) {
 		}
 	}
 }
-
-func TestGetNewReleases(t *testing.T) {
-	client, server := testClientFile(http.StatusOK, "get_new_releases.txt")
-	defer server.Close()
-
-	res, err := client.GetNewReleases(&GetNewReleasesParams{
-		Country: "ES",
-		Limit:   20,
-		Offset:  0,
-	})
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if res == nil {
-		t.Error("Response is nil")
-	} else {
-		if len(res.Albums.Items) != 20 {
-			t.Errorf("Expected 20 items, got %d", len(res.Albums.Items))
-		}
-	}
-}
