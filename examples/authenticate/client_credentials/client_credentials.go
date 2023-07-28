@@ -6,8 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/omegastreamtv/spotify"
 	"golang.org/x/oauth2/clientcredentials"
+
+	"github.com/omegastreamtv/spotify"
 )
 
 func main() {

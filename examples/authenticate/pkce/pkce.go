@@ -6,8 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/omegastreamtv/spotify"
 	"golang.org/x/oauth2"
+
+	"github.com/omegastreamtv/spotify"
 )
 
 type App struct {
