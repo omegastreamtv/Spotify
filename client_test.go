@@ -16,7 +16,10 @@ func testClient(code int, body []byte) (*Client, *httptest.Server) {
 	}))
 
 	mockServerURL, _ := url.Parse(ts.URL)
-	client, _ := NewClient(&Options{BaseURL: mockServerURL.String(), ClientID: "test", ClientSecret: "test", RedirectURI: "http://localhost:8080"}, nil)
+	client, _ := NewClient(WithClientID("test"),
+		WithBaseURL(mockServerURL.String()),
+		WithRedirectURI("http://localhost:8080"),
+	)
 
 	return client, ts
 }
