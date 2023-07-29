@@ -32,12 +32,15 @@ type GetSeveralBrowseCategoriesResponse struct {
 // Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
 func (c *Client) GetSeveralBrowseCategories(params *GetSeveralBrowseCategoriesParams) (*GetSeveralBrowseCategoriesResponse, error) {
 	categories := GetSeveralBrowseCategoriesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/browse/categories").QueryStruct(params).Receive(&categories, &err)
-
+	_, err := c.get("/browse/categories").QueryStruct(params).Receive(&categories, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &categories, nil
@@ -58,12 +61,15 @@ type GetSingleBrowseCategoryResponse struct {
 // Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
 func (c *Client) GetSingleBrowseCategory(id string, params *GetSingleBrowseCategoryParams) (*GetSingleBrowseCategoryResponse, error) {
 	category := GetSingleBrowseCategoryResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/browse/categories/%s", id)).QueryStruct(params).Receive(&category, &err)
-
+	_, err := c.get(fmt.Sprintf("/browse/categories/%s", id)).QueryStruct(params).Receive(&category, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &category, nil

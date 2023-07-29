@@ -68,16 +68,19 @@ type GetEpisodeResponse struct {
 // Get Spotify catalog information for a single episode identified by its unique Spotify ID.
 func (c *Client) GetEpisode(id string, market Market) (*GetEpisodeResponse, error) {
 	episode := GetEpisodeResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetEpisodeParams{
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/episodes/%s", id)).QueryStruct(params).Receive(&episode, &err)
-
+	_, err := c.get(fmt.Sprintf("/episodes/%s", id)).QueryStruct(params).Receive(&episode, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &episode, nil
@@ -98,15 +101,14 @@ type GetSeveralEpisodesResponse struct {
 // Required scope: user-read-playback-position
 func (c *Client) GetSeveralEpisodes(ids []string, market Market) (*GetSeveralEpisodesResponse, error) {
 	episodes := GetSeveralEpisodesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralEpisodesParams{
 		IDs:    strings.Join(ids, ","),
 		Market: market,
 	}
 
-	c.get("/episodes").QueryStruct(params).Receive(&episodes, &err)
-
+	_, err := c.get("/episodes").QueryStruct(params).Receive(&episodes, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -132,12 +134,15 @@ type GetUsersSavedEpisodesResponse struct {
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
 func (c *Client) GetUsersSavedEpisodes(params *GetUsersSavedEpisodesParams) (*GetUsersSavedEpisodesResponse, error) {
 	episodes := GetUsersSavedEpisodesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/episodes").QueryStruct(params).Receive(&episodes, &err)
-
+	_, err := c.get("/me/episodes").QueryStruct(params).Receive(&episodes, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &episodes, nil
@@ -155,16 +160,19 @@ type SaveEpisodesForCurrentUserBody struct {
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
 func (c *Client) SaveEpisodesForCurrentUser(ids []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := SaveEpisodesForCurrentUserBody{
 		IDs: ids,
 	}
 
-	c.put("/me/episodes").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.put("/me/episodes").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -182,16 +190,19 @@ type RemoveUsersSavedEpisodesBody struct {
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
 func (c *Client) RemoveUsersSavedEpisodes(episodeIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := RemoveUsersSavedEpisodesBody{
 		IDs: episodeIds,
 	}
 
-	c.delete("/me/episodes").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.delete("/me/episodes").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -209,16 +220,19 @@ type CheckUsersSavedEpisodesParams struct {
 // This API endpoint is in beta and could change without warning. Please share any feedback that you have, or issues that you discover, in our developer community forum. (https://community.spotify.com/t5/Spotify-for-Developers/bd-p/Spotify_Developer)
 func (c *Client) CheckUsersSavedEpisodes(episodeIds []string) ([]bool, error) {
 	var res []bool
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckUsersSavedEpisodesParams{
 		IDs: strings.Join(episodeIds, ","),
 	}
 
-	c.get("/me/episodes/contains").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.get("/me/episodes/contains").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return res, nil

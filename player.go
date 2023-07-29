@@ -172,10 +172,9 @@ type GetPlaybackStateResponse struct {
 // Required scopes: user-read-playback-state
 func (c *Client) GetPlaybackState(params *GetPlaybackStateParams) (*GetPlaybackStateResponse, error) {
 	playbackState := GetPlaybackStateStateResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/player").QueryStruct(params).Receive(&playbackState, &err)
-
+	_, err := c.get("/me/player").QueryStruct(params).Receive(&playbackState, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -201,6 +200,10 @@ func (c *Client) GetPlaybackState(params *GetPlaybackStateParams) (*GetPlaybackS
 
 	state.Item = eitherOr
 
+	if spotifyErr != nil {
+		return nil, spotifyErr
+	}
+
 	return &state, nil
 }
 
@@ -220,12 +223,15 @@ type TransferPlaybackBody struct {
 // Required scope: user-modify-playback-state
 func (c *Client) TransferPlayback(body *TransferPlaybackBody) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player").BodyJSON(body).Receive(&res, &err)
-
+	_, err := c.put("/me/player").BodyJSON(body).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -238,12 +244,15 @@ type GetAvailableDevicesResponse struct {
 // Get information about a user’s available devices.
 func (c *Client) GetAvailableDevices() (*GetAvailableDevicesResponse, error) {
 	devices := GetAvailableDevicesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/player/devices").Receive(&devices, &err)
-
+	_, err := c.get("/me/player/devices").Receive(&devices, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &devices, nil
@@ -268,10 +277,9 @@ type GetCurrentlyPlayingTrackResponse struct {
 // Required scope: user-read-currently-playing
 func (c *Client) GetCurrentlyPlayingTrack(params *GetCurrentlyPlayingTrackParams) (*GetCurrentlyPlayingTrackResponse, error) {
 	contentState := GetCurrentlyPlayingTrackStateResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/player/currently-playing").QueryStruct(params).Receive(&contentState, &err)
-
+	_, err := c.get("/me/player/currently-playing").QueryStruct(params).Receive(&contentState, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -297,6 +305,10 @@ func (c *Client) GetCurrentlyPlayingTrack(params *GetCurrentlyPlayingTrackParams
 
 	content.Item = either
 
+	if spotifyErr != nil {
+		return nil, spotifyErr
+	}
+
 	return &content, nil
 }
 
@@ -320,12 +332,15 @@ type StartResumePlaybackBody struct {
 // Required scope: user-modify-playback-state
 func (c *Client) StartResumePlayback(params *StartResumePlaybackParams, body *StartResumePlaybackBody) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/play").QueryStruct(params).BodyJSON(body).Receive(&res, &err)
-
+	_, err := c.put("/me/player/play").QueryStruct(params).BodyJSON(body).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -341,12 +356,15 @@ type PausePlaybackParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) PausePlayback(params *PausePlaybackParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/pause").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/pause").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -362,12 +380,15 @@ type SkipToNextParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) SkipToNext(params *SkipToNextParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/next").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/next").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -383,12 +404,15 @@ type SkipToPreviousParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) SkipToPrevious(params *SkipToPreviousParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/previous").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/previous").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -406,12 +430,15 @@ type SeekToPositionParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) SeekToPosition(params *SeekToPositionParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/seek").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/seek").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -435,12 +462,15 @@ type SetRepeatModeParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) SetRepeatMode(params *SetRepeatModeParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/repeat").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/repeat").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -458,12 +488,15 @@ type SetPlaybackVolumeParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) SetPlaybackVolume(params *SetPlaybackVolumeParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/volume").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/volume").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -483,12 +516,15 @@ type TogglePlaybackShuffleParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) TogglePlaybackShuffle(params *TogglePlaybackShuffleParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put("/me/player/shuffle").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/player/shuffle").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -520,12 +556,15 @@ type GetRecentlyPlayedTracksResponse struct {
 // Required scope: user-read-recently-played
 func (c *Client) GetRecentlyPlayedTracks(params *GetRecentlyPlayedTracksParams) (*GetRecentlyPlayedTracksResponse, error) {
 	tracks := GetRecentlyPlayedTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/player/recently-played").QueryStruct(params).Receive(&tracks, &err)
-
+	_, err := c.get("/me/player/recently-played").QueryStruct(params).Receive(&tracks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &tracks, nil
@@ -550,10 +589,9 @@ type GetTheUsersQueueResponse struct {
 // Required scope: user-read-playback-state
 func (c *Client) GetTheUsersQueue() (*GetTheUsersQueueResponse, error) {
 	queueState := GetTheUsersQueueStateResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/player/queue").Receive(&queueState, &err)
-
+	_, err := c.get("/me/player/queue").Receive(&queueState, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -575,6 +613,10 @@ func (c *Client) GetTheUsersQueue() (*GetTheUsersQueueResponse, error) {
 		queue.Queue = append(queue.Queue, either)
 	}
 
+	if spotifyErr != nil {
+		return nil, spotifyErr
+	}
+
 	return &queue, nil
 }
 
@@ -590,12 +632,15 @@ type AddItemToPlaybackQueueParams struct {
 // Required scope: user-modify-playback-state
 func (c *Client) AddItemToPlaybackQueue(params *AddItemToPlaybackQueueParams) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.post("/me/player/queue").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.post("/me/player/queue").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil

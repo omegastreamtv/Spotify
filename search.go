@@ -62,12 +62,15 @@ type SearchForItemResponse struct {
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) SearchForItem(params *SearchForItemParams) (*SearchForItemResponse, error) {
 	result := SearchForItemResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/search").Receive(&result, &err)
-
+	_, err := c.get("/search").Receive(&result, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &result, nil
