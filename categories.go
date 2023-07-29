@@ -2,6 +2,13 @@ package spotify
 
 import "fmt"
 
+type Category struct {
+	Href  string  `json:"href"`
+	Icons []Image `json:"icons"`
+	ID    string  `json:"id"`
+	Name  string  `json:"name"`
+}
+
 type GetSeveralBrowseCategoriesParams struct {
 	// A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want to narrow the list of returned categories to those relevant to a particular country. If omitted, the returned items will be globally relevant.
 	Country string `url:"country"`
@@ -13,13 +20,6 @@ type GetSeveralBrowseCategoriesParams struct {
 	Limit int `url:"limit"`
 	// The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
 	Offset int `url:"offset"`
-}
-
-type Category struct {
-	Href  string  `json:"href"`
-	Icons []Image `json:"icons"`
-	ID    string  `json:"id"`
-	Name  string  `json:"name"`
 }
 
 type GetSeveralBrowseCategoriesResponse struct {

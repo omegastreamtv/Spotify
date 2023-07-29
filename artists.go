@@ -31,11 +31,6 @@ type Artist struct {
 	URI string `json:"uri"`
 }
 
-type Followers struct {
-	Href  string `json:"href,omitempty"`
-	Total int    `json:"total"`
-}
-
 type GetArtistsResponse struct {
 	Artist
 }

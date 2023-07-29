@@ -1,57 +1,5 @@
 package spotify
 
-// External URLs for this context.
-type ExternalURLs struct {
-	// The Spotify URL for the object.
-	Spotify string `json:"spotify"`
-}
-
-// The cover art for the episode in various sizes, widest first.
-type Image struct {
-	// The source URL of the image.
-	URL string `json:"url"`
-	// The image height in pixels.
-	Height int `json:"height"`
-	// The image width in pixels.
-	Width int `json:"width"`
-}
-
-// Included in the response when a content restriction is applied.
-type Restrictions struct {
-	// The reason for the restriction. Supported values:
-	//
-	// market - The content item is not available in the given market.
-	// product - The content item is not available for the user's subscription type.
-	// explicit - The content item is explicit and the user's account is set to not play explicit content.
-	//
-	// Additional reasons may be added in the future. Note: If you use this field, make sure that your application safely handles unknown values.
-	Reason string `json:"reason"`
-}
-
-// The copyright statements of the content.
-type Copyright struct {
-	// The copyright text for this content.
-	Text string `json:"text"`
-	// The type of copyright: C = the copyright, P = the sound recording (performance) copyright.
-	Type string `json:"type"`
-}
-
-// Known external IDs for the content.
-type ExternalIDs struct {
-	// Known external IDs for the content.
-	//
-	// https://en.wikipedia.org/wiki/International_Standard_Recording_Code
-	ISRC string `json:"isrc"`
-	// International Article Number
-	//
-	// https://en.wikipedia.org/wiki/International_Article_Number
-	EAN string `json:"ean"`
-	// Universal Product Code
-	//
-	// https://en.wikipedia.org/wiki/Universal_Product_Code
-	UPC string `json:"upc"`
-}
-
 // Allows to update the user interface based on which playback actions are available within the current context.
 type Actions struct {
 	// Interrupting playback. Optional field.

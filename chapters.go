@@ -51,14 +51,6 @@ type FullChapter struct {
 	Audiobook Audiobook `json:"audiobook"`
 }
 
-// The user's most recent position in the episode. Set if the supplied access token is a user token and has the scope 'user-read-playback-position'.
-type ResumePoint struct {
-	// Whether or not the episode has been fully played by the user.
-	FullyPlayed bool `json:"fully_played"`
-	// The user's most recent position in the episode in milliseconds.
-	ResumePositionMS int `json:"resume_position_ms"`
-}
-
 type GetAChapterParams struct {
 	Market Market `url:"market,omitempty"`
 }

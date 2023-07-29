@@ -9,9 +9,7 @@ import (
 	"github.com/dghubble/sling"
 )
 
-const (
-	URL = "https://api.spotify.com/v1"
-)
+const URL = "https://api.spotify.com/v1"
 
 type Client struct {
 	// mu is used to lock the client for concurrent requests
@@ -105,21 +103,6 @@ type SpotifyError struct {
 
 func (s *SpotifyError) Error() string {
 	return fmt.Sprintf("Spotify API Error - Status: %d, Message: %s", s.Err.Status, s.Err.Message)
-}
-
-type Pagination struct {
-	// A link to the Web API endpoint returning the full result of the request
-	Href string `json:"href"`
-	// The maximum number of items in the response (as set in the query or by default).
-	Limit int `json:"limit"`
-	// URL to the next page of items. (null if none)
-	Next string `json:"next"`
-	// The offset of the items returned (as set in the query or by default)
-	Offset int `json:"offset"`
-	// URL to the previous page of items. (null if none)
-	Previous string `json:"previous"`
-	// The total number of items available to return.
-	Total int `json:"total"`
 }
 
 // SetAppAccessToken will set the app access token for the client.
