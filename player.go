@@ -106,7 +106,7 @@ type Context struct {
 }
 
 // Information about the currently active track or episode.
-type Playback struct {
+type PlaybackState struct {
 	// The device that is currently active.
 	Device Device `json:"device"`
 	// off, track, context
@@ -129,10 +129,38 @@ type Playback struct {
 	Actions Actions `json:"actions"`
 }
 
+// Information about the currently active track or episode.
+type Playback struct {
+	// The device that is currently active.
+	Device Device `json:"device"`
+	// off, track, context
+	RepeatState string `json:"repeat_state"`
+	// If shuffle is on or off.
+	ShuffleState bool `json:"shuffle_state"`
+	// A Context Object. Can be null.
+	Context Context `json:"context,omitempty"`
+	// Unix Millisecond Timestamp when data was fetched.
+	Timestamp int `json:"timestamp"`
+	// Progress into the currently playing track or episode. Can be null.
+	ProgressMS int `json:"progress_ms,omitempty"`
+	// If something is currently playing, return true.
+	IsPlaying bool `json:"is_playing"`
+	// The currently playing track or episode. Can be null.
+	Item Either[Track, Episode] `json:"item,omitempty"`
+	// The object type of the currently playing item. Can be one of track, episode, ad or unknown.
+	CurrentlyPlayingType string `json:"currently_playing_type"`
+	// Allows to update the user interface based on which playback actions are available within the current context.
+	Actions Actions `json:"actions"`
+}
+
 type GetPlaybackStateParams struct {
 	Market Market `url:"market"`
 	// A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode.
 	AdditionalTypes string `url:"additional_types"`
+}
+
+type GetPlaybackStateStateResponse struct {
+	PlaybackState
 }
 
 type GetPlaybackStateResponse struct {
@@ -143,14 +171,35 @@ type GetPlaybackStateResponse struct {
 //
 // Required scopes: user-read-playback-state
 func (c *Client) GetPlaybackState(params *GetPlaybackStateParams) (*GetPlaybackStateResponse, error) {
-	state := GetPlaybackStateResponse{}
+	playbackState := GetPlaybackStateStateResponse{}
 	var err *SpotifyError
 
-	c.get("/me/player").QueryStruct(params).Receive(&state, &err)
+	c.get("/me/player").QueryStruct(params).Receive(&playbackState, &err)
 
 	if err != nil {
 		return nil, err
 	}
+
+	state := GetPlaybackStateResponse{
+		Playback: Playback{
+			Device:               playbackState.Device,
+			RepeatState:          playbackState.RepeatState,
+			ShuffleState:         playbackState.ShuffleState,
+			Context:              playbackState.Context,
+			Timestamp:            playbackState.Timestamp,
+			ProgressMS:           playbackState.ProgressMS,
+			IsPlaying:            playbackState.IsPlaying,
+			CurrentlyPlayingType: playbackState.CurrentlyPlayingType,
+			Actions:              playbackState.Actions,
+		},
+	}
+
+	eitherOr, errJSON := EitherTrackOrEpisode[Track, Episode](playbackState.Item)
+	if errJSON != nil {
+		return nil, errJSON
+	}
+
+	state.Item = eitherOr
 
 	return &state, nil
 }
@@ -206,6 +255,10 @@ type GetCurrentlyPlayingTrackParams struct {
 	AdditionalTypes string `url:"additional_types"`
 }
 
+type GetCurrentlyPlayingTrackStateResponse struct {
+	PlaybackState
+}
+
 type GetCurrentlyPlayingTrackResponse struct {
 	Playback
 }
@@ -214,14 +267,35 @@ type GetCurrentlyPlayingTrackResponse struct {
 //
 // Required scope: user-read-currently-playing
 func (c *Client) GetCurrentlyPlayingTrack(params *GetCurrentlyPlayingTrackParams) (*GetCurrentlyPlayingTrackResponse, error) {
-	content := GetCurrentlyPlayingTrackResponse{}
+	contentState := GetCurrentlyPlayingTrackStateResponse{}
 	var err *SpotifyError
 
-	c.get("/me/player/currently-playing").QueryStruct(params).Receive(&content, &err)
+	c.get("/me/player/currently-playing").QueryStruct(params).Receive(&contentState, &err)
 
 	if err != nil {
 		return nil, err
 	}
+
+	content := GetCurrentlyPlayingTrackResponse{
+		Playback: Playback{
+			Device:               contentState.Device,
+			RepeatState:          contentState.RepeatState,
+			ShuffleState:         contentState.ShuffleState,
+			Context:              contentState.Context,
+			Timestamp:            contentState.Timestamp,
+			ProgressMS:           contentState.ProgressMS,
+			IsPlaying:            contentState.IsPlaying,
+			CurrentlyPlayingType: contentState.CurrentlyPlayingType,
+			Actions:              contentState.Actions,
+		},
+	}
+
+	either, errJSON := EitherTrackOrEpisode[Track, Episode](contentState.Item)
+	if errJSON != nil {
+		return nil, errJSON
+	}
+
+	content.Item = either
 
 	return &content, nil
 }
@@ -457,24 +531,48 @@ func (c *Client) GetRecentlyPlayedTracks(params *GetRecentlyPlayedTracksParams) 
 	return &tracks, nil
 }
 
-type GetTheUsersQueueResponse struct {
+type GetTheUsersQueueStateResponse struct {
 	// The currently playing track or episode. Can be null.
 	CurrentlyPlaying interface{} `json:"currently_playing"`
 	// The tracks or episodes in the queue. Can be empty.
 	Queue []interface{} `json:"queue"`
 }
 
+type GetTheUsersQueueResponse struct {
+	// The currently playing track or episode. Can be null.
+	CurrentlyPlaying Either[Track, Episode] `json:"currently_playing"`
+	// The tracks or episodes in the queue. Can be empty.
+	Queue []Either[Track, Episode] `json:"queue"`
+}
+
 // Get the list of objects that make up the user's queue.
 //
 // Required scope: user-read-playback-state
 func (c *Client) GetTheUsersQueue() (*GetTheUsersQueueResponse, error) {
-	queue := GetTheUsersQueueResponse{}
+	queueState := GetTheUsersQueueStateResponse{}
 	var err *SpotifyError
 
-	c.get("/me/player/queue").Receive(&queue, &err)
+	c.get("/me/player/queue").Receive(&queueState, &err)
 
 	if err != nil {
 		return nil, err
+	}
+
+	either, errJSON := EitherTrackOrEpisode[Track, Episode](queueState.CurrentlyPlaying)
+	if errJSON != nil {
+		return nil, errJSON
+	}
+
+	queue := GetTheUsersQueueResponse{
+		CurrentlyPlaying: either,
+	}
+
+	for _, v := range queueState.Queue {
+		either, err := EitherTrackOrEpisode[Track, Episode](v)
+		if err != nil {
+			return nil, err
+		}
+		queue.Queue = append(queue.Queue, either)
 	}
 
 	return &queue, nil
