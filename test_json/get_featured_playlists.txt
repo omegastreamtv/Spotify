@@ -1,0 +1,373 @@
+{
+  "message": "Ready for Saturday night",
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/featured-playlists?country=US&timestamp=2023-07-29T19%3A10%3A41&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "A perfect little pop party. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWXti3N4Wp5xy"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXti3N4Wp5xy",
+        "id": "37i9dQZF1DWXti3N4Wp5xy",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030326a92ce25b60530fe4dfbd",
+            "width": null
+          }
+        ],
+        "name": "Pop Party",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjgwMCwwMDAwMDAwMGExNTgzMzIwNzMxYjI0ODg3ODJjMDY5MzUxMWVlNmJi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXti3N4Wp5xy/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWXti3N4Wp5xy"
+      },
+      {
+        "collaborative": false,
+        "description": "The best indie dance tracks of the moment. Cover: ODESZA & Yellow House",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8CopunbDxgW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8CopunbDxgW",
+        "id": "37i9dQZF1DX8CopunbDxgW",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003515a6fcb64f6582b0487fa99",
+            "width": null
+          }
+        ],
+        "name": "metropolis",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjgwMCwwMDAwMDAwMDZhMzQ1NTEyNGY4N2I4MDg5MGZhYmFiZmI3NjEyMTY0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8CopunbDxgW/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8CopunbDxgW"
+      },
+      {
+        "collaborative": false,
+        "description": "hi Barbie! it's nearly August... 🧂",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWvvyNmW9V9a"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvvyNmW9V9a",
+        "id": "37i9dQZF1DWWvvyNmW9V9a",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000036492645ec2e541c18823e0e1",
+            "width": null
+          }
+        ],
+        "name": "teen beats",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjc3OCwwMDAwMDAwMGYyMzdiMzU4MGFkZjNmZTkxMWIyNzg2MzgzZjc2OTI3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvvyNmW9V9a/tracks",
+          "total": 102
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWvvyNmW9V9a"
+      },
+      {
+        "collaborative": false,
+        "description": "Soundtrack your cozy dinner with bossa nova jazz.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWVleyMkaelTd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVleyMkaelTd",
+        "id": "37i9dQZF1DWVleyMkaelTd",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003dd9acb211caf8703ea9bfc98",
+            "width": null
+          }
+        ],
+        "name": "Bossa Nova Dinner",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4NzM0NTE3NiwwMDAwMDAwMGI3YTk2YzJjZmQ0MDI5YjdmZmQ3MWI4NThmZTBhNjUz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVleyMkaelTd/tracks",
+          "total": 114
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWVleyMkaelTd"
+      },
+      {
+        "collaborative": false,
+        "description": "Genre-less. Quality first always. Cover: James Blake",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWBHeXOYZf74"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWBHeXOYZf74",
+        "id": "37i9dQZF1DWWBHeXOYZf74",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031ef0eefc47cf450885050698",
+            "width": null
+          }
+        ],
+        "name": "POLLEN",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjgwMCwwMDAwMDAwMDkwZjYzZTEzYTRkNjgxOTA1Mzk4NWZkNGVhMGRjNGM0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWBHeXOYZf74/tracks",
+          "total": 101
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWBHeXOYZf74"
+      },
+      {
+        "collaborative": false,
+        "description": "Country gone wild! You never know what you're gonna get. Cover: Tanner Adell",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX5mB2C8gBeUM"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5mB2C8gBeUM",
+        "id": "37i9dQZF1DX5mB2C8gBeUM",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037de064e56a7508771afaab79",
+            "width": null
+          }
+        ],
+        "name": "Wild Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjgwMCwwMDAwMDAwMDQ1MzdhNDJlZmU3MmZlMmRhYzBmNjMzMzk4ZWUwMDEz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5mB2C8gBeUM/tracks",
+          "total": 147
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX5mB2C8gBeUM"
+      },
+      {
+        "collaborative": false,
+        "description": "That unbridled, unholy, loud and dirty 90s rock goodness you know you love",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX5M59nhwFlWl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5M59nhwFlWl",
+        "id": "37i9dQZF1DX5M59nhwFlWl",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d171450c32cd730d3d589992",
+            "width": null
+          }
+        ],
+        "name": "Cranked Up",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4NjkyMDk1NSwwMDAwMDAwMDQyNTNhNTEzYTZkNzQ0NWE3NzE4NDE2NzFkNGRkMTZj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5M59nhwFlWl/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX5M59nhwFlWl"
+      },
+      {
+        "collaborative": false,
+        "description": "Keeping it lowkey with the best of today's chill pop. Cover: Billie Eilish",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0MLFaUdXnjA"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0MLFaUdXnjA",
+        "id": "37i9dQZF1DX0MLFaUdXnjA",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003cc50ba730dfd8b2f1d64543f",
+            "width": null
+          }
+        ],
+        "name": "Chill Pop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUxNjgwMCwwMDAwMDAwMGM1ZjAyZDY4YWYyYWU3OTU1ZDZlOThiZDQ0ZDllMzkw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0MLFaUdXnjA/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0MLFaUdXnjA"
+      },
+      {
+        "collaborative": false,
+        "description": "Mood: Turnt",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWY4xHQp97fN6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY4xHQp97fN6",
+        "id": "37i9dQZF1DWY4xHQp97fN6",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003190c3b2d05550ca2fe10e27e",
+            "width": null
+          }
+        ],
+        "name": "Get Turnt",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY5MDUyMDIyMCwwMDAwMDAwMDdkOGJmZjUyNGNkOTU4MDE5Njc3MWIyYzQyZjJmYWQx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY4xHQp97fN6/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWY4xHQp97fN6"
+      },
+      {
+        "collaborative": false,
+        "description": "The most essential R&B songs from the '00s. Cover: Beyoncé",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYmmr74INQlb"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYmmr74INQlb",
+        "id": "37i9dQZF1DWYmmr74INQlb",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000355a3fdb23c3f56ece1ad418a",
+            "width": null
+          }
+        ],
+        "name": "I Love My '00s R&B",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4ODQ4NDE2NiwwMDAwMDAwMDVlMDQxYzc2MmFlYzI2ODUwMWI2YzhkMGEwMjE4Mzg4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYmmr74INQlb/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYmmr74INQlb"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 10
+  }
+}

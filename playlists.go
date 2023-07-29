@@ -536,7 +536,7 @@ type AddCustomPlaylistCoverImageBody []byte
 // Replace the image used to represent a specific playlist.
 //
 // Required scope: ugc-image-upload, playlist-modify-public, playlist-modify-private
-func (c *Client) AddCustomPlaylistCoverImage(playlistId string) error {
+func (c *Client) AddCustomPlaylistCoverImage(playlistId string, imageBytes AddCustomPlaylistCoverImageBody) error {
 	var res struct{}
 	var err *SpotifyError
 
