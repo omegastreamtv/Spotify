@@ -68,16 +68,19 @@ type GetShowResponse struct {
 // Required scope: user-read-playback-position
 func (c *Client) GetShow(showId string, market Market) (*GetShowResponse, error) {
 	show := GetShowResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetShowParams{
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/shows/%s", showId)).QueryStruct(params).Receive(&show, &err)
-
+	_, err := c.get(fmt.Sprintf("/shows/%s", showId)).QueryStruct(params).Receive(&show, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &show, nil
@@ -96,17 +99,20 @@ type GetSeveralShowsResponse struct {
 // Get Spotify catalog information for several shows based on their Spotify IDs.
 func (c *Client) GetSeveralShows(showIds []string, market Market) (*GetSeveralShowsResponse, error) {
 	shows := GetSeveralShowsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralShowsParams{
 		IDs:    strings.Join(showIds, ","),
 		Market: market,
 	}
 
-	c.get("/shows").QueryStruct(params).Receive(&shows, &err)
-
+	_, err := c.get("/shows").QueryStruct(params).Receive(&shows, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &shows, nil
@@ -128,12 +134,15 @@ type GetShowEpisodesResponse struct {
 // Get Spotify catalog information about an show’s episodes. Optional parameters can be used to limit the number of episodes returned.
 func (c *Client) GetShowEpisodes(showId string, params *GetShowEpisodesParams) (*GetShowEpisodesResponse, error) {
 	episodes := GetShowEpisodesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/shows/%s/episodes", showId)).QueryStruct(params).Receive(&episodes, &err)
-
+	_, err := c.get(fmt.Sprintf("/shows/%s/episodes", showId)).QueryStruct(params).Receive(&episodes, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &episodes, nil
@@ -156,12 +165,15 @@ type GetUsersSavedShowsResponse struct {
 // Required scope: user-library-read
 func (c *Client) GetUsersSavedShows(params *GetUsersSavedShowsParams) (*GetUsersSavedShowsResponse, error) {
 	shows := GetUsersSavedShowsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/shows").QueryStruct(params).Receive(&shows, &err)
-
+	_, err := c.get("/me/shows").QueryStruct(params).Receive(&shows, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &shows, nil
@@ -176,16 +188,19 @@ type SaveShowsForCurrentUserParams struct {
 // Required scope: user-library-modify
 func (c *Client) SaveShowsForCurrentUser(showIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := SaveShowsForCurrentUserParams{
 		IDs: strings.Join(showIds, ","),
 	}
 
-	c.put("/me/shows").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/shows").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -202,17 +217,20 @@ type RemoveUsersSavedShowsParams struct {
 // Required scope: user-library-modify
 func (c *Client) RemoveUsersSavedShows(showIds []string, market Market) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := RemoveUsersSavedShowsParams{
 		IDs:    strings.Join(showIds, ","),
 		Market: market,
 	}
 
-	c.delete("/me/shows").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.delete("/me/shows").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -227,16 +245,19 @@ type CheckUsersSavedShowsParams struct {
 // Required scope: user-library-read
 func (c *Client) CheckUsersSavedShows(showIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckUsersSavedShowsParams{
 		IDs: strings.Join(showIds, ","),
 	}
 
-	c.get("/me/shows/contains").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.get("/me/shows/contains").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil

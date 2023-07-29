@@ -202,12 +202,15 @@ type GetAvailableMarketsResponse struct {
 // Get the list of markets where Spotify is available.
 func (c *Client) GetAvailableMarkets() (*GetAvailableMarketsResponse, error) {
 	markets := GetAvailableMarketsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/markets").Receive(&markets, &err)
-
+	_, err := c.get("/markets").Receive(&markets, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &markets, nil

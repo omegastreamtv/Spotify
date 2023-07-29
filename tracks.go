@@ -276,14 +276,13 @@ type GetTrackResponse struct {
 
 func (c *Client) GetTrack(trackId string, market Market) (*GetTrackResponse, error) {
 	track := GetTrackResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetTrackParams{
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/tracks/%s", trackId)).QueryStruct(params).Receive(&track, &err)
-
+	_, err := c.get(fmt.Sprintf("/tracks/%s", trackId)).QueryStruct(params).Receive(&track, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -304,17 +303,20 @@ type GetSeveralTracksResponse struct {
 // Get Spotify catalog information for multiple tracks based on their Spotify IDs.
 func (c *Client) GetSeveralTracks(trackIds []string, market Market) (*GetSeveralTracksResponse, error) {
 	tracks := GetSeveralTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralTracksParams{
 		Market: market,
 		IDs:    strings.Join(trackIds, ","),
 	}
 
-	c.get("/tracks").QueryStruct(params).Receive(&tracks, &err)
-
+	_, err := c.get("/tracks").QueryStruct(params).Receive(&tracks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &tracks, nil
@@ -338,12 +340,15 @@ type GetUsersSavedTracksResponse struct {
 // Required scope: user-library-read
 func (c *Client) GetUsersSavedTracks(params *GetUsersSavedTracksParams) (*GetUsersSavedTracksResponse, error) {
 	tracks := GetUsersSavedTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/tracks").QueryStruct(params).Receive(&tracks, &err)
-
+	_, err := c.get("/me/tracks").QueryStruct(params).Receive(&tracks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &tracks, nil
@@ -359,16 +364,19 @@ type SaveTracksForCurrentUserBody struct {
 // Required scope: user-library-modify
 func (c *Client) SaveTracksForCurrentUser(trackIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := SaveTracksForCurrentUserBody{
 		IDs: trackIds,
 	}
 
-	c.put("/me/tracks").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.put("/me/tracks").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -384,16 +392,19 @@ type RemoveUsersSavedTracksBody struct {
 // Required scope: user-library-modify
 func (c *Client) RemoveUsersSavedTracks(trackIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := RemoveUsersSavedTracksBody{
 		IDs: trackIds,
 	}
 
-	c.delete("/me/tracks").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.delete("/me/tracks").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -411,16 +422,19 @@ type CheckUsersSavedTracksResponse []bool
 // Required scope: user-library-read
 func (c *Client) CheckUsersSavedTracks(trackIds []string) (*CheckUsersSavedTracksResponse, error) {
 	foundEach := CheckUsersSavedTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckUsersSavedTracksParams{
 		IDs: strings.Join(trackIds, ","),
 	}
 
-	c.get("/me/tracks/contains").QueryStruct(params).Receive(&foundEach, &err)
-
+	_, err := c.get("/me/tracks/contains").QueryStruct(params).Receive(&foundEach, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &foundEach, nil
@@ -438,16 +452,19 @@ type GetMultiTracksAudioFeaturesResponse struct {
 // Get audio features for multiple tracks based on their Spotify IDs.
 func (c *Client) GetMultiTracksAudioFeatures(trackIds []string) (*GetMultiTracksAudioFeaturesResponse, error) {
 	features := GetMultiTracksAudioFeaturesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetMultiTracksAudioFeaturesParams{
 		IDs: strings.Join(trackIds, ","),
 	}
 
-	c.get("/audio-features").QueryStruct(params).Receive(&features, &err)
-
+	_, err := c.get("/audio-features").QueryStruct(params).Receive(&features, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &features, nil
@@ -462,12 +479,15 @@ type GetSingleTracksAudioFeaturesResponse struct {
 // Get audio feature information for a single track identified by its unique Spotify ID.
 func (c *Client) GetSingleTracksAudioFeatures(trackId string) (*GetSingleTracksAudioFeaturesResponse, error) {
 	features := GetSingleTracksAudioFeaturesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-features/%s", trackId)).Receive(&features, &err)
-
+	_, err := c.get(fmt.Sprintf("/audio-features/%s", trackId)).Receive(&features, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &features, nil
@@ -480,12 +500,15 @@ type GetTracksAudioAnalysisResponse struct {
 // Get a low-level audio analysis for a track in the Spotify catalog. The audio analysis describes the track’s structure and musical content, including rhythm, pitch, and timbre.
 func (c *Client) GetTracksAudioAnalysis(trackId string) (*GetTracksAudioAnalysisResponse, error) {
 	analysis := GetTracksAudioAnalysisResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/audio-analysis/%s", trackId)).Receive(&analysis, &err)
-
+	_, err := c.get(fmt.Sprintf("/audio-analysis/%s", trackId)).Receive(&analysis, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &analysis, nil
@@ -618,12 +641,15 @@ type GetRecommendationsResponse struct {
 // For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks.
 func (c *Client) GetRecommendations(payload GetRecommendationsBody) (*GetRecommendationsResponse, error) {
 	recs := GetRecommendationsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/recommendations").BodyJSON(payload).Receive(&recs, &err)
-
+	_, err := c.get("/recommendations").BodyJSON(payload).Receive(&recs, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &recs, nil

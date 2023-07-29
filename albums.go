@@ -76,12 +76,15 @@ type GetAlbumResponse struct {
 // Get Spotify catalog information for a single album.
 func (c *Client) GetAlbum(albumId string, market string) (*GetAlbumResponse, error) {
 	album := GetAlbumResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/albums/%s", albumId)).Receive(&album, &err)
-
+	_, err := c.get(fmt.Sprintf("/albums/%s", albumId)).Receive(&album, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &album, nil
@@ -100,7 +103,7 @@ type GetSeveralAlbumsResponse struct {
 // Get Spotify catalog information for multiple albums identified by their Spotify IDs.
 func (c *Client) GetSeveralAlbums(albumIds []string, market Market) (*GetSeveralAlbumsResponse, error) {
 	albums := GetSeveralAlbumsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralAlbumsParams{
 		// Convert ids slice to a comma-separated string
@@ -108,10 +111,13 @@ func (c *Client) GetSeveralAlbums(albumIds []string, market Market) (*GetSeveral
 		Market: market,
 	}
 
-	c.get("/albums").QueryStruct(params).Receive(&albums, &err)
-
+	_, err := c.get("/albums").QueryStruct(params).Receive(&albums, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &albums, nil
@@ -143,12 +149,15 @@ type GetAlbumTracksResponse struct {
 // Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.
 func (c *Client) GetAlbumTracks(albumId string, params *GetAlbumTracksParams) (*GetAlbumTracksResponse, error) {
 	tracks := GetAlbumTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/albums/%s/tracks", albumId)).QueryStruct(params).Receive(&tracks, &err)
-
+	_, err := c.get(fmt.Sprintf("/albums/%s/tracks", albumId)).QueryStruct(params).Receive(&tracks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &tracks, nil
@@ -172,12 +181,15 @@ type GetUsersSavedAlbumsResponse struct {
 // Required scope: user-library-read
 func (c *Client) GetUsersSavedAlbums(params *GetUsersSavedAlbumsParams) (*GetUsersSavedAlbumsResponse, error) {
 	albums := GetUsersSavedAlbumsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/albums").QueryStruct(params).Receive(&albums, &err)
-
+	_, err := c.get("/me/albums").QueryStruct(params).Receive(&albums, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &albums, nil
@@ -193,16 +205,19 @@ type SaveAlbumsForCurrentUserBody struct {
 // Required scope: user-library-modify
 func (c *Client) SaveAlbumsForCurrentUser(albumIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := SaveAlbumsForCurrentUserBody{
 		IDs: albumIds,
 	}
 
-	c.put("/me/albums").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.put("/me/albums").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -218,16 +233,19 @@ type RemoveAlbumsForCurrentUserBody struct {
 // Required scope: user-library-modify
 func (c *Client) RemoveAlbumsForCurrentUser(albumIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	payload := RemoveAlbumsForCurrentUserBody{
 		IDs: albumIds,
 	}
 
-	c.delete("/me/albums").BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.delete("/me/albums").BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -243,16 +261,19 @@ type CheckUsersSavedAlbumsParams struct {
 // Required scope: user-library-read
 func (c *Client) CheckUsersSavedAlbums(albumIds []string) ([]bool, error) {
 	var res []bool
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckUsersSavedAlbumsParams{
 		IDs: strings.Join(albumIds, ","),
 	}
 
-	c.get("/me/albums/contains").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.get("/me/albums/contains").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return res, nil
@@ -277,12 +298,15 @@ type GetNewReleasesResponse struct {
 // Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
 func (c *Client) GetNewReleases(params *GetNewReleasesParams) (*GetNewReleasesResponse, error) {
 	releases := GetNewReleasesResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/browse/new-releases").QueryStruct(params).Receive(&releases, &err)
-
+	_, err := c.get("/browse/new-releases").QueryStruct(params).Receive(&releases, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &releases, nil

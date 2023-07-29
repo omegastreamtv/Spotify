@@ -74,16 +74,19 @@ type GetAnAudiobookResponse struct {
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) GetAnAudiobook(audiobookId string, market Market) (*GetAnAudiobookResponse, error) {
 	audiobook := GetAnAudiobookResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetAnAudiobookParams{
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/audiobooks/%s", audiobookId)).QueryStruct(params).Receive(&audiobook, &err)
-
+	_, err := c.get(fmt.Sprintf("/audiobooks/%s", audiobookId)).QueryStruct(params).Receive(&audiobook, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &audiobook, nil
@@ -104,17 +107,20 @@ type GetSeveralAudiobooksResponse struct {
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) GetSeveralAudiobooks(audiobookIds []string, market Market) (*GetSeveralAudiobooksResponse, error) {
 	audiobooks := GetSeveralAudiobooksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralAudiobooksParams{
 		IDs:    strings.Join(audiobookIds, ","),
 		Market: market,
 	}
 
-	c.get("/audiobooks").QueryStruct(params).Receive(&audiobooks, &err)
-
+	_, err := c.get("/audiobooks").QueryStruct(params).Receive(&audiobooks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &audiobooks, nil
@@ -138,12 +144,15 @@ type GetAudiobookChaptersResponse struct {
 // Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) GetAudiobookChapters(audiobookId string, params *GetAudiobookChaptersParams) (*GetAudiobookChaptersResponse, error) {
 	chapters := GetAudiobookChaptersResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/audiobooks/%s/chapters", audiobookId)).QueryStruct(params).Receive(&chapters, &err)
-
+	_, err := c.get(fmt.Sprintf("/audiobooks/%s/chapters", audiobookId)).QueryStruct(params).Receive(&chapters, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &chapters, nil
@@ -166,12 +175,15 @@ type GetUsersSavedAudioBooksResponse struct {
 // Required scope: user-library-read
 func (c *Client) GetUsersSavedAudioBooks(params *GetUsersSavedAudioBooksParams) (*GetUsersSavedAudioBooksResponse, error) {
 	audiobooks := GetUsersSavedAudioBooksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/audiobooks").QueryStruct(params).Receive(&audiobooks, &err)
-
+	_, err := c.get("/me/audiobooks").QueryStruct(params).Receive(&audiobooks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &audiobooks, nil
@@ -187,16 +199,19 @@ type SaveAudiobooksForCurrentUserParams struct {
 // Required scope: user-library-modify
 func (c *Client) SaveAudiobooksForCurrentUser(audiobookIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := SaveAudiobooksForCurrentUserParams{
 		IDs: strings.Join(audiobookIds, ","),
 	}
 
-	c.put("/me/audiobooks").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/audiobooks").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -212,16 +227,19 @@ type RemoveUsersSavedAudiobooksParams struct {
 // Required scope: user-library-modify
 func (c *Client) RemoveUsersSavedAudiobooks(audiobookIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := RemoveUsersSavedAudiobooksParams{
 		IDs: strings.Join(audiobookIds, ","),
 	}
 
-	c.delete("/me/audiobooks").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.delete("/me/audiobooks").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -237,16 +255,19 @@ type CheckUsersSavedAudiobooksParams struct {
 // Required scope: user-library-read
 func (c *Client) CheckUsersSavedAudiobooks(audiobookIds []string) ([]bool, error) {
 	var res []bool
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckUsersSavedAudiobooksParams{
 		IDs: strings.Join(audiobookIds, ","),
 	}
 
-	c.get("/me/audiobooks/contains").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.get("/me/audiobooks/contains").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return res, nil

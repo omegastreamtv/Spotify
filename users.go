@@ -54,12 +54,15 @@ type GetCurrentUsersProfileResponse struct {
 // Required scope: user-read-private, user-read-email
 func (c *Client) GetCurrentUsersProfile() (*GetCurrentUsersProfileResponse, error) {
 	profile := GetCurrentUsersProfileResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me").Receive(&profile, &err)
-
+	_, err := c.get("/me").Receive(&profile, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &profile, nil
@@ -89,12 +92,15 @@ type GetUsersTopTracksResponse struct {
 // Required scope: user-top-read
 func (c *Client) GetUsersTopArtists(params *GetUsersTopItemsParams) (*GetUsersTopArtistsResponse, error) {
 	artists := GetUsersTopArtistsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/top/artists").QueryStruct(params).Receive(&artists, &err)
-
+	_, err := c.get("/me/top/artists").QueryStruct(params).Receive(&artists, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &artists, nil
@@ -105,12 +111,15 @@ func (c *Client) GetUsersTopArtists(params *GetUsersTopItemsParams) (*GetUsersTo
 // Required scope: user-top-read
 func (c *Client) GetUsersTopTracks(params *GetUsersTopItemsParams) (*GetUsersTopTracksResponse, error) {
 	tracks := GetUsersTopTracksResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/top/tracks").QueryStruct(params).Receive(&tracks, &err)
-
+	_, err := c.get("/me/top/tracks").QueryStruct(params).Receive(&tracks, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &tracks, nil
@@ -123,12 +132,15 @@ type GetUsersProfileResponse struct {
 // Get public profile information about a Spotify user.
 func (c *Client) GetUsersProfile(userId string) (*GetUsersProfileResponse, error) {
 	profile := GetUsersProfileResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get(fmt.Sprintf("/users/%s", userId)).Receive(&profile, &err)
-
+	_, err := c.get(fmt.Sprintf("/users/%s", userId)).Receive(&profile, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &profile, nil
@@ -144,12 +156,15 @@ type FollowPlaylistBody struct {
 // Required scope: playlist-modify-public, playlist-modify-private
 func (c *Client) FollowPlaylist(playlistId string, payload *FollowPlaylistBody) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.put(fmt.Sprintf("/playlists/%s/followers", playlistId)).BodyJSON(payload).Receive(&res, &err)
-
+	_, err := c.put(fmt.Sprintf("/playlists/%s/followers", playlistId)).BodyJSON(payload).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -160,12 +175,15 @@ func (c *Client) FollowPlaylist(playlistId string, payload *FollowPlaylistBody) 
 // Required scope: playlist-modify-public, playlist-modify-private
 func (c *Client) UnfollowPlaylist(playlistId string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.delete(fmt.Sprintf("/playlists/%s/followers", playlistId)).Receive(&res, &err)
-
+	_, err := c.delete(fmt.Sprintf("/playlists/%s/followers", playlistId)).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -192,12 +210,15 @@ type GetFollowedArtistsResponse struct {
 // Required scope: user-follow-read
 func (c *Client) GetFollowedArtists(params *GetFollowedArtistsParams) (*GetFollowedArtistsResponse, error) {
 	artists := GetFollowedArtistsResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
-	c.get("/me/following").Receive(&artists, &err)
-
+	_, err := c.get("/me/following").Receive(&artists, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &artists, nil
@@ -215,17 +236,20 @@ type FollowArtistsOrUsersParams struct {
 // Required scope: user-follow-modify
 func (c *Client) FollowArtistsOrUsers(typ string, artistIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := FollowArtistsOrUsersParams{
 		Type: typ,
 		IDs:  strings.Join(artistIds, ","),
 	}
 
-	c.put("/me/following").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.put("/me/following").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -243,17 +267,20 @@ type UnfollowArtistsOrUsersParams struct {
 // Required scope: user-follow-modify
 func (c *Client) UnfollowArtistsOrUsers(typ string, artistIds []string) error {
 	var res struct{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := UnfollowArtistsOrUsersParams{
 		Type: typ,
 		IDs:  strings.Join(artistIds, ","),
 	}
 
-	c.delete("/me/following").QueryStruct(params).Receive(&res, &err)
-
+	_, err := c.delete("/me/following").QueryStruct(params).Receive(&res, &spotifyErr)
 	if err != nil {
 		return err
+	}
+
+	if spotifyErr != nil {
+		return spotifyErr
 	}
 
 	return nil
@@ -273,15 +300,14 @@ type CheckIfUserFollowsArtistsOrUsersResponse []bool
 //	Required scope: user-follow-read
 func (c *Client) CheckIfUserFollowsArtistsOrUsers(typ string, artistIds []string) (*CheckIfUserFollowsArtistsOrUsersResponse, error) {
 	resEach := CheckIfUserFollowsArtistsOrUsersResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckIfUserFollowsArtistsOrUsersParams{
 		Type: typ,
 		IDs:  strings.Join(artistIds, ","),
 	}
 
-	c.get("/me/following/contains").QueryStruct(params).Receive(&resEach, &err)
-
+	_, err := c.get("/me/following/contains").QueryStruct(params).Receive(&resEach, &spotifyErr)
 	if err != nil {
 		return nil, err
 	}
@@ -299,16 +325,19 @@ type CheckIfUsersFollowPlaylistResponse []bool
 // Check to see if one or more Spotify users are following a specified playlist.
 func (c *Client) CheckIfUsersFollowPlaylist(playlistId string, userIds []string) (*CheckIfUsersFollowPlaylistResponse, error) {
 	resEach := CheckIfUsersFollowPlaylistResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := CheckIfUsersFollowPlaylistParams{
 		IDs: strings.Join(userIds, ","),
 	}
 
-	c.get(fmt.Sprintf("/playlists/%s/followers/contains", playlistId)).QueryStruct(params).Receive(&resEach, &err)
-
+	_, err := c.get(fmt.Sprintf("/playlists/%s/followers/contains", playlistId)).QueryStruct(params).Receive(&resEach, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &resEach, nil

@@ -72,16 +72,19 @@ type GetAChapterResponse struct {
 // Note: Chapters are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) GetAChapter(chatperId string, market Market) (*GetAChapterResponse, error) {
 	chapter := GetAChapterResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetAChapterParams{
 		Market: market,
 	}
 
-	c.get(fmt.Sprintf("/chapters/%s", chatperId)).QueryStruct(params).Receive(&chapter, &err)
-
+	_, err := c.get(fmt.Sprintf("/chapters/%s", chatperId)).QueryStruct(params).Receive(&chapter, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &chapter, nil
@@ -100,16 +103,19 @@ type GetSeveralChaptersResponse struct {
 // Note: Chapters are only available for the US, UK, Ireland, New Zealand and Australia markets.
 func (c *Client) GetSeveralChapters(chatperIds []string, market Market) (*GetSeveralChaptersResponse, error) {
 	chapters := GetSeveralChaptersResponse{}
-	var err *SpotifyError
+	var spotifyErr *SpotifyError
 
 	params := GetSeveralChaptersParams{
 		Market: market,
 	}
 
-	c.get("/chapters").QueryStruct(params).Receive(&chapters, &err)
-
+	_, err := c.get("/chapters").QueryStruct(params).Receive(&chapters, &spotifyErr)
 	if err != nil {
 		return nil, err
+	}
+
+	if spotifyErr != nil {
+		return nil, spotifyErr
 	}
 
 	return &chapters, nil
