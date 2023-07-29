@@ -79,7 +79,7 @@ _All the `Params`, `Body` and `Response` types are named exactly the same as the
 ### Episodes
 
 - [x] [Get Episode (`GetEpisode`)](https://developer.spotify.com/documentation/web-api/reference/get-an-episode)
-- [x] [Get Several Episodes (`GetSeveralEpisodes`)](<[url](https://developer.spotify.com/documentation/web-api/reference/get-multiple-episodes)>)
+- [x] [Get Several Episodes (`GetSeveralEpisodes`)]([url](https://developer.spotify.com/documentation/web-api/reference/get-multiple-episodes))
 - [x] [Get User's Saved Episodes (`GetUsersSavedEpisodes`)](https://developer.spotify.com/documentation/web-api/reference/get-users-saved-episodes)
 - [x] [Save Episodes for Current User (`SaveEpisodesForCurrentUser`)](https://developer.spotify.com/documentation/web-api/reference/save-episodes-user)
 - [x] [Remove User's Saved Episodes (`RemoveUsersSavedEpisodes`)](https://developer.spotify.com/documentation/web-api/reference/remove-episodes-user)
