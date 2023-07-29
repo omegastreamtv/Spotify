@@ -42,6 +42,17 @@ type BasicPlaylist struct {
 	}
 }
 
+type FullPlaylistState struct {
+	Playlist
+	// Information about the followers of the playlist.
+	Followers Followers `json:"followers"`
+	// The tracks of the playlist.
+	Tracks struct {
+		Pagination `json:"pagination"`
+		Items      []PlaylistTrackState `json:"items"`
+	} `json:"tracks"`
+}
+
 type FullPlaylist struct {
 	Playlist
 	// Information about the followers of the playlist.
@@ -53,7 +64,7 @@ type FullPlaylist struct {
 	} `json:"tracks"`
 }
 
-type PlaylistTrack struct {
+type PlaylistTrackState struct {
 	// The date and time the track or episode was added. Note: some very old playlists may return null in this field.
 	AddedAt string `json:"added_at"`
 	// The Spotify user who added the track or episode. Note: some very old playlists may return null in this field.
@@ -62,6 +73,17 @@ type PlaylistTrack struct {
 	IsLocal bool `json:"is_local"`
 	// Information about the track or episode.
 	Track interface{} `json:"track"`
+}
+
+type PlaylistTrack struct {
+	// The date and time the track or episode was added. Note: some very old playlists may return null in this field.
+	AddedAt string `json:"added_at"`
+	// The Spotify user who added the track or episode. Note: some very old playlists may return null in this field.
+	AddedBy User `json:"added_by"`
+	// Whether this track or episode is a local file or not.
+	IsLocal bool `json:"is_local"`
+	// Information about the track or episode.
+	Track Either[Track, Episode] `json:"track"`
 }
 
 type Owner struct {
@@ -95,19 +117,52 @@ type GetPlaylistParams struct {
 	AdditionalTypes string `url:"additional_types"`
 }
 
+type GetPlaylistStateResponse struct {
+	FullPlaylistState
+}
+
 type GetPlaylistResponse struct {
 	FullPlaylist
 }
 
 // Get a playlist owned by a Spotify user.
 func (c *Client) GetPlaylist(playlistId string, params *GetPlaylistParams) (*GetPlaylistResponse, error) {
-	playlist := GetPlaylistResponse{}
+	playlistState := GetPlaylistStateResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/playlists/%s", playlistId)).QueryStruct(params).Receive(&playlist, &err)
+	c.get(fmt.Sprintf("/playlists/%s", playlistId)).QueryStruct(params).Receive(&playlistState, &err)
 
 	if err != nil {
 		return nil, err
+	}
+
+	playlist := GetPlaylistResponse{
+		FullPlaylist: FullPlaylist{
+			Playlist:  playlistState.Playlist,
+			Followers: playlistState.Followers,
+			Tracks: struct {
+				Pagination "json:\"pagination\""
+				Items      []PlaylistTrack "json:\"items\""
+			}{
+				Pagination: playlistState.Tracks.Pagination,
+				Items:      []PlaylistTrack{},
+			},
+		},
+	}
+
+	for _, it := range playlistState.Tracks.Items {
+		// Convert Track of type interface{} to Either[Track, Episode]
+		eitherTrackOrEpisode, err := EitherTrackOrEpisode(it.Track)
+		if err != nil {
+			return nil, err
+		}
+		playlistTrack := PlaylistTrack{
+			AddedAt: it.AddedAt,
+			AddedBy: it.AddedBy,
+			IsLocal: it.IsLocal,
+			Track:   eitherTrackOrEpisode,
+		}
+		playlist.FullPlaylist.Tracks.Items = append(playlist.FullPlaylist.Tracks.Items, playlistTrack)
 	}
 
 	return &playlist, nil
@@ -160,6 +215,11 @@ type GetPlaylistItemsParams struct {
 	AdditionalTypes string `url:"additional_types"`
 }
 
+type GetPlaylistStateItemsResponse struct {
+	Pagination `json:"pagination"`
+	Items      []PlaylistTrackState `json:"items"`
+}
+
 type GetPlaylistItemsResponse struct {
 	Pagination `json:"pagination"`
 	Items      []PlaylistTrack `json:"items"`
@@ -169,13 +229,34 @@ type GetPlaylistItemsResponse struct {
 //
 // Required scope: playlist-read-private
 func (c *Client) GetPlaylistItems(playlistId string, params *GetPlaylistItemsParams) (*GetPlaylistItemsResponse, error) {
-	items := GetPlaylistItemsResponse{}
+	itemsState := GetPlaylistStateItemsResponse{}
 	var err *SpotifyError
 
-	c.get(fmt.Sprintf("/playlists/%s/tracks", playlistId)).QueryStruct(params).Receive(&items, &err)
+	c.get(fmt.Sprintf("/playlists/%s/tracks", playlistId)).QueryStruct(params).Receive(&itemsState, &err)
 
 	if err != nil {
 		return nil, err
+	}
+
+	items := GetPlaylistItemsResponse{
+		Pagination: itemsState.Pagination,
+	}
+
+	for _, it := range itemsState.Items {
+		// Convert Track of type interface{} to Either[Track, Episode]
+		eitherTrackOrEpisode, err := EitherTrackOrEpisode(it.Track)
+		if err != nil {
+			return nil, err
+		}
+
+		pl := PlaylistTrack{
+			AddedAt: it.AddedAt,
+			AddedBy: it.AddedBy,
+			IsLocal: it.IsLocal,
+			Track:   eitherTrackOrEpisode,
+		}
+
+		items.Items = append(items.Items, pl)
 	}
 
 	return &items, nil

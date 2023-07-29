@@ -1,7 +1,6 @@
 package spotify
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"testing"
@@ -22,37 +21,11 @@ func TestGetPlaybackState(t *testing.T) {
 	if res == nil {
 		t.Error("Expected response")
 	} else {
-		// Try to convert the interface{} to map[string]interface{}
-		m, ok := res.Item.(map[string]interface{})
-		if !ok {
-			fmt.Println("Not a map")
-			return
+		if res.Item.isLeft {
+			t.Logf("Is a track: %v", res.Item.isLeft)
+		} else {
+			t.Logf("Is a episode: %v", res.Item.right.Name)
 		}
-
-		// Convert map to JSON
-		jsonData, err := json.Marshal(m)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-
-		// Try to unmarshal the JSON into a Track
-		var tr Track
-		err = json.Unmarshal(jsonData, &tr)
-		if err == nil && tr.Name != "" { // Additional condition to ensure the struct is not empty
-			fmt.Println("This is a Track:", tr)
-			return
-		}
-
-		// Try to unmarshal the JSON into an Episode
-		var e Episode
-		err = json.Unmarshal(jsonData, &e)
-		if err == nil && e.Name != "" { // Additional condition to ensure the struct is not empty
-			fmt.Println("This is an Episode:", e)
-			return
-		}
-
-		fmt.Println("Unknown type")
 
 		if res.Timestamp != 1690379634686 {
 			t.Errorf("Expected %d, got %d", 1690379634686, res.Timestamp)
@@ -105,40 +78,14 @@ func TestGetCurrentlyPlayingTrack(t *testing.T) {
 	if res == nil {
 		t.Error("Expected response")
 	} else {
-		// Try to convert the interface{} to map[string]interface{}
-		m, ok := res.Item.(map[string]interface{})
-		if !ok {
-			fmt.Println("Not a map")
-			return
+		if res.Item.isLeft {
+			fmt.Println(res.Item)
+		} else {
+			fmt.Println(res.Item)
 		}
 
-		// Convert map to JSON
-		jsonData, err := json.Marshal(m)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-
-		// Try to unmarshal the JSON into a Track
-		var tr Track
-		err = json.Unmarshal(jsonData, &tr)
-		if err == nil && tr.Name != "" { // Additional condition to ensure the struct is not empty
-			fmt.Println("This is a Track:", tr)
-			return
-		}
-
-		// Try to unmarshal the JSON into an Episode
-		var e Episode
-		err = json.Unmarshal(jsonData, &e)
-		if err == nil && e.Name != "" { // Additional condition to ensure the struct is not empty
-			fmt.Println("This is an Episode:", e)
-			return
-		}
-
-		fmt.Println("Unknown type")
-
-		if res.Timestamp != 1690379634686 {
-			t.Errorf("Expected %d, got %d", 1690379634686, res.Timestamp)
+		if res.Timestamp != 1690381580786 {
+			t.Errorf("Expected %d, got %d", 1690381580786, res.Timestamp)
 		}
 	}
 }
@@ -277,6 +224,8 @@ func TestGetTheUsersQueue(t *testing.T) {
 
 	if res == nil {
 		t.Error("Expected response")
+	} else {
+		fmt.Println(res.Queue, res.CurrentlyPlaying)
 	}
 }
 
